@@ -4508,9 +4508,10 @@
     // ====================================================
     // Sequential Smart Copy Queue (连击分步极速复制)
     // ====================================================
-    // AINS NILAM Sequential Copy Queue (6 Steps strictly matching AINS)
+    // AINS NILAM Sequential Copy Queue (8 Steps strictly matching AINS)
     // 1. Tajuk (书名) -> 2. Penulis (作者) -> 3. Penerbit (出版社) 
-    // -> 4. Tahun (年份) -> 5. Muka Surat (页数) -> 6. Rumusan (读后感与总结)
+    // -> 4. Tahun (纯数字年份) -> 5. Muka Surat (页数) -> 6. ISBN
+    // -> 7. Rumusan (读后感与总结) -> 8. Pengajaran (品德启示)
     // ====================================================
     const SEQ_STEPS = [
       { key: 'title', labelZh: '书名', labelMs: 'Tajuk Buku', labelEn: 'Book Title' },
@@ -4518,7 +4519,9 @@
       { key: 'publisher', labelZh: '出版社', labelMs: 'Penerbit', labelEn: 'Publisher' },
       { key: 'year', labelZh: '出版年份', labelMs: 'Tahun Terbitan', labelEn: 'Year' },
       { key: 'pages', labelZh: '总页数', labelMs: 'Bilangan Muka Surat', labelEn: 'Pages' },
-      { key: 'rumusan', labelZh: '读后总结与概述', labelMs: 'Rumusan / Sinopsis', labelEn: 'Rumusan / Summary' }
+      { key: 'isbn', labelZh: 'ISBN', labelMs: 'ISBN', labelEn: 'ISBN' },
+      { key: 'rumusan', labelZh: '读后总结(Rumusan)', labelMs: 'Rumusan / Sinopsis', labelEn: 'Rumusan / Summary' },
+      { key: 'pengajaran', labelZh: '品德启示(Pengajaran)', labelMs: 'Pengajaran / Nilai Murni', labelEn: 'Moral Values / Lessons' }
     ];
 
     const _seqState = {};
@@ -4541,18 +4544,22 @@
       if (currentStepDef.key === 'title') textToCopy = getBookField(b, 'title');
       else if (currentStepDef.key === 'author') textToCopy = getBookField(b, 'author');
       else if (currentStepDef.key === 'publisher') textToCopy = getBookField(b, 'publisher');
-      else if (currentStepDef.key === 'year') textToCopy = b.year ? b.year.toString() : '';
-      else if (currentStepDef.key === 'pages') textToCopy = b.pages ? b.pages.toString() : '';
+      else if (currentStepDef.key === 'year') {
+        const rawY = (b.year ? b.year.toString() : '');
+        const ym = rawY.match(/\b(19\d\d|20\d\d)\b/);
+        textToCopy = ym ? ym[1] : rawY.replace(/[^\d]/g, '').slice(0, 4);
+      }
+      else if (currentStepDef.key === 'pages') {
+        textToCopy = b.pages ? b.pages.toString().replace(/[^\d]/g, '') : '';
+      }
+      else if (currentStepDef.key === 'isbn') {
+        textToCopy = (b.isbn && !['无', 'tiada', 'none', '-'].includes(b.isbn.toString().toLowerCase().trim())) ? b.isbn.trim() : '';
+      }
       else if (currentStepDef.key === 'rumusan') {
-        const sum = getBookField(b, 'summary');
-        const ins = getBookField(b, 'insight');
-        if (currentLang === 'ms') {
-          textToCopy = sum + (ins ? ('\n\nPengajaran: ' + ins) : '');
-        } else if (currentLang === 'en') {
-          textToCopy = sum + (ins ? ('\n\nMoral Takeaway: ' + ins) : '');
-        } else {
-          textToCopy = sum + (ins ? ('\n\n【读后启示与心得】：' + ins) : '');
-        }
+        textToCopy = getBookField(b, 'summary');
+      }
+      else if (currentStepDef.key === 'pengajaran') {
+        textToCopy = getBookField(b, 'insight');
       }
 
       navigator.clipboard.writeText(textToCopy).catch(() => {
@@ -4573,14 +4580,14 @@
       if (badgeEl) {
         const nextDef = SEQ_STEPS[nextStep];
         const nextLbl = currentLang === 'ms' ? nextDef.labelMs : (currentLang === 'en' ? nextDef.labelEn : nextDef.labelZh);
-        badgeEl.innerText = nextStep === 0 ? `[✓ AINS 完成/重置]` : `[${nextStep + 1}/6 ${nextLbl}]`;
+        badgeEl.innerText = nextStep === 0 ? `[✓ AINS 完成/重置]` : `[${nextStep + 1}/8 ${nextLbl}]`;
       }
 
       const toastMsg = currentLang === 'ms'
-        ? `[${step + 1}/6] Disalin ${fieldLabel} (AINS): "${textToCopy.slice(0, 24)}${textToCopy.length > 24 ? '...' : ''}"`
+        ? `[${step + 1}/8] Disalin ${fieldLabel} (AINS): "${textToCopy.slice(0, 24)}${textToCopy.length > 24 ? '...' : ''}"`
         : (currentLang === 'en'
-          ? `[${step + 1}/6] Copied ${fieldLabel} (AINS): "${textToCopy.slice(0, 24)}${textToCopy.length > 24 ? '...' : ''}"`
-          : `[${step + 1}/6] 已复制 AINS ${fieldLabel}: "${textToCopy.slice(0, 24)}${textToCopy.length > 24 ? '...' : ''}"`);
+          ? `[${step + 1}/8] Copied ${fieldLabel} (AINS): "${textToCopy.slice(0, 24)}${textToCopy.length > 24 ? '...' : ''}"`
+          : `[${step + 1}/8] 已复制 AINS ${fieldLabel}: "${textToCopy.slice(0, 24)}${textToCopy.length > 24 ? '...' : ''}"`);
       showToast(toastMsg);
     }
 
@@ -5067,7 +5074,7 @@
       });
     }
 
-        function copyFullVolume(b) {
+    function copyFullVolume(b) {
       if (!b) return;
       const s = getBookField(b, 'series');
       const title = getBookField(b, 'title');
@@ -5078,14 +5085,38 @@
       const summary = getBookField(b, 'summary');
       const insight = getBookField(b, 'insight');
 
+      // Clean 4-digit year for AINS compatibility
+      const rawYearStr = (b.year ? b.year.toString() : '') + ' ' + (pubDate || '');
+      const yearMatch = rawYearStr.match(/\b(19\d\d|20\d\d)\b/);
+      const cleanYear = yearMatch ? yearMatch[1] : (b.year ? b.year.toString().replace(/[^\d]/g, '').slice(0, 4) : '');
+      const cleanPages = b.pages ? b.pages.toString().replace(/[^\d]/g, '') : '';
+      const cleanIsbn = (b.isbn && !['无', 'tiada', 'none', '-'].includes(b.isbn.toString().toLowerCase().trim())) ? b.isbn.trim() : '';
+
+      const ainsPayload = {
+        title: title,
+        author: author,
+        publisher: publisher,
+        year: cleanYear,
+        pages: cleanPages,
+        isbn: cleanIsbn,
+        category: category,
+        series: s,
+        rumusan: summary,
+        pengajaran: insight
+      };
+
       let fullText = '';
       if (currentLang === 'ms') {
-        fullText = `Siri: ${s}\nNo. Jilid: ${b.vol || '-'}\nJudul: ${title}\nPengarang: ${author}\nPenerbit: ${publisher}\nKategori: ${category}\nTahun Terbit: ${b.year || t('valUnknown')} (${pubDate})\nJumlah Muka Surat: ${b.pages || t('valUnknown')}\nISBN: ${b.isbn || t('valNone')}${b.url ? '\nPautan Sumber (URL): ' + b.url : ''}\n\nSinopsis:\n${summary}\n\nNilai Murni & Pengajaran:\n${insight}`;
+        fullText = `Siri: ${s}\nNo. Jilid: ${b.vol || '-'}\nJudul: ${title}\nPengarang: ${author}\nPenerbit: ${publisher}\nKategori: ${category}\nTahun Terbit: ${cleanYear || b.year || t('valUnknown')}${pubDate ? ' (' + pubDate + ')' : ''}\nJumlah Muka Surat: ${cleanPages || b.pages || t('valUnknown')}\nISBN: ${cleanIsbn || t('valNone')}${b.url ? '\nPautan Sumber (URL): ' + b.url : ''}\n\nSinopsis:\n${summary}\n\nNilai Murni & Pengajaran:\n${insight}`;
       } else if (currentLang === 'en') {
-        fullText = `Series: ${s}\nVolume: ${b.vol || '-'}\nTitle: ${title}\nAuthor: ${author}\nPublisher: ${publisher}\nCategory: ${category}\nPublication Year: ${b.year || t('valUnknown')} (${pubDate})\nPages: ${b.pages || t('valUnknown')}\nISBN: ${b.isbn || t('valNone')}${b.url ? '\nSource Link (URL): ' + b.url : ''}\n\nSynopsis:\n${summary}\n\nMoral Values & Lessons:\n${insight}`;
+        fullText = `Series: ${s}\nVolume: ${b.vol || '-'}\nTitle: ${title}\nAuthor: ${author}\nPublisher: ${publisher}\nCategory: ${category}\nPublication Year: ${cleanYear || b.year || t('valUnknown')}${pubDate ? ' (' + pubDate + ')' : ''}\nPages: ${cleanPages || b.pages || t('valUnknown')}\nISBN: ${cleanIsbn || t('valNone')}${b.url ? '\nSource Link (URL): ' + b.url : ''}\n\nSynopsis:\n${summary}\n\nMoral Values & Lessons:\n${insight}`;
       } else {
-        fullText = `\u3010\u7cfb\u5217/Siri\u3011: ${b.series || '\u672a\u5206\u7c7b'}\n\u3010\u4e66\u540d/Judul\u3011: ${b.title}\n\u3010\u4f5c\u8005/Pengarang\u3011: ${b.author}\n\u3010\u51fa\u7248\u793e/Penerbit\u3011: ${b.publisher}\n\u3010\u7c7b\u522b/Kategori\u3011: ${b.category || '\u6f2b\u756b'}\n\u3010\u51fa\u7248\u5e74\u4efd/Tahun\u3011: ${b.year || '\u672a\u77e5'} (${b.pubDate || ''})\n\u3010\u9875\u6570/Muka Surat\u3011: ${b.pages || '\u672a\u77e5'}\n\u3010ISBN\u3011: ${b.isbn || '\u65e0'}${b.url ? '\n\u3010\u6765\u6e90\u94fe\u63a5/URL\u3011: ' + b.url : ''}\n\n\u3010\u5185\u5bb9\u6982\u8ff0/Sinopsis\u3011:\n${b.summary || '\u65e0'}\n\n\u3010\u542f\u793a\u4e0e\u54c1\u5fb7/Nilai Murni & Pengajaran\u3011:\n${b.insight || '\u65e0'}`;
+        fullText = `【系列/Siri】: ${b.series || '未分类'}\n【书名/Judul】: ${title}\n【作者/Pengarang】: ${author}\n【出版社/Penerbit】: ${publisher}\n【类别/Kategori】: ${category || '漫畫'}\n【出版年份/Tahun】: ${cleanYear || b.year || '未知'}${b.pubDate ? ' (' + b.pubDate + ')' : ''}\n【页数/Muka Surat】: ${cleanPages || b.pages || '未知'}\n【ISBN】: ${cleanIsbn || '无'}${b.url ? '\n【来源链接/URL】: ' + b.url : ''}\n\n【内容概述/Sinopsis】:\n${summary || '无'}\n\n【启示与品德/Nilai Murni & Pengajaran】:\n${insight || '无'}`;
       }
+
+      // Attach stealth JSON payload for 100% loss-less parsing by Tampermonkey companion
+      fullText += `\n\n<!--AINS_PAYLOAD:${JSON.stringify(ainsPayload)}-->`;
+
       copyText(fullText, t('fullCopyLabel', title));
 
       // Feature 2: Pipeline Auto-Advance Next Volume
@@ -5716,8 +5747,8 @@
           <!-- Full Copy Bar & Sequential Smart Copy Queue -->
           <div class="full-copy-bar" style="display: flex; gap: 8px; flex-wrap: wrap; justify-content: space-between; align-items: center;">
             <div class="seq-copy-group">
-              <button class="btn-seq-copy" id="btn-seq-${b.id}" onclick="copySequentialStep('${b.id}', this)" title="${currentLang === 'ms' ? 'Salin ikut turutan borang AINS NILAM: Tajuk > Penulis > Penerbit > Tahun > Muka Surat > Rumusan (Tekan Bar Ruang)' : (currentLang === 'en' ? 'AINS NILAM sequential copy: Title > Author > Publisher > Year > Pages > Rumusan (Press Space)' : 'AINS 顺序连击复制：书名 > 作者 > 出版社 > 年份 > 页数 > 读后感总结 (支持空格键)')}">
-                <span>⚡ 连击复制 (AINS)</span> <span class="badge-step" id="seq-step-badge-${b.id}">[1/6 ${currentLang === 'ms' ? 'Tajuk' : (currentLang === 'en' ? 'Title' : '书名')}]</span>
+              <button class="btn-seq-copy" id="btn-seq-${b.id}" onclick="copySequentialStep('${b.id}', this)" title="${currentLang === 'ms' ? 'Salin ikut turutan borang AINS NILAM: Tajuk > Penulis > Penerbit > Tahun > Muka Surat > ISBN > Rumusan > Pengajaran (Tekan Bar Ruang)' : (currentLang === 'en' ? 'AINS NILAM sequential copy: Title > Author > Publisher > Year > Pages > ISBN > Rumusan > Pengajaran (Press Space)' : 'AINS 顺序连击复制：书名 > 作者 > 出版社 > 年份 > 页数 > ISBN > 读后总结 > 品德启示 (支持空格键)')}">
+                <span>⚡ 连击复制 (AINS)</span> <span class="badge-step" id="seq-step-badge-${b.id}">[1/8 ${currentLang === 'ms' ? 'Tajuk' : (currentLang === 'en' ? 'Title' : '书名')}]</span>
               </button>
               <button class="btn btn-outline" style="font-size: 0.8rem; white-space: nowrap;" onclick="copyFullVolume(getAllBooks().find(x => x.id === '${b.id}'))">
                 <svg class="g-icon"><use href="#icon-copy"></use></svg> ${t('btnCopyFull')}
