@@ -2460,6 +2460,62 @@
         transition-duration: 0.001ms !important;
       }
     }
+      /* Cloud Sync Indicators & Badges */
+    .sync-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #647087;
+      margin-right: 6px;
+      transition: all 0.3s ease;
+      vertical-align: middle;
+    }
+    .sync-dot.connected {
+      background: #10b981;
+      box-shadow: 0 0 8px #10b981;
+    }
+    .sync-dot.syncing {
+      background: #f59e0b;
+      box-shadow: 0 0 8px #f59e0b;
+      animation: syncPulse 1s infinite alternate;
+    }
+    .sync-dot.error {
+      background: #ef4444;
+      box-shadow: 0 0 8px #ef4444;
+    }
+    @keyframes syncPulse {
+      0% { transform: scale(0.85); opacity: 0.7; }
+      100% { transform: scale(1.25); opacity: 1; }
+    }
+    .badge-status-chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.2rem 0.65rem;
+      border-radius: 9999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+    .badge-status-chip.badge-offline {
+      background: rgba(100, 112, 135, 0.2);
+      color: #9aa2b2;
+      border: 1px solid rgba(100, 112, 135, 0.3);
+    }
+    .badge-status-chip.badge-online {
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.4);
+    }
+    .badge-status-chip.badge-syncing {
+      background: rgba(245, 158, 11, 0.15);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.4);
+    }
+    .badge-status-chip.badge-error {
+      background: rgba(239, 68, 68, 0.15);
+      color: #fca5a5;
+      border: 1px solid rgba(239, 68, 68, 0.4);
+    }
   </style>
 </head>
 <body>
@@ -2592,7 +2648,11 @@
       <symbol id="icon-link-gold" viewBox="0 0 24 24">
         <path fill="currentColor" d="M3.9 12C3.9 10.29 5.29 8.9 7 8.9H11V7H7C4.24 7 2 9.24 2 12C2 14.76 4.24 17 7 17H11V15.1H7C5.29 15.1 3.9 13.71 3.9 12ZM8 13H16V11H8V13ZM17 7H13V8.9H17C18.71 8.9 20.1 10.29 20.1 12C20.1 13.71 18.71 15.1 17 15.1H13V17H17C19.76 17 22 14.76 22 12C22 9.24 19.76 7 17 7Z"/>
       </symbol>
-    </defs>
+            <!-- Cloud Icon -->
+        <symbol id="icon-cloud" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M19.35 10.04C18.67 6.59 15.64 4 12 4C9.11 4 6.6 5.64 5.35 8.04C2.34 8.36 0 10.91 0 14C0 17.31 2.69 20 6 20H19C21.76 20 24 17.76 24 15C24 12.36 21.95 10.22 19.35 10.04ZM19 18H6C3.79 18 2 16.21 2 14C2 11.95 3.53 10.24 5.56 10.03L6.63 9.92L7.13 8.97C8.08 7.14 9.94 6 12 6C14.62 6 16.88 7.86 17.39 10.43L17.69 11.93L19.22 12.04C20.78 12.14 22 13.45 22 15C22 16.65 20.65 18 19 18Z"/>
+        </symbol>
+      </defs>
   </svg>
 
   <!-- Sticky Dark Header -->
@@ -2626,7 +2686,11 @@
         <button class="btn btn-outline" id="btn-backup-data" onclick="exportData()" title="导出完整JSON备份数据">
           <span id="btn-text-backup">💾 备份</span>
         </button>
-        <button class="btn btn-outline" id="btn-restore-data" onclick="importData()" title="从JSON文件恢复数据">
+        <button class="btn btn-outline" id="btn-cloud-sync" onclick="openSyncModal()" title="云端多端同步 / Cloud Sync">
+            <span class="sync-dot" id="sync-dot-indicator"></span>
+            <svg class="g-icon"><use href="#icon-cloud"></use></svg> <span id="btn-text-sync">☁️ 云同步</span>
+          </button>
+          <button class="btn btn-outline" id="btn-restore-data" onclick="importData()" title="'从JSON文件恢复数据">
           <span id="btn-text-restore">📂 恢复</span>
         </button>
 
@@ -3048,6 +3112,53 @@
     </div>
   </div>
 
+    <!-- Cloud Sync Modal -->
+  <div class="modal-overlay" id="sync-modal">
+    <div class="modal-box" style="max-width: 520px;">
+      <div class="modal-header">
+        <h2>
+          <span>☁️</span> <span id="modal-sync-heading">多端云端自动同步</span>
+        </h2>
+        <button class="btn-close-modal" onclick="closeSyncModal()">&times;</button>
+      </div>
+      <div style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary); margin-bottom: 1.2rem;" id="modal-sync-desc">
+        无论在手机、平板或不同电脑浏览器，只要设置并输入相同的专属暗号，读书勾选与收藏进度将全自动实时同步！
+      </div>
+
+      <div style="background: var(--card-inner); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; margin-bottom: 1.2rem;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
+          <span style="font-size: 0.85rem; font-weight: 600; color: var(--text-muted);" id="lbl-sync-status-title">当前云端状态</span>
+          <span id="sync-badge-status" class="badge-status-chip badge-offline">● 纯本地模式</span>
+        </div>
+        <div id="sync-connected-info" style="font-size: 0.95rem; font-weight: bold; color: var(--gold-primary); word-break: break-all;">
+          无专属暗号（仅本地保存）
+        </div>
+      </div>
+
+      <div class="form-group" style="margin-bottom: 1.2rem;">
+        <label style="display: block; margin-bottom: 0.4rem; font-weight: 600; color: var(--text-main);" id="lbl-sync-code-input">专属同步暗号 (PIN / 识别码)：</label>
+        <div style="display: flex; gap: 8px;">
+          <input type="text" id="input-sync-code" placeholder="例如: xiaoche-8888 或自定义" style="flex: 1; padding: 0.6rem 0.8rem; background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-sm); color: var(--text-main); font-size: 0.95rem;">
+          <button type="button" class="btn btn-outline" onclick="generateRandomSyncCode()" title="随机生成一个暗号" style="white-space: nowrap;" id="btn-sync-random">
+            🎲 随机暗号
+          </button>
+        </div>
+        <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.45rem;" id="lbl-sync-hint">
+          💡 建议使用您的名字加数字（如 xiaoche-8888），好记又专属！在手机上输入同一个暗号即可同步。
+        </div>
+      </div>
+
+      <div class="modal-footer" style="display: flex; gap: 10px; justify-content: flex-end;">
+        <button type="button" class="btn btn-outline" id="btn-sync-disconnect" onclick="disconnectCloudSync()" style="display: none; color: #ef4444; border-color: rgba(239, 68, 68, 0.4);">
+          🔌 断开连接
+        </button>
+        <button type="button" class="btn btn-gold" id="btn-sync-connect" onclick="connectAndSyncCloud()" style="min-width: 130px;">
+          🚀 连接并同步
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Toast -->
   <div id="toast">
     <svg class="g-icon g-icon-gold"><use href="#icon-check"></use></svg>
@@ -3058,6 +3169,7 @@
   <input type="file" id="file-input" style="display: none;" accept=".json" onchange="handleFileSelect(event)">
 
   <!-- Load Preset Database -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="data.js"></script>
   <script>
     // Storage Keys
@@ -3080,6 +3192,26 @@
     "btnPoster": "📢 业务推广海报",
     "btnBackup": "💾 备份",
     "btnRestore": "📂 恢复",
+    "btnSync": "☁️ 云同步",
+    "syncModalTitle": "多端云端自动同步",
+    "syncModalDesc": "无论在手机、平板或不同电脑浏览器，只要输入相同的专属暗号，读书勾选与收藏进度将全自动实时同步！",
+    "syncStatusTitle": "当前云端状态",
+    "syncBadgeOnline": "已连接云端",
+    "syncBadgeOffline": "纯本地模式",
+    "syncStatusSyncing": "同步中...",
+    "syncConnectedAs": "专属暗号：",
+    "syncNoCode": "无专属暗号（仅本地保存）",
+    "syncCodeLabel": "专属同步暗号 (PIN / 识别码)：",
+    "syncPlaceholder": "例如: xiaoche-8888 或自定义",
+    "syncHint": "💡 建议使用您的名字加数字（如 xiaoche-8888），好记又专属！在手机上输入同一个暗号即可同步。",
+    "btnGenerateCode": "🎲 随机暗号",
+    "btnConnectSync": "🚀 连接并同步",
+    "btnDisconnectSync": "🔌 断开连接",
+    "syncCodeRequired": "请输入专属同步暗号",
+    "syncSuccess": "云端同步成功！已载入最新进度",
+    "syncInitSuccess": "专属暗号已激活，本地数据已上传至云端！",
+    "syncDisconnected": "已断开云端连接，当前处于本地模式",
+    "syncErrorNetwork": "云端同步失败，请检查网络",
     "btnReset": "🔄 重置",
     "btnTools": "更多工具 ▾",
     "toolPrint": "打印读书清单 (A4)",
@@ -3269,6 +3401,26 @@
     "btnPoster": "📢 Poster Promosi Servis",
     "btnBackup": "💾 Sandaran",
     "btnRestore": "📂 Pulih",
+    "btnSync": "☁️ Segerak Awan",
+    "syncModalTitle": "Penyegerakan Awan Pelbagai Peranti",
+    "syncModalDesc": "Di telefon, tablet atau pelayar lain, hanya masukkan kod rahsia yang sama, kemajuan bacaan & penanda buku akan disegerakkan secara automatik!",
+    "syncStatusTitle": "Status Awan Semasa",
+    "syncBadgeOnline": "Disambung ke Awan",
+    "syncBadgeOffline": "Mod Tempatan Sahaja",
+    "syncStatusSyncing": "Menyegerak...",
+    "syncConnectedAs": "Kod Eksklusif: ",
+    "syncNoCode": "Tiada kod rahsia (simpanan tempatan)",
+    "syncCodeLabel": "Kod Segerak Eksklusif (PIN):",
+    "syncPlaceholder": "Cth: xiaoche-8888 atau tersuai",
+    "syncHint": "💡 Cadangan: gunakan nama anda + nombor (cth: xiaoche-8888). Masukkan kod yang sama di telefon untuk segerak.",
+    "btnGenerateCode": "🎲 Kod Rawak",
+    "btnConnectSync": "🚀 Sambung & Segerak",
+    "btnDisconnectSync": "🔌 Putuskan Sambungan",
+    "syncCodeRequired": "Sila masukkan kod rahsia segerak",
+    "syncSuccess": "Segerak awan berjaya! Kemajuan terkini dimuatkan",
+    "syncInitSuccess": "Kod rahsia diaktifkan, data tempatan dimuat naik ke awan!",
+    "syncDisconnected": "Sambungan awan diputuskan, kini dalam mod tempatan",
+    "syncErrorNetwork": "Gagal menyegerak ke awan, sila semak rangkaian",
     "btnReset": "🔄 Tetap Semula",
     "btnTools": "Alatan Lanjut ▾",
     "toolPrint": "Cetak Slip Bacaan (A4)",
@@ -3458,6 +3610,26 @@
     "btnPoster": "📢 Promo Poster",
     "btnBackup": "💾 Backup",
     "btnRestore": "📂 Restore",
+    "btnSync": "☁️ Cloud Sync",
+    "syncModalTitle": "Multi-Device Cloud Sync",
+    "syncModalDesc": "On your phone, tablet, or another browser, just enter the same exclusive sync code to automatically sync reading progress & bookmarks in real time!",
+    "syncStatusTitle": "Current Cloud Status",
+    "syncBadgeOnline": "Connected to Cloud",
+    "syncBadgeOffline": "Local Mode Only",
+    "syncStatusSyncing": "Syncing...",
+    "syncConnectedAs": "Sync Code: ",
+    "syncNoCode": "No sync code (local storage only)",
+    "syncCodeLabel": "Exclusive Sync Code (PIN):",
+    "syncPlaceholder": "e.g. xiaoche-8888 or custom",
+    "syncHint": "💡 Tip: Use your name + numbers (e.g. xiaoche-8888). Enter the same code on your phone to sync instantly.",
+    "btnGenerateCode": "🎲 Random Code",
+    "btnConnectSync": "🚀 Connect & Sync",
+    "btnDisconnectSync": "🔌 Disconnect",
+    "syncCodeRequired": "Please enter your sync code",
+    "syncSuccess": "Cloud sync successful! Latest progress loaded",
+    "syncInitSuccess": "Sync code activated! Local data uploaded to cloud",
+    "syncDisconnected": "Cloud disconnected, now in local mode",
+    "syncErrorNetwork": "Cloud sync failed, please check your connection",
     "btnReset": "🔄 Reset",
     "btnTools": "More Tools ▾",
     "toolPrint": "Print Reading Slip (A4)",
@@ -4040,6 +4212,17 @@
       if (el('btn-random-book')) el('btn-random-book').title = t('btnRandomBook');
       if (el('btn-backup-data')) el('btn-backup-data').title = t('btnBackup');
       if (el('btn-restore-data')) el('btn-restore-data').title = t('btnRestore');
+        if (el('btn-cloud-sync')) el('btn-cloud-sync').title = t('btnSync');
+        if (el('btn-text-sync')) el('btn-text-sync').innerText = t('btnSync');
+        if (el('modal-sync-heading')) el('modal-sync-heading').innerText = t('syncModalTitle');
+        if (el('modal-sync-desc')) el('modal-sync-desc').innerText = t('syncModalDesc');
+        if (el('lbl-sync-status-title')) el('lbl-sync-status-title').innerText = t('syncStatusTitle');
+        if (el('lbl-sync-code-input')) el('lbl-sync-code-input').innerText = t('syncCodeLabel');
+        if (el('input-sync-code')) el('input-sync-code').placeholder = t('syncPlaceholder');
+        if (el('btn-sync-random')) el('btn-sync-random').innerText = t('btnGenerateCode');
+        if (el('lbl-sync-hint')) el('lbl-sync-hint').innerText = t('syncHint');
+        if (el('btn-sync-disconnect')) el('btn-sync-disconnect').innerText = t('btnDisconnectSync');
+        if (el('btn-sync-connect')) el('btn-sync-connect').innerText = t('btnConnectSync');
       if (el('btn-tools-trigger')) el('btn-tools-trigger').title = t('btnTools');
       if (el('timer-sound-test-btn')) el('timer-sound-test-btn').title = t('timerSoundTest');
 
@@ -4181,9 +4364,13 @@
     function saveState() {
       localStorage.setItem(KEY_STATUS, JSON.stringify(Array.from(completedSet)));
       localStorage.setItem(KEY_CUSTOM, JSON.stringify(customBooks));
+      localStorage.setItem('nilam_bookmarks_v1', JSON.stringify(Array.from(bookmarkedSet)));
       updateSeriesTabs();
       updateStats();
       updateJumpSelect();
+      if (typeof triggerAutoCloudSync === 'function') {
+        triggerAutoCloudSync();
+      }
     }
 
     function showToast(msg) {
@@ -5678,6 +5865,7 @@
 
       // Initialize 2.5D Layered Depth Parallax
       initSmoothParallax();
+        initCloudSync();
     });
   
     // ====================================================
@@ -5841,6 +6029,261 @@
       setTimeout(() => {
         if (el && el.classList) el.classList.remove('has-chromatic-afterimage');
       }, 350);
+    }
+
+    // ====================================================
+    // Supabase Cloud Sync Engine (Cross-Device Real-Time)
+    // ====================================================
+    const SUPABASE_URL = 'https://oyjakgyfymwsvdzuwnpv.supabase.co';
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im95amFrZ3lmeW13c3ZkenV3bnB2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODkxNTcxNTksImV4cCI6MjEwNDczMzE1OX0.7FW5o5Jp_y29KUHFAzA_E56RLfFPOR057RJRHpichxc';
+    const KEY_SYNC_CODE = 'nilam_cloud_sync_code_v1';
+    
+    let supabaseClient = null;
+    let cloudSyncDebounceTimer = null;
+
+    function initSupabaseClient() {
+      if (!supabaseClient && window.supabase && typeof window.supabase.createClient === 'function') {
+        try {
+          supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        } catch (err) {
+          console.error('Supabase init failed:', err);
+        }
+      }
+      return supabaseClient;
+    }
+
+    function getSavedSyncCode() {
+      return (localStorage.getItem(KEY_SYNC_CODE) || '').trim();
+    }
+
+    function updateSyncStatusUI(status, code) {
+      const dot = document.getElementById('sync-dot-indicator');
+      const badge = document.getElementById('sync-badge-status');
+      const info = document.getElementById('sync-connected-info');
+      const disconnectBtn = document.getElementById('btn-sync-disconnect');
+      const input = document.getElementById('input-sync-code');
+      const currentCode = (code !== undefined ? code : getSavedSyncCode()).trim();
+
+      if (dot) {
+        dot.className = 'sync-dot';
+        if (status === 'connected' || status === 'synced') dot.classList.add('connected');
+        else if (status === 'syncing') dot.classList.add('syncing');
+        else if (status === 'error') dot.classList.add('error');
+      }
+
+      if (badge) {
+        badge.className = 'badge-status-chip';
+        if (status === 'connected' || status === 'synced') {
+          badge.classList.add('badge-online');
+          badge.innerText = `● ${t('syncBadgeOnline') || '已连接云端'}`;
+        } else if (status === 'syncing') {
+          badge.classList.add('badge-syncing');
+          badge.innerText = `● ${t('syncStatusSyncing') || '同步中...'}`;
+        } else if (status === 'error') {
+          badge.classList.add('badge-error');
+          badge.innerText = `● 网络异常`;
+        } else {
+          badge.classList.add('badge-offline');
+          badge.innerText = `● ${t('syncBadgeOffline') || '纯本地模式'}`;
+        }
+      }
+
+      if (info) {
+        if (currentCode) {
+          info.innerHTML = `${t('syncConnectedAs') || '专属暗号：'}<span style="color: var(--gold-primary); text-decoration: underline;">${currentCode}</span>`;
+        } else {
+          info.innerText = t('syncNoCode') || '无专属暗号（仅本地保存）';
+        }
+      }
+
+      if (disconnectBtn) {
+        disconnectBtn.style.display = currentCode ? 'inline-block' : 'none';
+      }
+      if (input && currentCode && !input.value) {
+        input.value = currentCode;
+      }
+    }
+
+    function openSyncModal() {
+      const modal = document.getElementById('sync-modal');
+      if (modal) {
+        modal.classList.add('active');
+        const code = getSavedSyncCode();
+        updateSyncStatusUI(code ? 'connected' : 'offline', code);
+      }
+    }
+
+    function closeSyncModal() {
+      const modal = document.getElementById('sync-modal');
+      if (modal) modal.classList.remove('active');
+    }
+
+    function generateRandomSyncCode() {
+      const chars = '23456789ABCDEFGHJKLMNPQRSTUVWXYZ';
+      let rand = '';
+      for (let i = 0; i < 4; i++) {
+        rand += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+      const newCode = 'NLM-' + rand;
+      const input = document.getElementById('input-sync-code');
+      if (input) input.value = newCode;
+    }
+
+    async function pushToCloud(codeOverride) {
+      const code = (codeOverride || getSavedSyncCode()).trim();
+      if (!code) return;
+      const client = initSupabaseClient();
+      if (!client) return;
+
+      updateSyncStatusUI('syncing', code);
+      try {
+        const payload = {
+          completed: Array.from(completedSet),
+          bookmarked: Array.from(bookmarkedSet),
+          customBooks: customBooks || [],
+          clientUpdatedAt: new Date().toISOString()
+        };
+
+        const { error } = await client
+          .from('nilam_sync')
+          .upsert({
+            sync_code: code,
+            data: payload,
+            updated_at: new Date().toISOString()
+          }, { onConflict: 'sync_code' });
+
+        if (error) {
+          console.error('Supabase push error:', error);
+          updateSyncStatusUI('error', code);
+        } else {
+          updateSyncStatusUI('synced', code);
+        }
+      } catch (e) {
+        console.error('pushToCloud exception:', e);
+        updateSyncStatusUI('error', code);
+      }
+    }
+
+    async function pullFromCloud(codeOverride, showFeedback = true) {
+      const code = (codeOverride || getSavedSyncCode()).trim();
+      if (!code) return false;
+      const client = initSupabaseClient();
+      if (!client) return false;
+
+      updateSyncStatusUI('syncing', code);
+      try {
+        const { data, error } = await client
+          .from('nilam_sync')
+          .select('data, updated_at')
+          .eq('sync_code', code)
+          .maybeSingle();
+
+        if (error) {
+          console.error('Supabase pull error:', error);
+          if (showFeedback) showToast(t('syncErrorNetwork') || '云端同步失败，请检查网络');
+          updateSyncStatusUI('error', code);
+          return false;
+        }
+
+        if (data && data.data) {
+          const cloudCompleted = Array.isArray(data.data.completed) ? data.data.completed : [];
+          const cloudBookmarked = Array.isArray(data.data.bookmarked) ? data.data.bookmarked : [];
+          const cloudCustom = Array.isArray(data.data.customBooks) ? data.data.customBooks : [];
+
+          // Merge union so no readings are lost
+          cloudCompleted.forEach(id => completedSet.add(id));
+          cloudBookmarked.forEach(id => bookmarkedSet.add(id));
+
+          if (cloudCustom.length > 0) {
+            const existingIds = new Set(customBooks.map(x => x.id));
+            cloudCustom.forEach(cb => {
+              if (!existingIds.has(cb.id)) customBooks.push(cb);
+            });
+          }
+
+          localStorage.setItem(KEY_STATUS, JSON.stringify(Array.from(completedSet)));
+          localStorage.setItem('nilam_bookmarks_v1', JSON.stringify(Array.from(bookmarkedSet)));
+          localStorage.setItem(KEY_CUSTOM, JSON.stringify(customBooks));
+          updateSeriesTabs();
+          updateStats();
+          updateJumpSelect();
+          render();
+
+          // Push merged union back to cloud
+          await pushToCloud(code);
+
+          if (showFeedback) showToast(t('syncSuccess') || '云端同步成功！已载入最新进度');
+          updateSyncStatusUI('synced', code);
+          return true;
+        } else {
+          // New sync code on cloud: initialize with local data
+          await pushToCloud(code);
+          if (showFeedback) showToast(t('syncInitSuccess') || '专属暗号已激活，本地数据已上传至云端！');
+          updateSyncStatusUI('synced', code);
+          return true;
+        }
+      } catch (e) {
+        console.error('pullFromCloud exception:', e);
+        if (showFeedback) showToast(t('syncErrorNetwork') || '云端连接异常');
+        updateSyncStatusUI('error', code);
+        return false;
+      }
+    }
+
+    async function connectAndSyncCloud() {
+      const input = document.getElementById('input-sync-code');
+      const code = input ? input.value.trim() : '';
+      if (!code) {
+        showToast(t('syncCodeRequired') || '请输入专属同步暗号');
+        return;
+      }
+
+      const connectBtn = document.getElementById('btn-sync-connect');
+      if (connectBtn) {
+        connectBtn.disabled = true;
+        connectBtn.innerText = '同步中...';
+      }
+
+      const success = await pullFromCloud(code, true);
+      if (success) {
+        localStorage.setItem(KEY_SYNC_CODE, code);
+        updateSyncStatusUI('synced', code);
+        setTimeout(() => closeSyncModal(), 500);
+      }
+      if (connectBtn) {
+        connectBtn.disabled = false;
+        connectBtn.innerText = t('btnConnectSync') || '🚀 连接并同步';
+      }
+    }
+
+    function disconnectCloudSync() {
+      localStorage.removeItem(KEY_SYNC_CODE);
+      const input = document.getElementById('input-sync-code');
+      if (input) input.value = '';
+      updateSyncStatusUI('offline', '');
+      showToast(t('syncDisconnected') || '已断开云端连接，当前处于本地模式');
+      closeSyncModal();
+    }
+
+    function triggerAutoCloudSync() {
+      const code = getSavedSyncCode();
+      if (!code) return;
+      if (cloudSyncDebounceTimer) clearTimeout(cloudSyncDebounceTimer);
+      updateSyncStatusUI('syncing', code);
+      cloudSyncDebounceTimer = setTimeout(() => {
+        pushToCloud(code);
+      }, 1200);
+    }
+
+    function initCloudSync() {
+      initSupabaseClient();
+      const initialSyncCode = getSavedSyncCode();
+      if (initialSyncCode) {
+        updateSyncStatusUI('syncing', initialSyncCode);
+        pullFromCloud(initialSyncCode, false);
+      } else {
+        updateSyncStatusUI('offline', '');
+      }
     }
 
     // ====================================================
