@@ -4662,25 +4662,26 @@
         }
       }
       if (field === 'insight') {
+        const sName = getBookField(b, 'series');
         const volNum = getCleanVol(b.vol) || 1;
         const vInt = parseInt(volNum) || 1;
 
         if (currentLang === 'ms') {
           const msInsights = [
-            'Karya ini menyemai nilai kegigihan, keberanian dan hemah tinggi. Keazaman watak mendidik kita bahawa kejayaan hanya digapai melalui usaha gigih tanpa gentar menghadapi kegagalan.',
-            'Jilid ini mengajar kepentingan kerjasama berpasukan dan sikap bertanggungjawab. Bersatu hati dan saling mempercayai merupakan kunci utama merungkai kesulitan rumit dalam hidup.',
-            'Nilai murni yang diketengahkan ialah rasionaliti, kesabaran dan keadilan. Membuat pertimbangan matang sewaktu emosi teruji adalah asas pembentukan sahsiah terpuji.',
-            'Buku ini menekankan nilai kasih sayang, kesyukuran dan kesederhanaan. Menghargai setiap peluang dan sokongan orang di sekeliling membina jati diri yang kental dan berbudi bahasa.',
-            'Pengajaran penting ialah kejujuran, disiplin diri dan hemah tinggi. Integriti dalam setiap tindakan adalah kompas moral yang memimpin kita menuju kecemerlangan berkekalan.'
+            `Menerusi jilid ke-${volNum} siri ${sName} ini, dipaparkan dengan mendalam kecekalan jiwa watak utama dalam mempertahankan prinsip kebenaran dan nilai kegigihan sewaktu mendepani krisis mencabar. Sebagai murid, iktibar ini mendidik kita supaya bangkit mengatasi kemerosotan prestasi dengan tekun berusaha tanpa mengeluh.`,
+            `Penceritaan naskhah jilid ${volNum} (${sName}) menekankan betapa pentingnya kerjasama dan tanggungjawab sesama rakan dalam mengharungi ujian getir. Semasa melaksanakan tugasan berkumpulan di sekolah, kita wajar mengikis sikap mementingkan diri dan sentiasa menghargai sumbangan rakan demi mencapai matlamat bersama.`,
+            `Kisah dalam jilid ke-${volNum} siri ${sName} menyedarkan pembaca bahawa kejayaan sejati lahir daripada pertimbangan rasional dan hemah tinggi, bukan tindakan melulu berlandaskan emosi. Pengajaran ini membimbing para remaja agar sentiasa berfikiran waras, menjauhi pengaruh negatif dan mengamalkan adab sopan dalam pergaulan harian.`,
+            `Menghayati jilid ${volNum} karya ${sName} ini menonjolkan nilai kasih sayang, kesyukuran dan kejujuran dalam memelihara keharmonian persahabatan. Sebagai ahli masyarakat penyayang, kita diseru untuk prihatin membantu sahabat yang ditimpa kesusahan serta sentiasa menzahirkan rasa syukur atas sokongan keluarga dan guru.`,
+            `Naratif jilid ke-${volNum} siri ${sName} ini mengajar kita disiplin kendiri, berdikari dan keadilan sosial yang tidak berbelah bahagi. Iktibar ini membimbing para murid agar sentiasa teguh memegang prinsip integriti walau diasak oleh pelbagai rintangan dalam kehidupan seharian.`
           ];
           return msInsights[vInt % msInsights.length];
         } else {
           const enInsights = [
-            'This volume fosters resilience, courage, and moral dignity, demonstrating that triumph is earned through relentless dedication and perseverance in the face of hardship.',
-            'The work underlines the indispensable value of teamwork and shared accountability, illustrating that mutual trust overcomes daunting obstacles.',
-            'Key moral reflections center on rationality, patience, and fair-minded integrity, emphasizing thoughtful decision-making in turbulent circumstances.',
-            'Readers are guided toward empathy, gratitude, and moderation, realizing that humility and social solidarity form the bedrock of enduring personal character.',
-            'The core virtue is personal discipline, honesty, and high courtesy, serving as an upright moral compass for youth navigating personal development.'
+            `Throughout Volume ${volNum} of ${sName}, the narrative compellingly demonstrates the unwavering resolve and perseverance required to defend moral principles amidst adversity. In everyday student life, this teaches us to overcome scholastic setbacks through deliberate practice and disciplined consistency rather than despair.`,
+            `In this installment (Vol. ${volNum}) of ${sName}, readers witness how teamwork and shared accountability consistently outperform isolated individual effort. During collaborative classroom projects, setting aside personal ego and pursuing collective goals with integrity lead to enduring success.`,
+            `Exploring Volume ${volNum} in the ${sName} series illustrates how rationality and high courtesy empower individuals to navigate intense interpersonal friction with maturity. This guides youth to maintain balanced judgment amidst social pressures, uphold personal honor, and treat peers with respectful dignity.`,
+            `The storyline in Volume ${volNum} of ${sName} underscores compassion, honesty, and heartfelt gratitude as the bedrock of authentic human bonds. In our social interactions, offering sincere encouragement to struggling companions and practicing daily gratitude strengthens our moral foundation.`,
+            `Volume ${volNum} of ${sName} inspires self-reliance and civic justice, showing that genuine personal growth requires moral courage and ethical steadfastness. Approaching our academic and personal goals with principled discipline enables young readers to thrive with resilience.`
           ];
           return enInsights[vInt % enInsights.length];
         }
