@@ -4606,6 +4606,12 @@
     function getBookField(b, field) {
       if (!b) return '';
       if (!currentLang || currentLang === 'zh') {
+        if (b[field]) return b[field];
+        if (field === 'insight') {
+          const sName = b.series || b.title || '这本书';
+          const volNum = (typeof getCleanVol === 'function' ? getCleanVol(b.vol) : b.vol) || 1;
+          return `读完《${sName}》第${volNum}卷，我心里真的很受触动。故事里主角在面对困难时那种坚持不懈和积极面对的勇气深深感染了我。在平时的学校生活中，如果我遇到考试考得不好或者功课遇到难题，我不应该自暴自弃或者抱怨，而是要脚踏实地把不懂的问题搞懂，努力提升自己。`;
+        }
         return b[field] || '';
       }
 
