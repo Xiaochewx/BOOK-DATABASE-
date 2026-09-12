@@ -14,7 +14,24 @@
       --card-inner-hover: #161a28;
       
       /* Zero-GPU High-End Frosted Glass System (Pure CSS Pseudo-Glassmorphism) */
-      --glass-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(24, 28, 42, 0.82) 40%, rgba(15, 18, 28, 0.92) 100%);
+            /* Pure Dark Luxury Obsidian Frosted Glass (100% Dark Gaussian Blur - Zero Rainbow) */
+      --glass-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(18, 22, 34, 0.72) 40%, rgba(11, 14, 22, 0.85) 100%);
+      --glass-bg-hover: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(24, 30, 46, 0.78) 40%, rgba(14, 18, 28, 0.90) 100%);
+      --glass-card-inner: rgba(9, 12, 20, 0.58);
+      --glass-border: 1px solid rgba(255, 255, 255, 0.08);
+      --glass-border-gold: 1px solid rgba(212, 175, 55, 0.38);
+      --glass-border-hover: 1px solid rgba(212, 175, 55, 0.60);
+      --glass-specular: inset 0 1px 1px 0 rgba(255, 255, 255, 0.14), inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+      --glass-shadow: var(--glass-specular), 0 14px 40px rgba(0, 0, 0, 0.55);
+      --glass-shadow-hover: inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.22), 0 20px 50px rgba(0, 0, 0, 0.70), 0 0 22px rgba(212, 175, 55, 0.18);
+      --glass-blur: blur(28px) saturate(140%) brightness(1.02);
+      --glass-blur-sm: blur(14px) saturate(130%);
+      --glass-blur-lg: blur(40px) saturate(150%) brightness(1.03);
+
+      /* High-Performance Elastic Spring Physics Easing */
+      --ease-spring-snappy: cubic-bezier(0.34, 1.56, 0.64, 1);
+      --ease-spring-gentle: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-spring-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
       --glass-bg-hover: linear-gradient(135deg, rgba(255, 255, 255, 0.075) 0%, rgba(30, 36, 52, 0.88) 40%, rgba(18, 22, 34, 0.95) 100%);
       --glass-card-inner: rgba(12, 15, 22, 0.72);
       --glass-border: 1px solid rgba(255, 255, 255, 0.08);
@@ -2527,7 +2544,24 @@
       --card-inner: #f8fafc;
       --card-inner-hover: #f1f5f9;
       
-      --glass-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(248, 250, 252, 0.92) 100%);
+            /* Pure Dark Luxury Obsidian Frosted Glass (100% Dark Gaussian Blur - Zero Rainbow) */
+      --glass-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(18, 22, 34, 0.72) 40%, rgba(11, 14, 22, 0.85) 100%);
+      --glass-bg-hover: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(24, 30, 46, 0.78) 40%, rgba(14, 18, 28, 0.90) 100%);
+      --glass-card-inner: rgba(9, 12, 20, 0.58);
+      --glass-border: 1px solid rgba(255, 255, 255, 0.08);
+      --glass-border-gold: 1px solid rgba(212, 175, 55, 0.38);
+      --glass-border-hover: 1px solid rgba(212, 175, 55, 0.60);
+      --glass-specular: inset 0 1px 1px 0 rgba(255, 255, 255, 0.14), inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+      --glass-shadow: var(--glass-specular), 0 14px 40px rgba(0, 0, 0, 0.55);
+      --glass-shadow-hover: inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.22), 0 20px 50px rgba(0, 0, 0, 0.70), 0 0 22px rgba(212, 175, 55, 0.18);
+      --glass-blur: blur(28px) saturate(140%) brightness(1.02);
+      --glass-blur-sm: blur(14px) saturate(130%);
+      --glass-blur-lg: blur(40px) saturate(150%) brightness(1.03);
+
+      /* High-Performance Elastic Spring Physics Easing */
+      --ease-spring-snappy: cubic-bezier(0.34, 1.56, 0.64, 1);
+      --ease-spring-gentle: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-spring-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
       --glass-bg-hover: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
       --glass-card-inner: #f8fafc;
       --glass-border: 1px solid rgba(0, 0, 0, 0.08);
@@ -2881,9 +2915,249 @@
       border-color: var(--gold-primary);
       color: var(--gold-primary);
     }
+
+    /* ==================================================== */
+    
+    /* ==================================================== */
+    /* Master Spring Physics & Bouncy Tactile Micro-Interactions */
+    /* ==================================================== */
+
+    /* 1. Universal Tactile Click Recoil on All Interactive Elements */
+    .btn, 
+    .btn-seq-copy, 
+    .btn-copy-step, 
+    .btn-copy-full, 
+    .status-toggle-btn, 
+    .btn-bookmark, 
+    .timer-btn, 
+    .timer-preset-btn, 
+    .mini-timer-btn, 
+    .btn-page, 
+    .filter-tab, 
+    .series-tab, 
+    .shelf-cat-btn, 
+    .btn-toggle-stats-detail, 
+    .btn-toggle-shelf, 
+    .btn-lang, 
+    .dropdown-item, 
+    .badge-nilai-murni,
+    .btn-delete-card,
+    .timer-sound-test,
+    .timer-min-btn {
+      transition: transform 0.38s var(--ease-spring-snappy), 
+                  box-shadow 0.28s ease, 
+                  background 0.2s ease, 
+                  border-color 0.2s ease, 
+                  color 0.2s ease !important;
+      will-change: transform;
+    }
+
+    /* Spring Compression on Click/Active (物理按压弹性回弹) */
+    .btn:active, 
+    .btn-seq-copy:active, 
+    .btn-copy-step:active, 
+    .btn-copy-full:active, 
+    .status-toggle-btn:active, 
+    .btn-bookmark:active, 
+    .timer-btn:active, 
+    .timer-preset-btn:active, 
+    .mini-timer-btn:active, 
+    .btn-page:active, 
+    .filter-tab:active, 
+    .series-tab:active, 
+    .shelf-cat-btn:active, 
+    .btn-toggle-stats-detail:active, 
+    .btn-toggle-shelf:active, 
+    .btn-lang:active, 
+    .dropdown-item:active, 
+    .badge-nilai-murni:active,
+    .btn-delete-card:active,
+    .timer-sound-test:active,
+    .timer-min-btn:active {
+      transform: scale(0.92) translateY(1px) !important;
+      transition: transform 0.08s cubic-bezier(0.2, 0, 0, 1) !important;
+    }
+
+    /* 2. Book Cards Bouncy Spring Hover & Active */
+    .vol-card {
+      transition: transform 0.42s var(--ease-spring-snappy),
+                  box-shadow 0.35s ease,
+                  border-color 0.25s ease,
+                  background 0.25s ease !important;
+      will-change: transform;
+    }
+    .vol-card:hover {
+      transform: translateY(-6px) scale(1.015) !important;
+      border-color: var(--glass-border-hover) !important;
+      box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.2), 0 20px 48px rgba(0, 0, 0, 0.65), 0 0 22px var(--gold-glow) !important;
+    }
+    .vol-card:active {
+      transform: translateY(-2px) scale(0.992) !important;
+      transition: transform 0.1s ease !important;
+    }
+
+    /* 3. Series Shelf Accordion Spring Transition (展开/收起弹性平滑动画) */
+    .series-tabs-wrapper {
+      width: 100%;
+      margin-top: 0.6rem;
+      display: grid;
+      grid-template-rows: 1fr;
+      transition: grid-template-rows 0.45s var(--ease-spring-snappy), 
+                  opacity 0.32s var(--ease-spring-gentle), 
+                  margin-top 0.35s ease;
+      opacity: 1;
+      overflow: hidden;
+    }
+    .series-tabs-wrapper > .series-tabs {
+      min-height: 0;
+      transition: transform 0.45s var(--ease-spring-snappy);
+      transform: translateY(0);
+    }
+    .series-tabs-wrapper.is-collapsed {
+      display: grid !important;
+      grid-template-rows: 0fr !important;
+      opacity: 0 !important;
+      margin-top: 0 !important;
+      pointer-events: none !important;
+    }
+    .series-tabs-wrapper.is-collapsed > .series-tabs {
+      transform: translateY(-16px) !important;
+    }
+    .btn-toggle-shelf {
+      transition: all 0.32s var(--ease-spring-snappy) !important;
+    }
+    .btn-toggle-shelf:hover {
+      transform: scale(1.05);
+    }
+    .btn-toggle-shelf .shelf-arrow-icon {
+      display: inline-block;
+      transition: transform 0.4s var(--ease-spring-snappy);
+    }
+    .is-shelf-open .btn-toggle-shelf .shelf-arrow-icon {
+      transform: rotate(180deg);
+    }
+
+    /* 4. Stats Detail Card Elastic Accordion */
+    .stats-card {
+      transition: max-height 0.48s var(--ease-spring-snappy), 
+                  opacity 0.35s var(--ease-spring-gentle), 
+                  transform 0.48s var(--ease-spring-snappy), 
+                  margin 0.35s ease, 
+                  padding 0.35s ease !important;
+      overflow: hidden;
+      max-height: 1400px;
+      transform-origin: top center;
+    }
+    .stats-card.hidden {
+      display: block !important;
+      max-height: 0 !important;
+      opacity: 0 !important;
+      transform: scaleY(0.92) translateY(-14px) !important;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+      border: none !important;
+      pointer-events: none !important;
+    }
+
+    /* 5. Modals Elastic Spring Pop In */
+    .modal-overlay {
+      transition: opacity 0.32s var(--ease-spring-gentle), visibility 0.32s var(--ease-spring-gentle), backdrop-filter 0.32s ease !important;
+    }
+    @keyframes modalSpringBounce {
+      0% { transform: scale(0.82) translateY(32px); opacity: 0; }
+      65% { transform: scale(1.03) translateY(-4px); opacity: 1; }
+      100% { transform: scale(1) translateY(0); opacity: 1; }
+    }
+    .modal-overlay.active .modal-box,
+    #roulette-modal.active .roulette-box {
+      animation: modalSpringBounce 0.45s var(--ease-spring-snappy) forwards !important;
+    }
+
+    /* 6. Floating Mini-Timer Dock Elastic Hover & Click */
+    .floating-mini-timer-dock {
+      transition: transform 0.42s var(--ease-spring-snappy), 
+                  opacity 0.28s var(--ease-spring-gentle), 
+                  box-shadow 0.3s ease, 
+                  background 0.25s ease, 
+                  border-color 0.25s ease !important;
+    }
+    .floating-mini-timer-dock:hover {
+      transform: scale(1.08) translateY(-3px) !important;
+      border-color: var(--gold-primary) !important;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7), 0 0 20px var(--gold-glow) !important;
+    }
+    .floating-mini-timer-dock:active {
+      transform: scale(0.93) !important;
+    }
+
+    /* 7. Timer Expanded Widget Elastic Spring Popup */
+    @keyframes timerSpringOpen {
+      0% { transform: scale(0.72) translateY(28px); opacity: 0; }
+      68% { transform: scale(1.035) translateY(-4px); opacity: 1; }
+      100% { transform: scale(1) translateY(0); opacity: 1; }
+    }
+    .timer-widget.is-open {
+      animation: timerSpringOpen 0.44s var(--ease-spring-snappy) forwards !important;
+    }
+
+    /* 8. Bottom Sticky Batch Bar Spring Slide Up */
+    @keyframes batchBarSpring {
+      0% { transform: translateX(-50%) translateY(120px); opacity: 0; }
+      68% { transform: translateX(-50%) translateY(-8px); opacity: 1; }
+      100% { transform: translateX(-50%) translateY(0); opacity: 1; }
+    }
+    .batch-bar-sticky.show,
+    .batch-bar-sticky.visible {
+      animation: batchBarSpring 0.46s var(--ease-spring-snappy) forwards !important;
+    }
+
+    /* 9. Dropdown Tools Menu Spring Dropdown */
+    @keyframes dropdownSpring {
+      0% { transform: scale(0.85) translateY(-16px); opacity: 0; }
+      70% { transform: scale(1.025) translateY(3px); opacity: 1; }
+      100% { transform: scale(1) translateY(0); opacity: 1; }
+    }
+    .dropdown-tools-wrap.open .dropdown-tools-menu,
+    .dropdown-tools-menu.active {
+      animation: dropdownSpring 0.36s var(--ease-spring-snappy) forwards !important;
+    }
+
+    /* 10. Toast Notification Spring Pop */
+    @keyframes toastSpringPop {
+      0% { transform: translateX(-50%) translateY(90px) scale(0.88); opacity: 0; }
+      65% { transform: translateX(-50%) translateY(-8px) scale(1.03); opacity: 1; }
+      100% { transform: translateX(-50%) translateY(0) scale(1); opacity: 1; }
+    }
+    #toast.show {
+      animation: toastSpringPop 0.45s var(--ease-spring-snappy) forwards !important;
+    }
+
+    /* 11. Sequential Copy Button Step Pop Animation */
+    @keyframes seqBtnStepPop {
+      0% { transform: scale(0.92); }
+      45% { transform: scale(1.06); }
+      75% { transform: scale(0.98); }
+      100% { transform: scale(1); }
+    }
+    .btn-seq-copy.step-popped {
+      animation: seqBtnStepPop 0.4s var(--ease-spring-snappy) !important;
+    }
+
+    /* 12. Bookmark Star Elastic Spin */
+    .btn-bookmark:hover {
+      transform: scale(1.35) rotate(18deg) !important;
+    }
+    .btn-bookmark:active {
+      transform: scale(0.82) rotate(-15deg) !important;
+    }
+
 </style>
 </head>
 <body>
+
+
 
   <!-- Comprehensive Vector Symbol Sprite Definition with ViewBox (24x24) -->
   <svg style="display: none;">
@@ -3037,9 +3311,9 @@
       <div class="header-actions">
         <!-- Language Switcher -->
         <div class="lang-switch-group" title="切换语言 / Tukar Bahasa / Switch Language">
-          <button class="btn-lang" id="btn-lang-zh" onclick="setLanguage('zh')">???? 中文</button>
-          <button class="btn-lang" id="btn-lang-ms" onclick="setLanguage('ms')">???? Melayu</button>
-          <button class="btn-lang" id="btn-lang-en" onclick="setLanguage('en')">???? English</button>
+          <button class="btn-lang" id="btn-lang-zh" onclick="setLanguage('zh')">🇨🇳 中文</button>
+          <button class="btn-lang" id="btn-lang-ms" onclick="setLanguage('ms')">🇲🇾 Melayu</button>
+          <button class="btn-lang" id="btn-lang-en" onclick="setLanguage('en')">🇬🇧 English</button>
         </div>
 
         <button class="btn btn-gold" id="btn-add-book" onclick="openAddModal()">
@@ -3049,40 +3323,40 @@
           <svg class="g-icon"><use href="#icon-dice"></use></svg> <span id="btn-text-random">盲盒抽书</span>
         </button>
         <button class="btn btn-outline" id="btn-backup-data" onclick="exportData()" title="导出完整JSON备份数据">
-          <span id="btn-text-backup">?? 备份</span>
+          <span id="btn-text-backup">💾 备份</span>
         </button>
         <button class="btn btn-outline" id="btn-cloud-sync" onclick="openSyncModal()" title="云端多端同步 / Cloud Sync">
             <span class="sync-dot" id="sync-dot-indicator"></span>
-            <svg class="g-icon"><use href="#icon-cloud"></use></svg> <span id="btn-text-sync">?? 云同步</span>
+            <svg class="g-icon"><use href="#icon-cloud"></use></svg> <span id="btn-text-sync">🔄 云同步</span>
           </button>
           <button class="btn btn-outline" id="btn-restore-data" onclick="importData()" title="'从JSON文件恢复数据">
-          <span id="btn-text-restore">?? 恢复</span>
+          <span id="btn-text-restore">📥 恢复</span>
         </button>
         <button class="btn btn-outline" id="btn-theme-toggle" onclick="toggleTheme()" title="切换明亮/暗黑主题">
-          <span id="theme-btn-icon">??</span> <span id="theme-btn-text">主题</span>
+          <span id="theme-btn-icon">🌙</span> <span id="theme-btn-text">主题</span>
         </button>
         <button class="btn btn-outline" id="btn-compact-toggle" onclick="toggleCompactMode()" title="分屏极简模式 (适合与AINS NILAM并排)">
-          <span id="compact-btn-icon">???</span> <span id="compact-btn-text">分屏模式</span>
+          <span id="compact-btn-icon">📱</span> <span id="compact-btn-text">分屏模式</span>
         </button>
 
         <!-- More Tools Dropdown Menu -->
         <div class="dropdown-tools-wrap" id="tools-dropdown-wrap">
           <button class="btn btn-outline" id="btn-tools-trigger" onclick="toggleToolsDropdown(event)" title="更多工具与报表">
-            <svg class="g-icon"><use href="#icon-book-gold"></use></svg> <span id="btn-text-tools">更多工具 ?</span>
+            <svg class="g-icon"><use href="#icon-book-gold"></use></svg> <span id="btn-text-tools">更多工具 ▾</span>
           </button>
           <div class="dropdown-tools-menu" id="tools-dropdown-menu">
             <button class="dropdown-item" onclick="openPrintModal()">
-              <span class="d-icon">???</span> <span id="d-item-print">打印读书清单 (A4)</span>
+              <span class="d-icon">🖨️</span> <span id="d-item-print">打印读书清单 (A4)</span>
             </button>
             <button class="dropdown-item" onclick="openShortcutsModal()">
-              <span class="d-icon">??</span> <span id="d-item-keys">键盘快捷键指南 (?)</span>
+              <span class="d-icon">⌨️</span> <span id="d-item-keys">键盘快捷键指南 (?)</span>
             </button>
             <div class="dropdown-divider"></div>
             <button class="dropdown-item" onclick="exportNilamCSV()">
-              <span class="d-icon">??</span> <span id="d-item-export">导出当前表格 (CSV)</span>
+              <span class="d-icon">📊</span> <span id="d-item-export">导出当前表格 (CSV)</span>
             </button>
             <button class="dropdown-item text-danger" onclick="resetCurrentSeries()">
-              <span class="d-icon">??</span> <span id="d-item-reset">重置当前系列完成状态</span>
+              <span class="d-icon">⚠️</span> <span id="d-item-reset">重置当前系列完成状态</span>
             </button>
           </div>
         </div>
@@ -3120,7 +3394,7 @@
           </button>
         </div>
         <button class="btn-toggle-shelf" id="btn-toggle-shelf" onclick="toggleShelfCollapse()">
-          <span id="shelf-toggle-text">展开全部系列 ?</span>
+          <span id="shelf-toggle-text">展开全部系列 ▾</span>
         </button>
       </div>
       <div class="series-tabs-wrapper is-collapsed" id="series-tabs-wrapper">
@@ -3182,7 +3456,7 @@
           </div>
 
           <button class="btn-toolbar-opt" id="btn-toggle-batch" onclick="toggleBatchMode()" title="批量操作模式 (快捷键: B)">
-            <span>?? 批量操作</span>
+            <span>⚡ 批量操作</span>
           </button>
         </div>
       </div>
@@ -3323,7 +3597,7 @@
 
         <div class="modal-footer">
           <button type="button" class="btn btn-outline" id="btn-add-cancel" onclick="closeAddModal()">取消</button>
-          <button type="submit" class="btn btn-gold" id="btn-add-submit">?? 保存并添加到系统</button>
+          <button type="submit" class="btn btn-gold" id="btn-add-submit">💾 保存并添加到系统</button>
         </div>
       </form>
     </div>
@@ -3332,7 +3606,7 @@
   <!-- Blind Box Lottery Roulette Modal -->
   <div id="roulette-modal" style="display: none; visibility: hidden; pointer-events: none;">
     <div class="roulette-box">
-      <div class="roulette-dice-icon">??</div>
+      <div class="roulette-dice-icon">🎲</div>
       <h2 id="roulette-heading" style="font-size: 1.4rem; font-weight: 800; color: #ffffff; letter-spacing: 1px;">
         盲盒天选抽书 · 正在探寻
       </h2>
@@ -3341,13 +3615,13 @@
       </p>
 
       <div class="roulette-title-slot">
-        <div id="roulette-series" class="roulette-series-tag">? 典藏检索中 ?</div>
+        <div id="roulette-series" class="roulette-series-tag">✨ 典藏检索中 ✨</div>
         <div id="roulette-name" class="roulette-book-name">火影忍者 (1) 漩涡鸣人</div>
       </div>
 
       <div style="display: flex; justify-content: center; gap: 0.8rem;">
         <button id="btn-roulette-go" class="btn btn-gold" style="padding: 0.65rem 1.8rem; font-size: 0.95rem; font-weight: 800; opacity: 0; pointer-events: none; transition: 0.2s;" onclick="finishRouletteJump()">
-          ?? 立即直达填报
+          🚀 立即直达填报
         </button>
       </div>
     </div>
@@ -3355,13 +3629,13 @@
 
   <!-- Top Alarm Floating Banner -->
   <div id="timer-alarm-modal" style="display: none;">
-    <div style="font-size: 2.2rem; line-height: 1;">??</div>
+    <div style="font-size: 2.2rem; line-height: 1;">⏰</div>
     <div>
       <div id="alarm-banner-title" style="font-size: 1.05rem; font-weight: 800; color: #ffffff;">3 分钟倒计时已到！</div>
       <div id="alarm-banner-desc" style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 2px;">Bahan 填报冷却已完成，现在可以开始 Key In 下一本了！</div>
     </div>
     <div style="display: flex; gap: 0.6rem; margin-left: 0.6rem;">
-      <button id="alarm-banner-btn-repeat" class="btn btn-gold" onclick="dismissTimerAlarm(true)">?? 再来 3 分钟</button>
+      <button id="alarm-banner-btn-repeat" class="btn btn-gold" onclick="dismissTimerAlarm(true)">⏰ 再来 3 分钟</button>
       <button id="alarm-banner-btn-dismiss" class="btn btn-outline" onclick="dismissTimerAlarm(false)">我知道了</button>
     </div>
   </div>
@@ -3376,7 +3650,7 @@
           <span id="timer-title-text">阅读倒计时</span>
         </div>
         <div style="display: flex; align-items: center; gap: 6px;">
-          <button id="timer-sound-test-btn" class="timer-sound-test" onclick="testChimeSound(event)" title="试听金属响铃声">?? 试听</button>
+          <button id="timer-sound-test-btn" class="timer-sound-test" onclick="testChimeSound(event)" title="试听金属响铃声">🔔 试听</button>
           <button class="timer-min-btn" id="timer-min-btn" onclick="toggleMinimizeTimer(event)">&minus;</button>
         </div>
       </div>
@@ -3394,17 +3668,17 @@
 
       <div class="timer-controls">
         <button id="btn-timer-toggle" class="timer-btn timer-btn-primary" onclick="toggleTimer(event)">
-          ? 开始倒计时
+          ▶️ 开始倒计时
         </button>
         <button id="btn-timer-reset" class="timer-btn timer-btn-secondary" onclick="resetTimer(event)">
-          ?? 重置
+          🔄 重置
         </button>
       </div>
 
       <div class="timer-setting-row">
         <label>
           <input type="checkbox" id="chk-auto-timer" checked onchange="toggleAutoTimer(event)">
-          <span id="chk-auto-timer-label">? 复制资料后自动开启</span>
+          <span id="chk-auto-timer-label">⚡ 复制资料后自动开启</span>
         </label>
       </div>
     </div>
@@ -3420,8 +3694,8 @@
       <div class="mini-timer-dot" id="mini-timer-dot"></div>
     </div>
     <span class="mini-timer-digits" id="dock-timer-digits">03:00</span>
-    <button class="mini-timer-btn" onclick="toggleTimer(event)" title="开始/暂停">?</button>
-    <button class="mini-timer-btn" onclick="resetTimer(event)" title="重置">??</button>
+    <button class="mini-timer-btn" id="dock-btn-toggle" onclick="toggleTimer(event)" title="开始/暂停">▶</button>
+    <button class="mini-timer-btn" onclick="resetTimer(event)" title="重置">⏹</button>
     <span class="dock-expand-hint" id="dock-expand-hint">展开</span>
   </div>
 
@@ -3441,7 +3715,7 @@
     <div class="modal-box" style="max-width: 800px;">
       <div class="modal-header">
         <h2>
-          <span style="font-size: 1.3rem;">???</span> <span id="modal-print-title">打印官方标准学生个人读书证明清单</span>
+          <span style="font-size: 1.3rem;">🖨️</span> <span id="modal-print-title">打印官方标准学生个人读书证明清单</span>
         </h2>
         <button class="btn-close-modal" onclick="closePrintModal()">&times;</button>
       </div>
@@ -3478,7 +3752,7 @@
 
         <div class="modal-footer" style="padding-top: 0;">
           <button type="button" class="btn btn-outline" id="btn-print-cancel" onclick="closePrintModal()">取消</button>
-          <button type="button" class="btn btn-gold" id="btn-print-execute" onclick="executePrintSlip()">??? 立即打印 / 保存 PDF</button>
+          <button type="button" class="btn btn-gold" id="btn-print-execute" onclick="executePrintSlip()">🖨️ 立即打印 / 保存 PDF</button>
         </div>
       </div>
     </div>
@@ -3492,7 +3766,7 @@
     <div class="modal-box" style="max-width: 500px;">
       <div class="modal-header">
         <h2>
-          <span>??</span> <span id="modal-shortcuts-heading">全局键盘极速快捷键</span>
+          <span>⌨️</span> <span id="modal-shortcuts-heading">全局键盘极速快捷键</span>
         </h2>
         <button class="btn-close-modal" onclick="closeShortcutsModal()">&times;</button>
       </div>
@@ -3514,7 +3788,7 @@
     <div class="modal-box" style="max-width: 520px;">
       <div class="modal-header">
         <h2>
-          <span>??</span> <span id="modal-sync-heading">多端云端自动同步</span>
+          <span>☁️</span> <span id="modal-sync-heading">多端云端自动同步</span>
         </h2>
         <button class="btn-close-modal" onclick="closeSyncModal()">&times;</button>
       </div>
@@ -3537,20 +3811,20 @@
         <div style="display: flex; gap: 8px;">
           <input type="text" id="input-sync-code" placeholder="例如: xiaoche-8888 或自定义" style="flex: 1; padding: 0.6rem 0.8rem; background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-sm); color: var(--text-main); font-size: 0.95rem;">
           <button type="button" class="btn btn-outline" onclick="generateRandomSyncCode()" title="随机生成一个暗号" style="white-space: nowrap;" id="btn-sync-random">
-            ?? 随机暗号
+            🎲 随机暗号
           </button>
         </div>
         <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.45rem;" id="lbl-sync-hint">
-          ?? 建议使用您的名字加数字（如 xiaoche-8888），好记又专属！在手机上输入同一个暗号即可同步。
+          💡 建议使用您的名字加数字（如 xiaoche-8888），好记又专属！在手机上输入同一个暗号即可同步。
         </div>
       </div>
 
       <div class="modal-footer" style="display: flex; gap: 10px; justify-content: flex-end;">
         <button type="button" class="btn btn-outline" id="btn-sync-disconnect" onclick="disconnectCloudSync()" style="display: none; color: #ef4444; border-color: rgba(239, 68, 68, 0.4);">
-          ?? 断开连接
+          🔌 断开连接
         </button>
         <button type="button" class="btn btn-gold" id="btn-sync-connect" onclick="connectAndSyncCloud()" style="min-width: 130px;">
-          ?? 连接并同步
+          ⚡ 连接并同步
         </button>
       </div>
     </div>
@@ -3586,7 +3860,7 @@
       document.documentElement.setAttribute('data-theme', theme);
       const icon = document.getElementById('theme-btn-icon');
       const text = document.getElementById('theme-btn-text');
-      if (icon) icon.innerText = theme === 'light' ? '??' : '??';
+      if (icon) icon.innerText = theme === 'light' ? '☀️' : '🌙';
       if (text) text.innerText = theme === 'light' ? (currentLang === 'ms' ? 'Cerah' : (currentLang === 'en' ? 'Light' : '明亮')) : (currentLang === 'ms' ? 'Gelap' : (currentLang === 'en' ? 'Dark' : '深色'));
     }
 
@@ -3620,10 +3894,10 @@
     "btnAddBook": "录入新书",
     "btnRandomBook": "盲盒抽书",
     "btnExportCsv": "导出表格",
-    "btnPoster": "?? 业务推广海报",
-    "btnBackup": "?? 备份",
-    "btnRestore": "?? 恢复",
-    "btnSync": "?? 云同步",
+    "btnPoster": "🎨 业务推广海报",
+    "btnBackup": "💾 备份",
+    "btnRestore": "📥 恢复",
+    "btnSync": "🔄 云同步",
     "syncModalTitle": "多端云端自动同步",
     "syncModalDesc": "无论在手机、平板或不同电脑浏览器，只要输入相同的专属暗号，读书勾选与收藏进度将全自动实时同步！",
     "syncStatusTitle": "当前云端状态",
@@ -3634,23 +3908,23 @@
     "syncNoCode": "无专属暗号（仅本地保存）",
     "syncCodeLabel": "专属同步暗号 (PIN / 识别码)：",
     "syncPlaceholder": "例如: xiaoche-8888 或自定义",
-    "syncHint": "?? 建议使用您的名字加数字（如 xiaoche-8888），好记又专属！在手机上输入同一个暗号即可同步。",
-    "btnGenerateCode": "?? 随机暗号",
-    "btnConnectSync": "?? 连接并同步",
-    "btnDisconnectSync": "?? 断开连接",
+    "syncHint": "💡 建议使用您的名字加数字（如 xiaoche-8888），好记又专属！在手机上输入同一个暗号即可同步。",
+    "btnGenerateCode": "🎲 随机暗号",
+    "btnConnectSync": "⚡ 连接并同步",
+    "btnDisconnectSync": "🔌 断开连接",
     "syncCodeRequired": "请输入专属同步暗号",
     "syncSuccess": "云端同步成功！已载入最新进度",
     "syncInitSuccess": "专属暗号已激活，本地数据已上传至云端！",
     "syncDisconnected": "已断开云端连接，当前处于本地模式",
     "syncErrorNetwork": "云端同步失败，请检查网络",
-    "btnReset": "?? 重置",
-    "btnTools": "更多工具 ?",
+    "btnReset": "⚠️ 重置",
+    "btnTools": "更多工具 ▾",
     "toolPrint": "打印读书清单 (A4)",
     "toolKeys": "键盘快捷键指南 (?)",
     "toolExport": "导出当前表格 (CSV)",
     "toolReset": "重置当前系列完成状态",
     "shelfLabel": "典藏书架：",
-    "shelfExpand": "展开全部系列 ?",
+    "shelfExpand": "展开全部系列 ▾",
     "shelfCollapse": "收起系列书架 ?",
     "allSeries": "全部系列",
     "allProgressTitle": "全馆所有藏书录入进度",
@@ -3677,7 +3951,7 @@
     "viewTableTip": "紧凑表格清单视图",
     "btnViewCard": "卡片",
     "btnViewTable": "清单",
-    "btnBatchMode": "?? 批量操作",
+    "btnBatchMode": "⚡ 批量操作",
     "sortDefault": "默认卷号",
     "sortVolDesc": "卷号倒序",
     "sortYearDesc": "年份由新到旧",
@@ -3730,12 +4004,12 @@
     "tableDoneBadge": "? 已做",
     "tablePendingBadge": "? 待做",
     "fullCopyLabel": "{0} 全部资料",
-    "toastMarkDone": "?? 恭喜！已标记为【已完成】",
+    "toastMarkDone": "🎉 恭喜！已标记为【已完成】",
     "toastMarkPending": "已标记为【未做】",
     "confirmDeleteBook": "确定要删除这本自定义书籍吗？",
     "toastDeleted": "已删除该书籍",
-    "luckyDrawAllDone": "恭喜！本系列所有书籍均已录入完成！??",
-    "luckyDrawChosenToast": "?? 盲盒抽中：{0}",
+    "luckyDrawAllDone": "恭喜！本系列所有书籍均已录入完成！🎉",
+    "luckyDrawChosenToast": "🎯 盲盒抽中：{0}",
     "jumpedToast": "已直达：{0}",
     "exportCsvDone": "已成功导出【{0}】表格清单！",
     "exportDataDone": "完整数据与进度已备份导出！",
@@ -3758,18 +4032,18 @@
     "lblSummary": "内容概述 (Sinopsis - 约150字)",
     "lblInsight": "启示与道德价值 (Nilai Murni / Pengajaran - 约150字)",
     "btnAddCancel": "取消",
-    "btnAddSubmit": "?? 保存并添加到系统",
+    "btnAddSubmit": "💾 保存并添加到系统",
     "rouletteHeading": "盲盒天选抽书 · 正在探寻",
     "rouletteSubheading": "正从全馆 1,000+ 册典藏中为您随机锁定未读书籍...",
-    "rouletteSearching": "? 典藏检索中 ?",
-    "rouletteChosenTag": "?? 天选系列 · {0}",
-    "rouletteBtnGo": "?? 立即直达该书",
+    "rouletteSearching": "✨ 典藏检索中 ✨",
+    "rouletteChosenTag": "🎯 天选系列 · {0}",
+    "rouletteBtnGo": "👉 立即直达该书",
     "alarmTitle": "3 分钟倒计时已到！",
     "alarmDesc": "阅读专注计时已完成，可以继续探索下一本书了！",
-    "alarmBtnRepeat": "?? 再来 3 分钟",
+    "alarmBtnRepeat": "⏰ 再来 3 分钟",
     "alarmBtnDismiss": "我知道了",
     "timerTitle": "阅读专注倒计时",
-    "timerSoundTest": "?? 试听",
+    "timerSoundTest": "🔔 试听",
     "timerStatusReady": "待命 (Ready)",
     "timerStatusRunning": "计时中 (Running)",
     "timerStatusPaused": "已暂停 (Paused)",
@@ -3777,17 +4051,17 @@
     "timerPreset1m": "1 分钟",
     "timerPreset3m": "3 分钟",
     "timerPreset5m": "5 分钟",
-    "timerBtnStart": "?? 开始倒计时",
-    "timerBtnPause": "?? 暂停计时",
-    "timerBtnRestart": "?? 重新开始",
-    "timerBtnReset": "?? 重置",
-    "timerAutoStartLabel": "? 复制资料后自动开启",
+    "timerBtnStart": "▶ 开始倒计时",
+    "timerBtnPause": "⏸ 暂停计时",
+    "timerBtnRestart": "🔄 重新开始",
+    "timerBtnReset": "⏹ 重置",
+    "timerAutoStartLabel": "⚡ 复制资料后自动开启",
     "timerExpand": "展开",
-    "toastSoundTest": "?? 响铃测试成功！声音清脆清晰",
+    "toastSoundTest": "🔔 响铃测试成功！声音清脆清晰",
     "toastPresetSwitched": "已切换倒计时时长为 {0} 分钟",
     "toastAutoTimerOn": "? 已开启：复制资料后自动开启 3 分钟倒计时",
     "toastAutoTimerOff": "已关闭复制自动倒计时",
-    "toastAutoTimerTriggered": "已复制！?? 阅读专注倒计时已自动启动",
+    "toastAutoTimerTriggered": "已复制！⏱ 阅读专注倒计时已自动启动",
     "batchSelectedCount": "已选中 {0} 本",
     "btnBatchDone": "? 标记为已做",
     "btnBatchPending": "? 标记为未做",
@@ -3796,12 +4070,12 @@
     "btnBatchExit": "? 退出批量",
     "toastBookmarkAdded": "? 已加入重点收藏！",
     "toastBookmarkRemoved": "已取消收藏",
-    "toastBatchModeOn": "?? 已开启批量操作模式",
+    "toastBatchModeOn": "⚡ 已开启批量操作模式",
     "toastBatchModeOff": "已退出批量模式",
     "toastAutoNext": "? 自动直达下一本：{0}",
     "toastBatchSelectAll": "已全选当前筛选的 {0} 本书籍",
     "toastBatchDeselectAll": "已取消全部勾选",
-    "toastBatchDone": "?? 批量成功：已将 {0} 册标记为【{1}】",
+    "toastBatchDone": "✅ 批量成功：已将 {0} 册标记为【{1}】",
     "toastBatchStar": "? 已将 {0} 册批量加入重点收藏",
     "batchEmptyAlert": "请先勾选需要操作的书籍！",
     "statsCollapse": "收起看板 ?",
@@ -3829,10 +4103,10 @@
     "btnAddBook": "Rekod Buku Baharu",
     "btnRandomBook": "Cabutan Bertuah",
     "btnExportCsv": "Eksport CSV",
-    "btnPoster": "?? Poster Promosi Servis",
-    "btnBackup": "?? Sandaran",
-    "btnRestore": "?? Pulih",
-    "btnSync": "?? Segerak Awan",
+    "btnPoster": "🎨 Poster Promosi Servis",
+    "btnBackup": "💾 Sandaran",
+    "btnRestore": "📥 Pulih",
+    "btnSync": "🔄 Segerak Awan",
     "syncModalTitle": "Penyegerakan Awan Pelbagai Peranti",
     "syncModalDesc": "Di telefon, tablet atau pelayar lain, hanya masukkan kod rahsia yang sama, kemajuan bacaan & penanda buku akan disegerakkan secara automatik!",
     "syncStatusTitle": "Status Awan Semasa",
@@ -3843,16 +4117,16 @@
     "syncNoCode": "Tiada kod rahsia (simpanan tempatan)",
     "syncCodeLabel": "Kod Segerak Eksklusif (PIN):",
     "syncPlaceholder": "Cth: xiaoche-8888 atau tersuai",
-    "syncHint": "?? Cadangan: gunakan nama anda + nombor (cth: xiaoche-8888). Masukkan kod yang sama di telefon untuk segerak.",
-    "btnGenerateCode": "?? Kod Rawak",
-    "btnConnectSync": "?? Sambung & Segerak",
-    "btnDisconnectSync": "?? Putuskan Sambungan",
+    "syncHint": "💡 Cadangan: gunakan nama anda + nombor (cth: xiaoche-8888). Masukkan kod yang sama di telefon untuk segerak.",
+    "btnGenerateCode": "🎲 Kod Rawak",
+    "btnConnectSync": "⚡ Sambung & Segerak",
+    "btnDisconnectSync": "🔌 Putuskan Sambungan",
     "syncCodeRequired": "Sila masukkan kod rahsia segerak",
     "syncSuccess": "Segerak awan berjaya! Kemajuan terkini dimuatkan",
     "syncInitSuccess": "Kod rahsia diaktifkan, data tempatan dimuat naik ke awan!",
     "syncDisconnected": "Sambungan awan diputuskan, kini dalam mod tempatan",
     "syncErrorNetwork": "Gagal menyegerak ke awan, sila semak rangkaian",
-    "btnReset": "?? Tetap Semula",
+    "btnReset": "⚠️ Tetap Semula",
     "btnTools": "Alatan Lanjut ?",
     "toolPrint": "Cetak Slip Bacaan (A4)",
     "toolKeys": "Pintasan Papan Kekunci (?)",
@@ -3886,7 +4160,7 @@
     "viewTableTip": "Paparan Jadual Padat",
     "btnViewCard": "Kad",
     "btnViewTable": "Jadual",
-    "btnBatchMode": "?? Mod Pukal",
+    "btnBatchMode": "⚡ Mod Pukal",
     "sortDefault": "Jilid Lalai",
     "sortVolDesc": "Jilid Menurun",
     "sortYearDesc": "Tahun Terbaharu",
@@ -3939,12 +4213,12 @@
     "tableDoneBadge": "? Selesai",
     "tablePendingBadge": "? Belum",
     "fullCopyLabel": "Semua Maklumat {0}",
-    "toastMarkDone": "?? Tahniah! Ditandakan sebagai 【Selesai】",
+    "toastMarkDone": "🎉 Tahniah! Ditandakan sebagai 【Selesai】",
     "toastMarkPending": "Ditandakan sebagai 【Belum Selesai】",
     "confirmDeleteBook": "Adakah anda pasti mahu memadam buku tersuai ini?",
     "toastDeleted": "Buku telah dipadam",
-    "luckyDrawAllDone": "Tahniah! Semua buku dalam siri ini telah selesai dibaca! ??",
-    "luckyDrawChosenToast": "?? Cabutan Bertuah: {0}",
+    "luckyDrawAllDone": "Tahniah! Semua buku dalam siri ini telah selesai dibaca! 🎉",
+    "luckyDrawChosenToast": "🎯 Cabutan Bertuah: {0}",
     "jumpedToast": "Telah pergi ke: {0}",
     "exportCsvDone": "Berjaya mengeksport jadual CSV 【{0}】!",
     "exportDataDone": "Data dan kemajuan lengkap telah berjaya disandarkan!",
@@ -3967,18 +4241,18 @@
     "lblSummary": "Sinopsis Buku (~150 patah perkataan)",
     "lblInsight": "Nilai Murni & Pengajaran (~150 patah perkataan)",
     "btnAddCancel": "Batal",
-    "btnAddSubmit": "?? Simpan ke Koleksi",
+    "btnAddSubmit": "💾 Simpan ke Koleksi",
     "rouletteHeading": "Cabutan Bertuah Bahan Bacaan",
     "rouletteSubheading": "Memilih bahan bacaan belum dibaca secara rawak daripada 1,000+ jilid...",
     "rouletteSearching": "? Sedang Memilih ?",
-    "rouletteChosenTag": "?? Pilihan Bertuah · Siri {0}",
-    "rouletteBtnGo": "?? Terus ke Buku Ini",
+    "rouletteChosenTag": "🎯 Pilihan Bertuah · Siri {0}",
+    "rouletteBtnGo": "👉 Terus ke Buku Ini",
     "alarmTitle": "Pemasa 3 Minit Tamat!",
     "alarmDesc": "Masa bertenang membaca selesai! Anda kini boleh meneruskan bacaan buku seterusnya.",
-    "alarmBtnRepeat": "?? Ulang 3 Minit",
+    "alarmBtnRepeat": "⏰ Ulang 3 Minit",
     "alarmBtnDismiss": "Faham",
     "timerTitle": "Pemasa Bacaan",
-    "timerSoundTest": "?? Uji Bunyi",
+    "timerSoundTest": "🔔 Uji Bunyi",
     "timerStatusReady": "Sedia",
     "timerStatusRunning": "Sedang Mengira",
     "timerStatusPaused": "Dijeda",
@@ -3986,17 +4260,17 @@
     "timerPreset1m": "1 Minit",
     "timerPreset3m": "3 Minit",
     "timerPreset5m": "5 Minit",
-    "timerBtnStart": "?? Mula Pemasa",
-    "timerBtnPause": "?? Jeda Pemasa",
-    "timerBtnRestart": "?? Mula Semula",
-    "timerBtnReset": "?? Tetap Semula",
+    "timerBtnStart": "▶ Mula Pemasa",
+    "timerBtnPause": "⏸ Jeda Pemasa",
+    "timerBtnRestart": "🔄 Mula Semula",
+    "timerBtnReset": "⏹ Tetap Semula",
     "timerAutoStartLabel": "? Mula automatik selepas salin data",
     "timerExpand": "Kembang",
-    "toastSoundTest": "?? Ujian loceng berjaya! Nada berbunyi jelas",
+    "toastSoundTest": "🔔 Ujian loceng berjaya! Nada berbunyi jelas",
     "toastPresetSwitched": "Tempoh pemasa ditukar ke {0} minit",
     "toastAutoTimerOn": "? Diaktifkan: Pemasa 3 minit mula automatik selepas salin",
     "toastAutoTimerOff": "Pemasa automatik dimatikan",
-    "toastAutoTimerTriggered": "Disalin! ?? Pemasa fokus membaca telah dimulakan secara automatik",
+    "toastAutoTimerTriggered": "Disalin! ⏱ Pemasa fokus membaca telah dimulakan secara automatik",
     "batchSelectedCount": "Dipilih {0} jilid",
     "btnBatchDone": "? Tandakan Selesai",
     "btnBatchPending": "? Tandakan Belum",
@@ -4005,12 +4279,12 @@
     "btnBatchExit": "? Keluar Mod Pukal",
     "toastBookmarkAdded": "? Ditambah ke Pilihan Utama!",
     "toastBookmarkRemoved": "Pilihan dibatalkan",
-    "toastBatchModeOn": "?? Mod Pukal diaktifkan",
+    "toastBatchModeOn": "⚡ Mod Pukal diaktifkan",
     "toastBatchModeOff": "Mod Pukal ditamatkan",
     "toastAutoNext": "? Melompat ke buku seterusnya: {0}",
     "toastBatchSelectAll": "Semua {0} buku dalam tapisan dipilih",
     "toastBatchDeselectAll": "Semua pilihan dibatalkan",
-    "toastBatchDone": "?? Berjaya secara pukal: {0} jilid ditandakan sebagai 【{1}】",
+    "toastBatchDone": "✅ Berjaya secara pukal: {0} jilid ditandakan sebagai 【{1}】",
     "toastBatchStar": "? {0} jilid ditambah ke pilihan utama",
     "batchEmptyAlert": "Sila pilih buku terlebih dahulu!",
     "statsCollapse": "Tutup Papan ?",
@@ -4038,10 +4312,10 @@
     "btnAddBook": "Record New Book",
     "btnRandomBook": "Lucky Draw",
     "btnExportCsv": "Export CSV",
-    "btnPoster": "?? Promo Poster",
-    "btnBackup": "?? Backup",
-    "btnRestore": "?? Restore",
-    "btnSync": "?? Cloud Sync",
+    "btnPoster": "🎨 Promo Poster",
+    "btnBackup": "💾 Backup",
+    "btnRestore": "📥 Restore",
+    "btnSync": "🔄 Cloud Sync",
     "syncModalTitle": "Multi-Device Cloud Sync",
     "syncModalDesc": "On your phone, tablet, or another browser, just enter the same exclusive sync code to automatically sync reading progress & bookmarks in real time!",
     "syncStatusTitle": "Current Cloud Status",
@@ -4052,16 +4326,16 @@
     "syncNoCode": "No sync code (local storage only)",
     "syncCodeLabel": "Exclusive Sync Code (PIN):",
     "syncPlaceholder": "e.g. xiaoche-8888 or custom",
-    "syncHint": "?? Tip: Use your name + numbers (e.g. xiaoche-8888). Enter the same code on your phone to sync instantly.",
-    "btnGenerateCode": "?? Random Code",
-    "btnConnectSync": "?? Connect & Sync",
-    "btnDisconnectSync": "?? Disconnect",
+    "syncHint": "💡 Tip: Use your name + numbers (e.g. xiaoche-8888). Enter the same code on your phone to sync instantly.",
+    "btnGenerateCode": "🎲 Random Code",
+    "btnConnectSync": "⚡ Connect & Sync",
+    "btnDisconnectSync": "🔌 Disconnect",
     "syncCodeRequired": "Please enter your sync code",
     "syncSuccess": "Cloud sync successful! Latest progress loaded",
     "syncInitSuccess": "Sync code activated! Local data uploaded to cloud",
     "syncDisconnected": "Cloud disconnected, now in local mode",
     "syncErrorNetwork": "Cloud sync failed, please check your connection",
-    "btnReset": "?? Reset",
+    "btnReset": "⚠️ Reset",
     "btnTools": "More Tools ?",
     "toolPrint": "Print Reading Slip (A4)",
     "toolKeys": "Keyboard Shortcuts (?)",
@@ -4095,7 +4369,7 @@
     "viewTableTip": "Compact Table View",
     "btnViewCard": "Cards",
     "btnViewTable": "Table",
-    "btnBatchMode": "?? Batch Mode",
+    "btnBatchMode": "⚡ Batch Mode",
     "sortDefault": "Default Volume",
     "sortVolDesc": "Volume Descending",
     "sortYearDesc": "Year Newest First",
@@ -4148,12 +4422,12 @@
     "tableDoneBadge": "? Done",
     "tablePendingBadge": "? Pending",
     "fullCopyLabel": "All data for {0}",
-    "toastMarkDone": "?? Great! Marked as 【Completed】",
+    "toastMarkDone": "🎉 Great! Marked as 【Completed】",
     "toastMarkPending": "Marked as 【Pending】",
     "confirmDeleteBook": "Are you sure you want to delete this custom book?",
     "toastDeleted": "Book deleted",
-    "luckyDrawAllDone": "Congratulations! All books in this series have been read! ??",
-    "luckyDrawChosenToast": "?? Lucky draw picked: {0}",
+    "luckyDrawAllDone": "Congratulations! All books in this series have been read! 🎉",
+    "luckyDrawChosenToast": "🎯 Lucky draw picked: {0}",
     "jumpedToast": "Navigated to: {0}",
     "exportCsvDone": "Successfully exported CSV for 【{0}】!",
     "exportDataDone": "Complete library data and progress backed up!",
@@ -4176,18 +4450,18 @@
     "lblSummary": "Synopsis (~150 words)",
     "lblInsight": "Moral Values & Lessons (~150 words)",
     "btnAddCancel": "Cancel",
-    "btnAddSubmit": "?? Save to Library",
+    "btnAddSubmit": "💾 Save to Library",
     "rouletteHeading": "Lucky Draw Reading Material",
     "rouletteSubheading": "Selecting an unread volume at random from 1,000+ volumes...",
     "rouletteSearching": "? Selecting ?",
-    "rouletteChosenTag": "?? Chosen Series · {0}",
-    "rouletteBtnGo": "?? Jump to Book Now",
+    "rouletteChosenTag": "🎯 Chosen Series · {0}",
+    "rouletteBtnGo": "👉 Jump to Book Now",
     "alarmTitle": "3-Minute Cooldown Complete!",
     "alarmDesc": "Reading session complete! You can now proceed to explore the next book.",
-    "alarmBtnRepeat": "?? Another 3 Mins",
+    "alarmBtnRepeat": "⏰ Another 3 Mins",
     "alarmBtnDismiss": "Got it",
     "timerTitle": "Reading Focus Timer",
-    "timerSoundTest": "?? Test Bell",
+    "timerSoundTest": "🔔 Test Bell",
     "timerStatusReady": "Ready",
     "timerStatusRunning": "Running",
     "timerStatusPaused": "Paused",
@@ -4195,17 +4469,17 @@
     "timerPreset1m": "1 Min",
     "timerPreset3m": "3 Min",
     "timerPreset5m": "5 Min",
-    "timerBtnStart": "?? Start Timer",
-    "timerBtnPause": "?? Pause Timer",
-    "timerBtnRestart": "?? Restart",
-    "timerBtnReset": "?? Reset",
+    "timerBtnStart": "▶ Start Timer",
+    "timerBtnPause": "⏸ Pause Timer",
+    "timerBtnRestart": "🔄 Restart",
+    "timerBtnReset": "⏹ Reset",
     "timerAutoStartLabel": "? Auto-start after copying",
     "timerExpand": "Expand",
-    "toastSoundTest": "?? Chime test successful! Crisp and clear tone",
+    "toastSoundTest": "🔔 Chime test successful! Crisp and clear tone",
     "toastPresetSwitched": "Timer duration switched to {0} minutes",
     "toastAutoTimerOn": "? Enabled: Timer auto-starts for 3 minutes after copying",
     "toastAutoTimerOff": "Auto timer on copy disabled",
-    "toastAutoTimerTriggered": "Copied! ?? Reading timer auto-started",
+    "toastAutoTimerTriggered": "Copied! ⏱ Reading timer auto-started",
     "batchSelectedCount": "Selected {0} books",
     "btnBatchDone": "? Mark as Done",
     "btnBatchPending": "? Mark as Pending",
@@ -4214,12 +4488,12 @@
     "btnBatchExit": "? Exit Batch",
     "toastBookmarkAdded": "? Added to Starred!",
     "toastBookmarkRemoved": "Removed from Starred",
-    "toastBatchModeOn": "?? Batch Mode Enabled",
+    "toastBatchModeOn": "⚡ Batch Mode Enabled",
     "toastBatchModeOff": "Batch Mode Disabled",
     "toastAutoNext": "? Auto-advanced to next: {0}",
     "toastBatchSelectAll": "Selected all {0} filtered books",
     "toastBatchDeselectAll": "Cleared all selections",
-    "toastBatchDone": "?? Batch success: Marked {0} volumes as 【{1}】",
+    "toastBatchDone": "✅ Batch success: Marked {0} volumes as 【{1}】",
     "toastBatchStar": "? Added {0} volumes to Starred",
     "batchEmptyAlert": "Please select books first!",
     "statsCollapse": "Collapse Stats ?",
@@ -4888,7 +5162,7 @@
       if (el('lbl-slip-school')) el('lbl-slip-school').innerText = t('slipSchool');
       if (el('lbl-slip-scope')) el('lbl-slip-scope').innerText = currentLang === 'ms' ? 'Skop Cetakan' : (currentLang === 'en' ? 'Print Scope' : '打印清单范围');
       if (el('btn-print-cancel')) el('btn-print-cancel').innerText = t('btnAddCancel');
-      if (el('btn-print-execute')) el('btn-print-execute').innerText = currentLang === 'ms' ? '??? Cetak / Simpan PDF' : (currentLang === 'en' ? '??? Print / Save PDF' : '??? 立即打印 / 保存 PDF');
+      if (el('btn-print-execute')) el('btn-print-execute').innerText = currentLang === 'ms' ? '🖨️ Cetak / Simpan PDF' : (currentLang === 'en' ? '🖨️ Print / Save PDF' : '🖨️ 立即打印 / 保存 PDF');
       const slipScope = el('slip-scope');
       if (slipScope) {
         const scopeMap = {
@@ -5474,7 +5748,7 @@
       if (!controls) return;
 
       let btnsHtml = '';
-      btnsHtml += `<button class="btn-page" ${currentPage <= 1 ? 'disabled' : ''} onclick="changePage(${currentPage - 1})" title="上一页">?</button>`;
+      btnsHtml += `<button class="btn-page" ${currentPage <= 1 ? 'disabled' : ''} onclick="changePage(${currentPage - 1})" title="上一页">&laquo;</button>`;
 
       const delta = 2;
       const range = [];
@@ -5491,7 +5765,7 @@
       if (totalPages > 1) {
         btnsHtml += `<button class="btn-page ${currentPage === totalPages ? 'active' : ''}" onclick="changePage(${totalPages})">${totalPages}</button>`;
       }
-      btnsHtml += `<button class="btn-page ${currentPage >= totalPages ? 'disabled' : ''}" onclick="changePage(${currentPage + 1})" title="下一页">?</button>`;
+      btnsHtml += `<button class="btn-page ${currentPage >= totalPages ? 'disabled' : ''}" onclick="changePage(${currentPage + 1})" title="下一页">&raquo;</button>`;
 
       controls.innerHTML = btnsHtml;
     }
@@ -5755,14 +6029,14 @@
           <div class="full-copy-bar" style="display: flex; gap: 8px; flex-wrap: wrap; justify-content: space-between; align-items: center;">
             <div class="seq-copy-group">
               <button class="btn-seq-copy" id="btn-seq-${b.id}" onclick="copySequentialStep('${b.id}', this)" title="${currentLang === 'ms' ? 'Salin ikut turutan borang AINS NILAM: Tajuk > Penulis > Penerbit > Tahun > Muka Surat > ISBN > Rumusan > Pengajaran (Tekan Bar Ruang)' : (currentLang === 'en' ? 'AINS NILAM sequential copy: Title > Author > Publisher > Year > Pages > ISBN > Rumusan > Pengajaran (Press Space)' : 'AINS 顺序连击复制：书名 > 作者 > 出版社 > 年份 > 页数 > ISBN > 读后总结 > 品德启示 (支持空格键)')}">
-                <span>? 连击复制 (AINS)</span> <span class="badge-step" id="seq-step-badge-${b.id}">[1/8 ${currentLang === 'ms' ? 'Tajuk' : (currentLang === 'en' ? 'Title' : '书名')}]</span>
+                <span>⚡ 连击复制 (AINS)</span> <span class="badge-step" id="seq-step-badge-${b.id}">[1/8 ${currentLang === 'ms' ? 'Tajuk' : (currentLang === 'en' ? 'Title' : '书名')}]</span>
               </button>
               <button class="btn btn-outline" style="font-size: 0.8rem; white-space: nowrap;" onclick="copyFullVolume(getAllBooks().find(x => x.id === '${b.id}'))">
                 <svg class="g-icon"><use href="#icon-copy"></use></svg> ${t('btnCopyFull')}
               </button>
               ${isCustom ? `
                 <button class="btn-card-edit" onclick="openEditCustomModal('${b.id}')" title="编辑这本自定义书籍">
-                  ?? 编辑
+                  ✏️ 编辑
                 </button>
               ` : ''}
             </div>
@@ -6545,7 +6819,7 @@
       }
 
       if (timerRunning) {
-        document.title = `?? [${timeStr}] - ${t('appTitle')}`;
+        document.title = `⏱ [${timeStr}] - ${t('appTitle')}`;
       } else if (timerRemaining > 0) {
         document.title = t('pageTitle');
       }
@@ -6621,7 +6895,7 @@
       if (titleBlinkInterval) clearInterval(titleBlinkInterval);
       let flag = false;
       titleBlinkInterval = setInterval(() => {
-        document.title = flag ? '?? Time\'s Up!' : `?? [00:00] ${t('appTitle')}`;
+        document.title = flag ? '🔔 Time\'s Up!' : `⏱ [00:00] ${t('appTitle')}`;
         flag = !flag;
       }, 800);
     }
@@ -7103,7 +7377,7 @@
       }
       if (connectBtn) {
         connectBtn.disabled = false;
-        connectBtn.innerText = t('btnConnectSync') || '?? 连接并同步';
+        connectBtn.innerText = t('btnConnectSync') || '⚡ 连接并同步';
       }
     }
 
