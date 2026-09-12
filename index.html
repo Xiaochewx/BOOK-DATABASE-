@@ -2516,7 +2516,372 @@
       color: #fca5a5;
       border: 1px solid rgba(239, 68, 68, 0.4);
     }
-  </style>
+  
+    /* ==================================================== */
+    /* Light Mode (Paper Cream / Crisp Clean)               */
+    /* ==================================================== */
+    [data-theme="light"] {
+      --bg: #f6f8fb;
+      --bg-surface: #ffffff;
+      --card-bg: #ffffff;
+      --card-inner: #f8fafc;
+      --card-inner-hover: #f1f5f9;
+      
+      --glass-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(248, 250, 252, 0.92) 100%);
+      --glass-bg-hover: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+      --glass-card-inner: #f8fafc;
+      --glass-border: 1px solid rgba(0, 0, 0, 0.08);
+      --glass-border-gold: 1px solid rgba(184, 144, 48, 0.35);
+      --glass-border-hover: 1px solid rgba(184, 144, 48, 0.55);
+      --glass-specular: inset 0 1px 1px 0 rgba(255, 255, 255, 0.9);
+      --glass-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+      --glass-shadow-hover: 0 8px 24px rgba(184, 144, 48, 0.14), 0 2px 6px rgba(0, 0, 0, 0.04);
+
+      --text-main: #1e293b;
+      --text-secondary: #475569;
+      --text-muted: #64748b;
+
+      --gold-primary: #b8860b;
+      --gold-hover: #996515;
+      --gold-dark: #8b6508;
+      --gold-deep: #684a00;
+      --gold-bg-subtle: rgba(184, 134, 11, 0.1);
+      --gold-bg-hover: rgba(184, 134, 11, 0.18);
+      --gold-border: rgba(184, 134, 11, 0.3);
+      --gold-border-bright: rgba(184, 134, 11, 0.65);
+      --gold-glow: rgba(184, 134, 11, 0.2);
+
+      --border: #e2e8f0;
+      --border-light: #cbd5e1;
+      --border-focus: #b8860b;
+
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+      --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 10px 24px rgba(0, 0, 0, 0.08);
+      --shadow-gold: 0 0 16px rgba(184, 134, 11, 0.16);
+    }
+    [data-theme="light"] body {
+      background-color: #f6f8fb;
+      background-image: 
+        radial-gradient(circle at 10% 12%, rgba(184, 134, 11, 0.035) 0%, transparent 40%),
+        radial-gradient(circle at 90% 88%, rgba(100, 116, 139, 0.045) 0%, transparent 50%);
+      color: #1e293b;
+    }
+    [data-theme="light"] .vol-card {
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+      background: #ffffff;
+    }
+    [data-theme="light"] .vol-title {
+      color: #0f172a;
+    }
+    [data-theme="light"] .content-box {
+      background: #f8fafc;
+      border-color: #e2e8f0;
+    }
+    [data-theme="light"] .content-text {
+      color: #334155;
+    }
+    [data-theme="light"] .meta-box {
+      background: #f8fafc;
+      border-color: #e2e8f0;
+    }
+    [data-theme="light"] .meta-value {
+      color: #0f172a;
+    }
+    [data-theme="light"] header {
+      background: rgba(255, 255, 255, 0.92);
+      border-bottom: 1px solid #e2e8f0;
+    }
+    [data-theme="light"] .search-input {
+      background: #ffffff;
+      color: #0f172a;
+      border-color: #cbd5e1;
+    }
+    [data-theme="light"] .sorter-select, [data-theme="light"] .jump-select {
+      background-color: #ffffff;
+      color: #0f172a;
+      border-color: #cbd5e1;
+    }
+    [data-theme="light"] .filter-tab {
+      background: #f1f5f9;
+      color: #475569;
+      border-color: #e2e8f0;
+    }
+    [data-theme="light"] .filter-tab.active {
+      background: #ffffff;
+      color: #b8860b;
+      border-color: #b8860b;
+      box-shadow: 0 2px 6px rgba(184, 134, 11, 0.15);
+    }
+    [data-theme="light"] .shelf-cat-btn {
+      background: #f1f5f9;
+      color: #475569;
+      border-color: #e2e8f0;
+    }
+    [data-theme="light"] .shelf-cat-btn.active {
+      background: #ffffff;
+      color: #b8860b;
+      border-color: #b8860b;
+    }
+    [data-theme="light"] .series-tab {
+      background: #ffffff;
+      color: #475569;
+      border-color: #e2e8f0;
+    }
+    [data-theme="light"] .series-tab.active {
+      background: rgba(184, 134, 11, 0.1);
+      color: #b8860b;
+      border-color: #b8860b;
+    }
+    [data-theme="light"] .modal-box {
+      background: #ffffff;
+      border-color: #e2e8f0;
+      color: #1e293b;
+    }
+    [data-theme="light"] .nilam-table {
+      background: #ffffff;
+    }
+    [data-theme="light"] .nilam-table th {
+      background: #f8fafc;
+      color: #475569;
+      border-bottom: 2px solid #e2e8f0;
+    }
+    [data-theme="light"] .nilam-table td {
+      border-bottom: 1px solid #f1f5f9;
+      color: #334155;
+    }
+    [data-theme="light"] .nilam-table tr:hover td {
+      background: #f8fafc;
+    }
+
+    /* ==================================================== */
+    /* Side-by-Side Compact Mode (for half-screen docking)   */
+    /* ==================================================== */
+    body.compact-mode .container {
+      max-width: 100% !important;
+      padding: 6px 10px !important;
+    }
+    body.compact-mode .header-container {
+      padding: 6px 10px !important;
+    }
+    body.compact-mode .logo-text h1 {
+      font-size: 1.05rem !important;
+    }
+    body.compact-mode .header-actions {
+      gap: 6px !important;
+    }
+    body.compact-mode .stats-compact-bar {
+      display: none !important;
+    }
+    body.compact-mode .vol-list {
+      grid-template-columns: 1fr !important;
+      gap: 12px !important;
+    }
+    body.compact-mode .vol-card {
+      padding: 12px !important;
+    }
+    body.compact-mode .meta-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 6px !important;
+    }
+    body.compact-mode .content-box {
+      margin-top: 8px !important;
+    }
+    body.compact-mode .content-text {
+      max-height: 100px;
+      overflow-y: auto;
+      font-size: 0.8rem !important;
+      line-height: 1.4 !important;
+    }
+    body.compact-mode .toolbar {
+      padding: 8px !important;
+      margin-bottom: 10px !important;
+    }
+
+    /* ==================================================== */
+    /* Pagination Navigation Controls                        */
+    /* ==================================================== */
+    .pagination-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+      padding: 14px 20px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+    }
+    .pagination-info {
+      font-size: 0.86rem;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .pagination-info strong {
+      color: var(--gold-primary);
+    }
+    .pagination-controls {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-page {
+      min-width: 34px;
+      height: 34px;
+      padding: 0 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border);
+      background: var(--bg-surface);
+      color: var(--text-main);
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      user-select: none;
+    }
+    .btn-page:hover:not(:disabled) {
+      border-color: var(--gold-primary);
+      color: var(--gold-primary);
+      background: var(--gold-bg-subtle);
+    }
+    .btn-page.active {
+      background: var(--gold-primary);
+      color: #0c0e14;
+      border-color: var(--gold-primary);
+      box-shadow: 0 0 10px var(--gold-glow);
+    }
+    .btn-page:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+    .page-ellipsis {
+      padding: 0 4px;
+      color: var(--text-muted);
+      font-weight: bold;
+    }
+    .page-size-selector {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+    .page-size-select {
+      background: var(--bg-surface);
+      color: var(--text-main);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 4px 8px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      outline: none;
+    }
+    .page-size-select:focus {
+      border-color: var(--gold-primary);
+    }
+
+    /* ==================================================== */
+    /* Official KPM Nilai Murni Badges & Sequential Copy     */
+    /* ==================================================== */
+    .nilai-murni-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px dashed var(--border);
+    }
+    .nilai-murni-title {
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--gold-primary);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .badge-nilai-murni {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 2px 8px;
+      font-size: 0.74rem;
+      font-weight: 600;
+      border-radius: 999px;
+      background: var(--gold-bg-subtle);
+      border: 1px solid var(--gold-border);
+      color: var(--gold-hover);
+      cursor: pointer;
+      transition: all 0.18s ease;
+      user-select: none;
+    }
+    .badge-nilai-murni:hover {
+      background: var(--gold-primary);
+      color: #0c0e14;
+      transform: translateY(-1px);
+      box-shadow: 0 2px 8px var(--gold-glow);
+    }
+    .badge-nilai-murni:active {
+      transform: scale(0.96);
+    }
+
+    .seq-copy-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+    }
+    .btn-seq-copy {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 7px 12px;
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%);
+      border: 1px solid var(--gold-primary);
+      border-radius: var(--radius-sm);
+      color: var(--gold-primary);
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .btn-seq-copy:hover {
+      background: var(--gold-primary);
+      color: #0c0e14;
+      box-shadow: 0 0 14px var(--gold-glow);
+    }
+    .btn-seq-copy.step-active {
+      animation: pulseGoldBorder 1.2s infinite;
+    }
+    @keyframes pulseGoldBorder {
+      0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+      70% { box-shadow: 0 0 0 6px rgba(212, 175, 55, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+    }
+    .btn-card-edit {
+      padding: 4px 8px;
+      font-size: 0.74rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: var(--bg-surface);
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .btn-card-edit:hover {
+      border-color: var(--gold-primary);
+      color: var(--gold-primary);
+    }
+</style>
 </head>
 <body>
 
@@ -2693,6 +3058,12 @@
           <button class="btn btn-outline" id="btn-restore-data" onclick="importData()" title="'从JSON文件恢复数据">
           <span id="btn-text-restore">📂 恢复</span>
         </button>
+        <button class="btn btn-outline" id="btn-theme-toggle" onclick="toggleTheme()" title="切换明亮/暗黑主题">
+          <span id="theme-btn-icon">🌓</span> <span id="theme-btn-text">主题</span>
+        </button>
+        <button class="btn btn-outline" id="btn-compact-toggle" onclick="toggleCompactMode()" title="分屏极简模式 (适合与AINS NILAM并排)">
+          <span id="compact-btn-icon">🖥️</span> <span id="compact-btn-text">分屏模式</span>
+        </button>
 
         <!-- More Tools Dropdown Menu -->
         <div class="dropdown-tools-wrap" id="tools-dropdown-wrap">
@@ -2730,7 +3101,13 @@
         </span>
         <div class="shelf-cat-tabs" id="shelf-cat-tabs">
           <button class="shelf-cat-btn active" data-cat="all" onclick="filterShelfCategory('all')">
-            <span class="cat-name" id="cat-tab-all">全部</span><span class="cat-pill" id="cat-count-all">1,019</span>
+            <span class="cat-name" id="cat-tab-all">全部</span><span class="cat-pill" id="cat-count-all">2,029</span>
+          </button>
+          <button class="shelf-cat-btn" data-cat="bukan_fiksyen" onclick="filterShelfCategory('bukan_fiksyen')">
+            <span class="cat-name" id="cat-tab-bukan_fiksyen">非虚构与科学传记</span><span class="cat-pill" id="cat-count-bukan_fiksyen">730</span>
+          </button>
+          <button class="shelf-cat-btn" data-cat="sastera" onclick="filterShelfCategory('sastera')">
+            <span class="cat-name" id="cat-tab-sastera">经典文学</span><span class="cat-pill" id="cat-count-sastera">280</span>
           </button>
           <button class="shelf-cat-btn" data-cat="shonen" onclick="filterShelfCategory('shonen')">
             <span class="cat-name" id="cat-tab-shonen">热血冒险</span><span class="cat-pill" id="cat-count-shonen">610</span>
@@ -2739,7 +3116,7 @@
             <span class="cat-name" id="cat-tab-romance">青春恋爱</span><span class="cat-pill" id="cat-count-romance">140</span>
           </button>
           <button class="shelf-cat-btn" data-cat="daily" onclick="filterShelfCategory('daily')">
-            <span class="cat-name" id="cat-tab-daily">美食日常</span><span class="cat-pill" id="cat-count-daily">269</span>
+            <span class="cat-name" id="cat-tab-daily" style="white-space:nowrap;">美食生活</span><span class="cat-pill" id="cat-count-daily">269</span>
           </button>
         </div>
         <button class="btn-toggle-shelf" id="btn-toggle-shelf" onclick="toggleShelfCollapse()">
@@ -2844,6 +3221,25 @@
     <div id="content-container">
       <div class="vol-list" id="vol-list"></div>
     </div>
+
+    <!-- Pagination Deck (Sleek High-Performance Controls) -->
+    <div class="pagination-bar" id="pagination-bar" style="display: none;">
+      <div class="pagination-info" id="pagination-info">
+        <span>显示第 <strong id="page-range-text">1 - 24</strong> 本 (共 <strong id="page-total-text">2029</strong> 本)</span>
+      </div>
+      <div class="pagination-controls" id="pagination-controls">
+        <!-- Dynamically rendered page buttons -->
+      </div>
+      <div class="page-size-selector">
+        <span>每页:</span>
+        <select class="page-size-select" id="page-size-select" onchange="changePageSize(this.value)">
+          <option value="24">24 本</option>
+          <option value="48">48 本</option>
+          <option value="96">96 本</option>
+          <option value="all">全部显示</option>
+        </select>
+      </div>
+    </div>
   </div>
 
   <!-- Add Book Modal -->
@@ -2857,6 +3253,7 @@
       </div>
 
       <form id="add-book-form" onsubmit="handleAddBookSubmit(event)">
+        <input type="hidden" id="m-edit-id" value="">
         <div class="form-row">
           <div class="form-group">
             <label id="lbl-series">所属系列 (Series) *</label>
@@ -2940,7 +3337,7 @@
         盲盒天选抽书 · 正在探寻
       </h2>
       <p id="roulette-subheading" style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">
-        正从全馆 633 卷典藏书库中为您随机锁定未读天选之卷...
+        <span id="roulette-pool-desc">正从全馆典藏书库中为您随机锁定未读天选之卷...</span>
       </p>
 
       <div class="roulette-title-slot">
@@ -3177,6 +3574,40 @@
     const KEY_CUSTOM = 'universal_nilam_custom_books_v3';
     const KEY_VIEW = 'universal_nilam_view_mode';
     const KEY_LANG = 'nilam_lang';
+    const KEY_THEME = 'universal_nilam_theme_v1';
+    const KEY_COMPACT = 'universal_nilam_compact_v1';
+
+    let currentTheme = localStorage.getItem(KEY_THEME) || 'dark';
+    let isCompactMode = localStorage.getItem(KEY_COMPACT) === 'true';
+
+    function applyTheme(theme) {
+      currentTheme = theme;
+      localStorage.setItem(KEY_THEME, theme);
+      document.documentElement.setAttribute('data-theme', theme);
+      const icon = document.getElementById('theme-btn-icon');
+      const text = document.getElementById('theme-btn-text');
+      if (icon) icon.innerText = theme === 'light' ? '☀️' : '🌙';
+      if (text) text.innerText = theme === 'light' ? (currentLang === 'ms' ? 'Cerah' : (currentLang === 'en' ? 'Light' : '明亮')) : (currentLang === 'ms' ? 'Gelap' : (currentLang === 'en' ? 'Dark' : '深色'));
+    }
+
+    function toggleTheme() {
+      applyTheme(currentTheme === 'light' ? 'dark' : 'light');
+      playTactilePopSound();
+    }
+
+    function applyCompactMode(compact) {
+      isCompactMode = compact;
+      localStorage.setItem(KEY_COMPACT, compact ? 'true' : 'false');
+      document.body.classList.toggle('compact-mode', compact);
+      const btn = document.getElementById('btn-compact-toggle');
+      if (btn) btn.classList.toggle('active', compact);
+    }
+
+    function toggleCompactMode() {
+      applyCompactMode(!isCompactMode);
+      playTactilePopSound();
+      showToast(isCompactMode ? (currentLang === 'ms' ? 'Mod Pisah Skrin Diaktifkan' : '分屏模式已开启') : (currentLang === 'ms' ? 'Mod Piawai Diaktifkan' : '标准模式已恢复'));
+    }
 
     // Current Language: 'zh' | 'ms' | 'en' (supports ?lang= query param or localStorage)
     const urlLangParam = new URLSearchParams(window.location.search).get('lang');
@@ -4004,6 +4435,167 @@
       return m ? m[0] : str;
     }
 
+
+    // ====================================================
+    // Official KPM Nilai Murni (16 Standard Values)
+    // ====================================================
+    const KPM_NILAI_MURNI_LIST = [
+      "Baik Hati", "Berdikari", "Hemah Tinggi", "Hormat-menghormati",
+      "Kasih Sayang", "Keadilan", "Kebebasan", "Keberanian",
+      "Kebersihan Fizikal & Mental", "Kejujuran", "Kerajinan", "Kerjasama",
+      "Kesederhanaan", "Kesyukuran", "Patriotisme", "Rasional"
+    ];
+
+    function getBookNilaiMurni(b) {
+      if (!b) return [];
+      if (b.i18n && b.i18n[currentLang] && Array.isArray(b.i18n[currentLang].nilaiMurni) && b.i18n[currentLang].nilaiMurni.length > 0) {
+        return b.i18n[currentLang].nilaiMurni;
+      }
+      if (Array.isArray(b.nilaiMurni) && b.nilaiMurni.length > 0) {
+        if (currentLang === 'zh') {
+          const zhMap = {
+            "Kegigihan": "坚毅不拔", "Keberanian": "见义勇为", "Hemah Tinggi": "崇高品德",
+            "Kerjasama": "团结互助", "Kasih Sayang": "仁爱关怀", "Berdikari": "自立自强",
+            "Kesyukuran": "心怀感恩", "Rasional": "理性明辨", "Keadilan": "公正无私",
+            "Kejujuran": "诚实守信", "Kerajinan": "勤勉刻苦", "Hormat-menghormati": "尊师重道",
+            "Baik Hati": "心地善良", "Patriotisme": "爱国精神", "Kesederhanaan": "适度谦逊",
+            "Semangat Bermasyarakat": "社会责任", "Kebersihan Fizikal & Mental": "身心清明"
+          };
+          return b.nilaiMurni.map(v => zhMap[v] || v);
+        } else if (currentLang === 'en') {
+          const enMap = {
+            "Kegigihan": "Perseverance", "Keberanian": "Courage", "Hemah Tinggi": "High Courtesy",
+            "Kerjasama": "Teamwork & Cooperation", "Kasih Sayang": "Love & Compassion", "Berdikari": "Independence",
+            "Kesyukuran": "Gratitude", "Rasional": "Rationality", "Keadilan": "Justice",
+            "Kejujuran": "Honesty & Integrity", "Kerajinan": "Diligence", "Hormat-menghormati": "Mutual Respect",
+            "Baik Hati": "Kindheartedness", "Patriotisme": "Patriotism", "Kesederhanaan": "Moderation",
+            "Semangat Bermasyarakat": "Community Spirit", "Kebersihan Fizikal & Mental": "Purity"
+          };
+          return b.nilaiMurni.map(v => enMap[v] || v);
+        }
+        return b.nilaiMurni;
+      }
+
+      // Deduce 2-3 KPM values based on series / insight
+      const txt = ((b.summary || '') + ' ' + (b.insight || '')).toLowerCase();
+      const res = [];
+      if (txt.includes('合作') || txt.includes('夥伴') || txt.includes('伙伴') || txt.includes('默契') || txt.includes('團隊') || txt.includes('团队')) {
+        res.push(currentLang === 'zh' ? '团结协作' : (currentLang === 'en' ? 'Teamwork' : 'Kerjasama'));
+      }
+      if (txt.includes('毅力') || txt.includes('堅持') || txt.includes('坚持') || txt.includes('不屈') || txt.includes('努力') || txt.includes('拼搏')) {
+        res.push(currentLang === 'zh' ? '坚毅不拔' : (currentLang === 'en' ? 'Perseverance' : 'Kegigihan'));
+      }
+      if (txt.includes('勇氣') || txt.includes('勇气') || txt.includes('無畏') || txt.includes('无畏') || txt.includes('突破') || txt.includes('挑戰') || txt.includes('挑战')) {
+        res.push(currentLang === 'zh' ? '见义勇为' : (currentLang === 'en' ? 'Courage' : 'Keberanian'));
+      }
+      if (txt.includes('關懷') || txt.includes('关怀') || txt.includes('溫暖') || txt.includes('温暖') || txt.includes('愛') || txt.includes('爱') || txt.includes('友誼') || txt.includes('友谊')) {
+        res.push(currentLang === 'zh' ? '仁爱关怀' : (currentLang === 'en' ? 'Love & Compassion' : 'Kasih Sayang'));
+      }
+      if (txt.includes('禮') || txt.includes('礼') || txt.includes('敬') || txt.includes('尊') || txt.includes('謙') || txt.includes('谦')) {
+        res.push(currentLang === 'zh' ? '崇高品德' : (currentLang === 'en' ? 'High Courtesy' : 'Hemah Tinggi'));
+      }
+      if (txt.includes('理智') || txt.includes('思考') || txt.includes('智慧') || txt.includes('策略') || txt.includes('冷靜') || txt.includes('冷静')) {
+        res.push(currentLang === 'zh' ? '理性明辨' : (currentLang === 'en' ? 'Rationality' : 'Rasional'));
+      }
+      if (res.length < 2) {
+        if (currentLang === 'zh') res.push('勤勉刻苦', '崇高品德');
+        else if (currentLang === 'en') res.push('Diligence', 'High Courtesy');
+        else res.push('Kerajinan', 'Hemah Tinggi');
+      }
+      return res.slice(0, 3);
+    }
+
+    // ====================================================
+    // Sequential Smart Copy Queue (连击分步极速复制)
+    // ====================================================
+    // AINS NILAM Sequential Copy Queue (6 Steps strictly matching AINS)
+    // 1. Tajuk (书名) -> 2. Penulis (作者) -> 3. Penerbit (出版社) 
+    // -> 4. Tahun (年份) -> 5. Muka Surat (页数) -> 6. Rumusan (读后感与总结)
+    // ====================================================
+    const SEQ_STEPS = [
+      { key: 'title', labelZh: '书名', labelMs: 'Tajuk Buku', labelEn: 'Book Title' },
+      { key: 'author', labelZh: '作者', labelMs: 'Penulis', labelEn: 'Author' },
+      { key: 'publisher', labelZh: '出版社', labelMs: 'Penerbit', labelEn: 'Publisher' },
+      { key: 'year', labelZh: '出版年份', labelMs: 'Tahun Terbitan', labelEn: 'Year' },
+      { key: 'pages', labelZh: '总页数', labelMs: 'Bilangan Muka Surat', labelEn: 'Pages' },
+      { key: 'rumusan', labelZh: '读后总结与概述', labelMs: 'Rumusan / Sinopsis', labelEn: 'Rumusan / Summary' }
+    ];
+
+    const _seqState = {};
+    let lastActiveBookId = null;
+
+    function copySequentialStep(bookId, triggerBtn) {
+      const allBooks = getAllBooks();
+      const b = allBooks.find(x => x.id === bookId);
+      if (!b) return;
+      lastActiveBookId = bookId;
+
+      let step = _seqState[bookId] || 0;
+      const currentStepDef = SEQ_STEPS[step];
+
+      let textToCopy = '';
+      let fieldLabel = currentStepDef.labelZh;
+      if (currentLang === 'ms') fieldLabel = currentStepDef.labelMs;
+      if (currentLang === 'en') fieldLabel = currentStepDef.labelEn;
+
+      if (currentStepDef.key === 'title') textToCopy = getBookField(b, 'title');
+      else if (currentStepDef.key === 'author') textToCopy = getBookField(b, 'author');
+      else if (currentStepDef.key === 'publisher') textToCopy = getBookField(b, 'publisher');
+      else if (currentStepDef.key === 'year') textToCopy = b.year ? b.year.toString() : '';
+      else if (currentStepDef.key === 'pages') textToCopy = b.pages ? b.pages.toString() : '';
+      else if (currentStepDef.key === 'rumusan') {
+        const sum = getBookField(b, 'summary');
+        const ins = getBookField(b, 'insight');
+        if (currentLang === 'ms') {
+          textToCopy = sum + (ins ? ('\n\nPengajaran: ' + ins) : '');
+        } else if (currentLang === 'en') {
+          textToCopy = sum + (ins ? ('\n\nMoral Takeaway: ' + ins) : '');
+        } else {
+          textToCopy = sum + (ins ? ('\n\n【读后启示与心得】：' + ins) : '');
+        }
+      }
+
+      navigator.clipboard.writeText(textToCopy).catch(() => {
+        const ta = document.createElement('textarea');
+        ta.value = textToCopy;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+      });
+
+      playTactilePopSound();
+
+      const nextStep = (step + 1) % SEQ_STEPS.length;
+      _seqState[bookId] = nextStep;
+
+      const badgeEl = document.getElementById(`seq-step-badge-${bookId}`);
+      if (badgeEl) {
+        const nextDef = SEQ_STEPS[nextStep];
+        const nextLbl = currentLang === 'ms' ? nextDef.labelMs : (currentLang === 'en' ? nextDef.labelEn : nextDef.labelZh);
+        badgeEl.innerText = nextStep === 0 ? `[✓ AINS 完成/重置]` : `[${nextStep + 1}/6 ${nextLbl}]`;
+      }
+
+      const toastMsg = currentLang === 'ms'
+        ? `[${step + 1}/6] Disalin ${fieldLabel} (AINS): "${textToCopy.slice(0, 24)}${textToCopy.length > 24 ? '...' : ''}"`
+        : (currentLang === 'en'
+          ? `[${step + 1}/6] Copied ${fieldLabel} (AINS): "${textToCopy.slice(0, 24)}${textToCopy.length > 24 ? '...' : ''}"`
+          : `[${step + 1}/6] 已复制 AINS ${fieldLabel}: "${textToCopy.slice(0, 24)}${textToCopy.length > 24 ? '...' : ''}"`);
+      showToast(toastMsg);
+    }
+
+    // Keyboard Space shortcut for sequential copy when card is active
+    document.addEventListener('keydown', (e) => {
+      if (e.code === 'Space' && lastActiveBookId) {
+        const activeEl = document.activeElement;
+        const isInput = activeEl && (activeEl.tagName === 'INPUT' || activeEl.tagName === 'TEXTAREA' || activeEl.isContentEditable);
+        if (!isInput) {
+          e.preventDefault();
+          copySequentialStep(lastActiveBookId);
+        }
+      }
+    });
+
     function getBookField(b, field) {
       if (!b) return '';
       if (!currentLang || currentLang === 'zh') {
@@ -4040,17 +4632,50 @@
       if (field === 'summary') {
         const sName = getBookField(b, 'series');
         const volNum = getCleanVol(b.vol) || 1;
+        const vInt = parseInt(volNum) || 1;
+
         if (currentLang === 'ms') {
-          return 'Dalam jilid ke-' + volNum + ' siri ' + sName + ', watak utama mengharungi pelbagai cabaran dan liku perjuangan yang menguji kekuatan mental dan fizikal. Bersama rakan-rakan seperjuangan, mereka berganding bahu mengatasi rintangan getir dengan penuh keazaman dan dedikasi demi mencapai impian murni.';
+          const msSummaries = [
+            'Buku jilid ke-' + volNum + ' dalam siri ' + sName + ' ini memaparkan babak-babak mencabar yang menguji kecekalan fizikal dan mental watak utama demi mempertahankan maruah serta sahabat seperjuangan.',
+            'Kisah jilid ' + volNum + ' siri ' + sName + ' membawa pembaca menyelami pertembungan sengit dan strategi taktikal yang memerlukan kesepakatan jitu antara rakan sepasukan untuk melepasi rintangan getir.',
+            'Dalam bahagian ke-' + volNum + ' siri ' + sName + ' ini, naratif tertumpu kepada perkembangan kematangan watak utama yang bangkit daripada kegagalan lalu dengan tekad memperkukuh kebolehan kendiri.',
+            'Jilid ke-' + volNum + ' siri ' + sName + ' mengetengahkan konflik genting dan pengorbanan suci yang membuka mata para protagonis tentang erti tanggungjawab terhadap amanah yang dipikul.',
+            'Menerusi penceritaan jilid ' + volNum + ' siri ' + sName + ', pembaca didedahkan dengan kegigihan watak-watak dalam menyelesaikan cabaran rumit berasaskan kebijaksanaan, kesabaran serta dedikasi murni.'
+          ];
+          return msSummaries[vInt % msSummaries.length];
         } else {
-          return 'In volume ' + volNum + ' of ' + sName + ', the protagonists confront significant obstacles and thrilling challenges that test their mental and physical limits. United with their trusted companions, they overcome adversity through unwavering determination and camaraderie, forging their path toward excellence.';
+          const enSummaries = [
+            'Volume ' + volNum + ' of ' + sName + ' chronicles pivotal challenges testing the physical resolve and tactical ingenuity of the protagonists in defense of their ideals and companions.',
+            'This installment (Vol. ' + volNum + ') of ' + sName + ' delves into high-stakes encounters and collaborative strategic maneuvers essential for conquering critical turning points.',
+            'Focusing on personal growth, Volume ' + volNum + ' in the ' + sName + ' series demonstrates how resilience and disciplined perseverance enable the characters to rise above past setbacks.',
+            'In Volume ' + volNum + ' of ' + sName + ', intensifying dilemmas compel the protagonists to make courageous decisions, embodying responsibility, selfless duty, and fortitude.',
+            'This chapter (Vol. ' + volNum + ') of ' + sName + ' highlights the analytical problem-solving and patient teamwork demanded to resolve complex adversarial situations.'
+          ];
+          return enSummaries[vInt % enSummaries.length];
         }
       }
       if (field === 'insight') {
+        const volNum = getCleanVol(b.vol) || 1;
+        const vInt = parseInt(volNum) || 1;
+
         if (currentLang === 'ms') {
-          return 'Jilid ini memaparkan nilai murni yang amat mendalam tentang kecekalan hati, kerjasama berpasukan dan integriti diri. Pengorbanan dan ketabahan watak-watak mengajar kita bahawa kejayaan sejati tidak datang bergolek, sebaliknya memerlukan usaha gigih, sifat merendah diri dan kesetiaan padu sesama sahabat dalam mendepani dugaan hidup.';
+          const msInsights = [
+            'Karya ini menyemai nilai kegigihan, keberanian dan hemah tinggi. Keazaman watak mendidik kita bahawa kejayaan hanya digapai melalui usaha gigih tanpa gentar menghadapi kegagalan.',
+            'Jilid ini mengajar kepentingan kerjasama berpasukan dan sikap bertanggungjawab. Bersatu hati dan saling mempercayai merupakan kunci utama merungkai kesulitan rumit dalam hidup.',
+            'Nilai murni yang diketengahkan ialah rasionaliti, kesabaran dan keadilan. Membuat pertimbangan matang sewaktu emosi teruji adalah asas pembentukan sahsiah terpuji.',
+            'Buku ini menekankan nilai kasih sayang, kesyukuran dan kesederhanaan. Menghargai setiap peluang dan sokongan orang di sekeliling membina jati diri yang kental dan berbudi bahasa.',
+            'Pengajaran penting ialah kejujuran, disiplin diri dan hemah tinggi. Integriti dalam setiap tindakan adalah kompas moral yang memimpin kita menuju kecemerlangan berkekalan.'
+          ];
+          return msInsights[vInt % msInsights.length];
         } else {
-          return "This volume conveys profound moral values centered on perseverance, selfless teamwork, and personal integrity. The resilience demonstrated by the characters reminds readers that genuine accomplishment is forged through relentless dedication, humility, and the courage to support one's peers through life's trials.";
+          const enInsights = [
+            'This volume fosters resilience, courage, and moral dignity, demonstrating that triumph is earned through relentless dedication and perseverance in the face of hardship.',
+            'The work underlines the indispensable value of teamwork and shared accountability, illustrating that mutual trust overcomes daunting obstacles.',
+            'Key moral reflections center on rationality, patience, and fair-minded integrity, emphasizing thoughtful decision-making in turbulent circumstances.',
+            'Readers are guided toward empathy, gratitude, and moderation, realizing that humility and social solidarity form the bedrock of enduring personal character.',
+            'The core virtue is personal discipline, honesty, and high courtesy, serving as an upright moral compass for youth navigating personal development.'
+          ];
+          return enInsights[vInt % enInsights.length];
         }
       }
 
@@ -4331,11 +4956,19 @@
 
     // Series Category Helper (Feature: Shelf Categories)
     function getSeriesCategory(s) {
-      if (!s) return 'shonen';
+      if (!s) return 'bukan_fiksyen';
+      // 1. Bukan Fiksyen / Non-fiction (Science, History, Biography, Motivation, Finance)
+      if (s.includes('科學') || s.includes('科学') || s.includes('宇宙') || s.includes('物理') || s.includes('醫學') || s.includes('医学') || s.includes('歷史') || s.includes('历史') || s.includes('文明') || s.includes('先驅') || s.includes('先驱') || s.includes('領袖') || s.includes('领袖') || s.includes('偉人') || s.includes('伟人') || s.includes('傳記') || s.includes('传记') || s.includes('認知') || s.includes('认知') || s.includes('財商') || s.includes('财商') || s.includes('思維') || s.includes('思维') || s.includes('哲學') || s.includes('哲学') || s.includes('人工智能') || s.includes('理財') || s.includes('理财') || s.includes('成長') || s.includes('成长') || s.includes('心理') || s.includes('地球') || s.includes('生物') || s.includes('大英') || s.includes('華夏') || s.includes('华夏') || s.includes('人類') || s.includes('人类')) return 'bukan_fiksyen';
+      
+      // 2. Sastera / Classic Literature (Masterpieces, Fables, World Classics)
+      if (s.includes('文學') || s.includes('文学') || s.includes('名著') || s.includes('三國') || s.includes('三国') || s.includes('水滸') || s.includes('水浒') || s.includes('西遊') || s.includes('西游') || s.includes('紅樓') || s.includes('红楼') || s.includes('莎士比亞') || s.includes('莎士比亚') || s.includes('寓言') || s.includes('童話') || s.includes('童话') || s.includes('福爾摩斯') || s.includes('福尔摩斯') || s.includes('格林') || s.includes('安徒生') || s.includes('伊索') || s.includes('小王子') || s.includes('老人與海') || s.includes('傲慢與偏見') || s.includes('悲慘世界') || s.includes('基督山') || s.includes('詩經') || s.includes('诗经') || s.includes('唐詩') || s.includes('宋詞')) return 'sastera';
+
+      // 3. Manga Subcategories
       if (s.includes('火影') || s.includes('海賊') || s.includes('海贼') || s.includes('航海王') || s.includes('刃牙') || s.includes('格鬥天王') || s.includes('格斗天王') || s.includes('排球') || s.includes('灌籃') || s.includes('灌篮') || s.includes('英雄') || s.includes('鬼滅') || s.includes('鬼灭') || s.includes('鋼之') || s.includes('钢之') || s.includes('咒術') || s.includes('咒术') || s.includes('棋魂') || s.includes('黑子') || s.includes('巨人') || s.includes('藍色監獄') || s.includes('蓝色监狱') || s.includes('死神') || s.includes('BLEACH')) return 'shonen';
       if (s.includes('輝夜') || s.includes('辉夜') || s.includes('五等分') || s.includes('高木') || s.includes('堀與') || s.includes('堀与') || s.includes('青春') || s.includes('閃爍') || s.includes('闪烁') || s.includes('告訴') || s.includes('告诉') || s.includes('只要妳') || s.includes('只要你')) return 'romance';
       if (s.includes('美味') || s.includes('烏龍') || s.includes('乌龙') || s.includes('強風') || s.includes('强风')) return 'daily';
-      return 'shonen';
+
+      return 'bukan_fiksyen';
     }
 
     // Series Icon Mapping
@@ -4537,11 +5170,16 @@
       render();
     }
 
+    let searchDebounceTimer = null;
     function handleSearchInput() {
       const q = document.getElementById('search-input').value.trim();
       const clearBtn = document.getElementById('btn-clear-search');
-      clearBtn.classList.toggle('visible', q.length > 0);
-      render();
+      if (clearBtn) clearBtn.classList.toggle('visible', q.length > 0);
+      clearTimeout(searchDebounceTimer);
+      searchDebounceTimer = setTimeout(() => {
+        currentPage = 1;
+        render();
+      }, 250);
     }
 
     function clearSearch() {
@@ -4594,25 +5232,32 @@
     }
 
     function exportNilamCSV() {
-      const allBooks = getAllBooks();
-      const scopeBooks = currentSeries === 'all' ? allBooks : allBooks.filter(b => b.series === currentSeries);
+      const booksToExport = (currentFilteredList && currentFilteredList.length > 0) ? currentFilteredList : getAllBooks();
       
       const headers = ['Siri (系列)', 'No. Jilid (卷数)', 'Judul (书名)', 'Pengarang (作者)', 'Penerbit (出版社)', 'Tahun (年份)', 'Muka Surat (页数)', 'ISBN', 'Status (状态)', 'Sinopsis (内容概述)', 'Nilai Murni (品德启示)'];
       
-      const rows = scopeBooks.map(b => {
+      const rows = booksToExport.map(b => {
         const isDone = completedSet.has(b.id) ? t('statDone') : t('statPending');
+        const locTitle = getBookField(b, 'title');
+        const locAuthor = getBookField(b, 'author');
+        const locPublisher = getBookField(b, 'publisher');
+        const locSeries = getBookField(b, 'series');
+        const locSummary = getBookField(b, 'summary');
+        const locInsight = getBookField(b, 'insight');
+        const nilaiTags = getBookNilaiMurni(b).join('; ');
+
         return [
-          `"${(b.series || '').replace(/"/g, '""')}"`,
+          `"${(locSeries || '').replace(/"/g, '""')}"`,
           `"${b.vol || ''}"`,
-          `"${(b.title || '').replace(/"/g, '""')}"`,
-          `"${(b.author || '').replace(/"/g, '""')}"`,
-          `"${(b.publisher || '').replace(/"/g, '""')}"`,
+          `"${(locTitle || '').replace(/"/g, '""')}"`,
+          `"${(locAuthor || '').replace(/"/g, '""')}"`,
+          `"${(locPublisher || '').replace(/"/g, '""')}"`,
           `"${b.year || ''}"`,
           `"${b.pages || ''}"`,
           `"${b.isbn || ''}"`,
           `"${isDone}"`,
-          `"${(b.summary || '').replace(/"/g, '""')}"`,
-          `"${(b.insight || '').replace(/"/g, '""')}"`
+          `"${(locSummary || '').replace(/"/g, '""')}"`,
+          `"${(nilaiTags ? (nilaiTags + ' | ' + locInsight) : locInsight).replace(/"/g, '""')}"`
         ].join(',');
       });
 
@@ -4621,8 +5266,8 @@
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      const seriesTag = currentSeries === 'all' ? t('allSeries') : currentSeries;
-      a.download = `Books_${seriesTag}_${new Date().toISOString().slice(0, 10)}.csv`;
+      const seriesTag = currentSeries === 'all' ? (currentShelfCat !== 'all' ? currentShelfCat : t('allSeries')) : currentSeries;
+      a.download = `Books_NILAM_${seriesTag}_${new Date().toISOString().slice(0, 10)}.csv`;
       a.click();
       URL.revokeObjectURL(url);
       showToast(t('exportCsvDone', seriesTag));
@@ -4633,7 +5278,7 @@
       const seriesMap = new Map();
 
       // Category count calculation
-      let catCounts = { all: allBooks.length, shonen: 0, romance: 0, daily: 0 };
+      let catCounts = { all: allBooks.length, bukan_fiksyen: 0, sastera: 0, shonen: 0, romance: 0, daily: 0 };
 
       allBooks.forEach(b => {
         const s = b.series || t('uncategorized');
@@ -4644,6 +5289,8 @@
 
       // Update category badges in shelf header
       if (document.getElementById('cat-count-all')) document.getElementById('cat-count-all').innerText = Number(catCounts.all).toLocaleString();
+      if (document.getElementById('cat-count-bukan_fiksyen')) document.getElementById('cat-count-bukan_fiksyen').innerText = Number(catCounts.bukan_fiksyen || 0).toLocaleString();
+      if (document.getElementById('cat-count-sastera')) document.getElementById('cat-count-sastera').innerText = Number(catCounts.sastera || 0).toLocaleString();
       if (document.getElementById('cat-count-shonen')) document.getElementById('cat-count-shonen').innerText = Number(catCounts.shonen).toLocaleString();
       if (document.getElementById('cat-count-romance')) document.getElementById('cat-count-romance').innerText = Number(catCounts.romance).toLocaleString();
       if (document.getElementById('cat-count-daily')) document.getElementById('cat-count-daily').innerText = Number(catCounts.daily).toLocaleString();
@@ -4741,7 +5388,77 @@
       if (document.getElementById('filter-star-count')) document.getElementById('filter-star-count').innerText = bookmarkedCount;
     }
 
-    function render() {
+    let currentPage = 1;
+    let pageSize = 24;
+    let currentFilteredList = [];
+
+    function changePage(page) {
+      currentPage = page;
+      render(true);
+      const container = document.getElementById('content-container');
+      if (container) {
+        container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    function changePageSize(size) {
+      pageSize = size === 'all' ? 'all' : parseInt(size);
+      currentPage = 1;
+      render();
+    }
+
+    function renderPagination(totalCount) {
+      const bar = document.getElementById('pagination-bar');
+      if (!bar) return;
+
+      if (totalCount === 0 || pageSize === 'all') {
+        bar.style.display = (pageSize === 'all' && totalCount > 0) ? 'flex' : 'none';
+        const info = document.getElementById('pagination-info');
+        if (info) info.innerHTML = `<span>显示全部 <strong style="color:var(--gold-primary);">${totalCount}</strong> 本</span>`;
+        const ctrl = document.getElementById('pagination-controls');
+        if (ctrl) ctrl.innerHTML = '';
+        return;
+      }
+
+      bar.style.display = 'flex';
+      const totalPages = Math.ceil(totalCount / pageSize);
+      if (currentPage > totalPages) currentPage = totalPages || 1;
+
+      const startNum = (currentPage - 1) * pageSize + 1;
+      const endNum = Math.min(currentPage * pageSize, totalCount);
+
+      const rangeEl = document.getElementById('page-range-text');
+      const totalEl = document.getElementById('page-total-text');
+      if (rangeEl) rangeEl.innerText = `${startNum} - ${endNum}`;
+      if (totalEl) totalEl.innerText = totalCount;
+
+      const controls = document.getElementById('pagination-controls');
+      if (!controls) return;
+
+      let btnsHtml = '';
+      btnsHtml += `<button class="btn-page" ${currentPage <= 1 ? 'disabled' : ''} onclick="changePage(${currentPage - 1})" title="上一页">‹</button>`;
+
+      const delta = 2;
+      const range = [];
+      for (let i = Math.max(2, currentPage - delta); i <= Math.min(totalPages - 1, currentPage + delta); i++) {
+        range.push(i);
+      }
+
+      btnsHtml += `<button class="btn-page ${currentPage === 1 ? 'active' : ''}" onclick="changePage(1)">1</button>`;
+      if (range.length > 0 && range[0] > 2) btnsHtml += `<span class="page-ellipsis">...</span>`;
+      range.forEach(p => {
+        btnsHtml += `<button class="btn-page ${currentPage === p ? 'active' : ''}" onclick="changePage(${p})">${p}</button>`;
+      });
+      if (range.length > 0 && range[range.length - 1] < totalPages - 1) btnsHtml += `<span class="page-ellipsis">...</span>`;
+      if (totalPages > 1) {
+        btnsHtml += `<button class="btn-page ${currentPage === totalPages ? 'active' : ''}" onclick="changePage(${totalPages})">${totalPages}</button>`;
+      }
+      btnsHtml += `<button class="btn-page ${currentPage >= totalPages ? 'disabled' : ''}" onclick="changePage(${currentPage + 1})" title="下一页">›</button>`;
+
+      controls.innerHTML = btnsHtml;
+    }
+
+    function render(isPageChangeOnly) {
       const container = document.getElementById('content-container');
       const query = document.getElementById('search-input').value.trim().toLowerCase();
       const allBooks = getAllBooks();
@@ -4761,14 +5478,21 @@
         if (currentFilter === 'bookmarked' && !isBookmarked) return false;
 
         if (query) {
-          const mTitle = (b.title || '').toLowerCase().includes(query);
-          const mSeries = (b.series || '').toLowerCase().includes(query);
-          const mAuthor = (b.author || '').toLowerCase().includes(query);
+          const locTitle = (getBookField(b, 'title') || '').toLowerCase();
+          const locSeries = (getBookField(b, 'series') || '').toLowerCase();
+          const locAuthor = (getBookField(b, 'author') || '').toLowerCase();
+          const locPublisher = (getBookField(b, 'publisher') || '').toLowerCase();
+          const mTitle = (b.title || '').toLowerCase().includes(query) || locTitle.includes(query);
+          const mSeries = (b.series || '').toLowerCase().includes(query) || locSeries.includes(query);
+          const mAuthor = (b.author || '').toLowerCase().includes(query) || locAuthor.includes(query);
+          const mPublisher = (b.publisher || '').toLowerCase().includes(query) || locPublisher.includes(query);
           const mIsbn = (b.isbn || '').toLowerCase().includes(query);
-          const mSummary = (b.summary || '').toLowerCase().includes(query);
-          const mInsight = (b.insight || '').toLowerCase().includes(query);
+          const mCategory = (b.category || '').toLowerCase().includes(query) || (getBookField(b, 'category') || '').toLowerCase().includes(query);
+          const mSummary = (b.summary || '').toLowerCase().includes(query) || (getBookField(b, 'summary') || '').toLowerCase().includes(query);
+          const mInsight = (b.insight || '').toLowerCase().includes(query) || (getBookField(b, 'insight') || '').toLowerCase().includes(query);
           const mVol = (b.vol !== undefined ? b.vol.toString() : '').toLowerCase().includes(query);
-          return mTitle || mSeries || mAuthor || mIsbn || mSummary || mInsight || mVol;
+          const mNilai = (b.nilaiMurni || []).some(n => n.toLowerCase().includes(query));
+          return mTitle || mSeries || mAuthor || mPublisher || mIsbn || mCategory || mSummary || mInsight || mVol || mNilai;
         }
         return true;
       });
@@ -4805,16 +5529,23 @@
         return;
       }
 
+      currentFilteredList = filtered;
+      renderPagination(filtered.length);
+
+      const pagedBooks = pageSize === 'all' 
+        ? filtered 
+        : filtered.slice((currentPage - 1) * pageSize, currentPage * pageSize);
+
       if (currentViewMode === 'card') {
         container.innerHTML = `
           <div class="vol-list view-scene-transition" id="vol-list">
-            ${filtered.map((b, idx) => renderCardItem(b, idx)).join('')}
+            ${pagedBooks.map((b, idx) => renderCardItem(b, idx)).join('')}
           </div>
         `;
       } else {
         container.innerHTML = `
           <div class="view-scene-transition">
-            ${renderTableView(filtered)}
+            ${renderTableView(pagedBooks)}
           </div>
         `;
       }
@@ -4982,11 +5713,21 @@
             <div class="content-text" id="insight-${b.id}">${locInsight || t('noInsight')}</div>
           </div>
 
-          <!-- Full Copy Bar -->
-          <div class="full-copy-bar">
-            <button class="btn btn-outline" style="font-size: 0.8rem;" onclick="copyFullVolume(getAllBooks().find(x => x.id === '${b.id}'))">
-              <svg class="g-icon"><use href="#icon-copy"></use></svg> ${t('btnCopyFull')}
-            </button>
+          <!-- Full Copy Bar & Sequential Smart Copy Queue -->
+          <div class="full-copy-bar" style="display: flex; gap: 8px; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+            <div class="seq-copy-group">
+              <button class="btn-seq-copy" id="btn-seq-${b.id}" onclick="copySequentialStep('${b.id}', this)" title="${currentLang === 'ms' ? 'Salin ikut turutan borang AINS NILAM: Tajuk > Penulis > Penerbit > Tahun > Muka Surat > Rumusan (Tekan Bar Ruang)' : (currentLang === 'en' ? 'AINS NILAM sequential copy: Title > Author > Publisher > Year > Pages > Rumusan (Press Space)' : 'AINS 顺序连击复制：书名 > 作者 > 出版社 > 年份 > 页数 > 读后感总结 (支持空格键)')}">
+                <span>⚡ 连击复制 (AINS)</span> <span class="badge-step" id="seq-step-badge-${b.id}">[1/6 ${currentLang === 'ms' ? 'Tajuk' : (currentLang === 'en' ? 'Title' : '书名')}]</span>
+              </button>
+              <button class="btn btn-outline" style="font-size: 0.8rem; white-space: nowrap;" onclick="copyFullVolume(getAllBooks().find(x => x.id === '${b.id}'))">
+                <svg class="g-icon"><use href="#icon-copy"></use></svg> ${t('btnCopyFull')}
+              </button>
+              ${isCustom ? `
+                <button class="btn-card-edit" onclick="openEditCustomModal('${b.id}')" title="编辑这本自定义书籍">
+                  ✏️ 编辑
+                </button>
+              ` : ''}
+            </div>
           </div>
         </div>
       `;
@@ -5083,8 +5824,32 @@
       document.getElementById('add-modal').classList.remove('active');
     }
 
+    function openEditCustomModal(bookId) {
+      const b = customBooks.find(x => x.id === bookId);
+      if (!b) return;
+
+      document.getElementById('m-edit-id').value = bookId;
+      document.getElementById('m-series').value = b.series || '';
+      document.getElementById('m-category').value = b.category || '漫畫';
+      document.getElementById('m-title').value = b.title || '';
+      document.getElementById('m-vol').value = b.vol || '';
+      document.getElementById('m-author').value = b.author || '';
+      document.getElementById('m-publisher').value = b.publisher || '';
+      document.getElementById('m-isbn').value = b.isbn || '';
+      document.getElementById('m-year').value = b.year || '';
+      document.getElementById('m-pages').value = b.pages || '';
+      document.getElementById('m-summary').value = b.summary || '';
+      document.getElementById('m-insight').value = b.insight || '';
+
+      const headingText = document.getElementById('modal-add-title-text');
+      if (headingText) headingText.innerText = currentLang === 'ms' ? 'Kemaskini Buku Tersuai' : (currentLang === 'en' ? 'Edit Custom Book' : '编辑自定义书籍资料');
+
+      document.getElementById('add-modal').classList.add('active');
+    }
+
     function handleAddBookSubmit(e) {
       e.preventDefault();
+      const editId = document.getElementById('m-edit-id').value;
       const series = document.getElementById('m-series').value.trim();
       const category = document.getElementById('m-category').value;
       const title = document.getElementById('m-title').value.trim();
@@ -5096,6 +5861,29 @@
       const pages = parseInt(document.getElementById('m-pages').value) || null;
       const summary = document.getElementById('m-summary').value.trim();
       const insight = document.getElementById('m-insight').value.trim();
+
+      if (editId) {
+        const idx = customBooks.findIndex(x => x.id === editId);
+        if (idx !== -1) {
+          customBooks[idx].series = series;
+          customBooks[idx].category = category;
+          customBooks[idx].title = title;
+          customBooks[idx].vol = vol ? (isNaN(vol) ? vol : Number(vol)) : '';
+          customBooks[idx].author = author;
+          customBooks[idx].publisher = publisher;
+          customBooks[idx].isbn = isbn || '无';
+          customBooks[idx].year = year || '';
+          customBooks[idx].pages = pages || '';
+          customBooks[idx].summary = summary || '';
+          customBooks[idx].insight = insight || '';
+        }
+        document.getElementById('m-edit-id').value = '';
+        saveState();
+        closeAddModal();
+        render();
+        showToast(currentLang === 'ms' ? 'Buku berjaya dikemaskini!' : '书籍资料已成功修改！');
+        return;
+      }
 
       const newBook = {
         id: `custom-${Date.now()}`,
@@ -5563,6 +6351,8 @@
     });
 
     document.addEventListener('DOMContentLoaded', () => {
+      applyTheme(currentTheme);
+      applyCompactMode(isCompactMode);
       setViewMode(currentViewMode);
       setLanguage(currentLang);
 
@@ -5872,13 +6662,29 @@
     // Sound Feedback Micro-Interactions (Offline Web Audio)
     // ====================================================
     
+    // ====================================================
+    // Sound Feedback Singleton (Zero Memory Leak / Limitless)
+    // ====================================================
+    const SoundManager = {
+      _ctx: null,
+      getCtx() {
+        try {
+          const AudioCtx = window.AudioContext || window.webkitAudioContext;
+          if (!AudioCtx) return null;
+          if (!this._ctx) this._ctx = new AudioCtx();
+          if (this._ctx.state === 'suspended') this._ctx.resume().catch(() => {});
+          return this._ctx;
+        } catch(e) {
+          return null;
+        }
+      }
+    };
+
     // Play light tactile click blip
     function playTactilePopSound() {
       try {
-        const AudioCtx = window.AudioContext || window.webkitAudioContext;
-        if (!AudioCtx) return;
-        const ctx = new AudioCtx();
-        if (ctx.state === 'suspended') ctx.resume();
+        const ctx = SoundManager.getCtx();
+        if (!ctx) return;
 
         const osc = ctx.createOscillator();
         const gain = ctx.createGain();
@@ -5899,10 +6705,8 @@
     // Play triumphant lottery chord sound
     function playTriumphantChord() {
       try {
-        const AudioCtx = window.AudioContext || window.webkitAudioContext;
-        if (!AudioCtx) return;
-        const ctx = new AudioCtx();
-        if (ctx.state === 'suspended') ctx.resume();
+        const ctx = SoundManager.getCtx();
+        if (!ctx) return;
 
         const freqs = [523.25, 659.25, 783.99, 1046.50]; // C Major Chord
         const t = ctx.currentTime;
@@ -5928,12 +6732,21 @@
     let rouletteChosenBook = null;
     function pickRandomBook() {
       const allBooks = getAllBooks();
-      const scopeBooks = currentSeries === 'all' ? allBooks : allBooks.filter(b => b.series === currentSeries);
+      const scopeBooks = currentSeries === 'all' ? (currentShelfCat !== 'all' ? allBooks.filter(b => getSeriesCategory(b.series) === currentShelfCat) : allBooks) : allBooks.filter(b => b.series === currentSeries);
       const pendingBooks = scopeBooks.filter(b => !completedSet.has(b.id));
 
       if (pendingBooks.length === 0) {
         alert(t('luckyDrawAllDone'));
         return;
+      }
+
+      const descEl = document.getElementById('roulette-pool-desc');
+      if (descEl) {
+        descEl.innerText = currentLang === 'ms'
+          ? `Memilih secara rawak daripada ${allBooks.length} buku (baki ${pendingBooks.length} buku belum dibaca)...`
+          : (currentLang === 'en'
+            ? `Randomly selecting from ${allBooks.length} books (${pendingBooks.length} pending)...`
+            : `正从全馆 ${allBooks.length} 卷典藏书库（待读 ${pendingBooks.length} 卷）中为您随机锁定未读天选之卷...`);
       }
 
       const randomIdx = Math.floor(Math.random() * pendingBooks.length);
