@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
@@ -3037,9 +3037,9 @@
       <div class="header-actions">
         <!-- Language Switcher -->
         <div class="lang-switch-group" title="切换语言 / Tukar Bahasa / Switch Language">
-          <button class="btn-lang" id="btn-lang-zh" onclick="setLanguage('zh')">🇨🇳 中文</button>
-          <button class="btn-lang" id="btn-lang-ms" onclick="setLanguage('ms')">🇲🇾 Melayu</button>
-          <button class="btn-lang" id="btn-lang-en" onclick="setLanguage('en')">🇬🇧 English</button>
+          <button class="btn-lang" id="btn-lang-zh" onclick="setLanguage('zh')">???? 中文</button>
+          <button class="btn-lang" id="btn-lang-ms" onclick="setLanguage('ms')">???? Melayu</button>
+          <button class="btn-lang" id="btn-lang-en" onclick="setLanguage('en')">???? English</button>
         </div>
 
         <button class="btn btn-gold" id="btn-add-book" onclick="openAddModal()">
@@ -3049,40 +3049,40 @@
           <svg class="g-icon"><use href="#icon-dice"></use></svg> <span id="btn-text-random">盲盒抽书</span>
         </button>
         <button class="btn btn-outline" id="btn-backup-data" onclick="exportData()" title="导出完整JSON备份数据">
-          <span id="btn-text-backup">💾 备份</span>
+          <span id="btn-text-backup">?? 备份</span>
         </button>
         <button class="btn btn-outline" id="btn-cloud-sync" onclick="openSyncModal()" title="云端多端同步 / Cloud Sync">
             <span class="sync-dot" id="sync-dot-indicator"></span>
-            <svg class="g-icon"><use href="#icon-cloud"></use></svg> <span id="btn-text-sync">☁️ 云同步</span>
+            <svg class="g-icon"><use href="#icon-cloud"></use></svg> <span id="btn-text-sync">?? 云同步</span>
           </button>
           <button class="btn btn-outline" id="btn-restore-data" onclick="importData()" title="'从JSON文件恢复数据">
-          <span id="btn-text-restore">📂 恢复</span>
+          <span id="btn-text-restore">?? 恢复</span>
         </button>
         <button class="btn btn-outline" id="btn-theme-toggle" onclick="toggleTheme()" title="切换明亮/暗黑主题">
-          <span id="theme-btn-icon">🌓</span> <span id="theme-btn-text">主题</span>
+          <span id="theme-btn-icon">??</span> <span id="theme-btn-text">主题</span>
         </button>
         <button class="btn btn-outline" id="btn-compact-toggle" onclick="toggleCompactMode()" title="分屏极简模式 (适合与AINS NILAM并排)">
-          <span id="compact-btn-icon">🖥️</span> <span id="compact-btn-text">分屏模式</span>
+          <span id="compact-btn-icon">???</span> <span id="compact-btn-text">分屏模式</span>
         </button>
 
         <!-- More Tools Dropdown Menu -->
         <div class="dropdown-tools-wrap" id="tools-dropdown-wrap">
           <button class="btn btn-outline" id="btn-tools-trigger" onclick="toggleToolsDropdown(event)" title="更多工具与报表">
-            <svg class="g-icon"><use href="#icon-book-gold"></use></svg> <span id="btn-text-tools">更多工具 ▾</span>
+            <svg class="g-icon"><use href="#icon-book-gold"></use></svg> <span id="btn-text-tools">更多工具 ?</span>
           </button>
           <div class="dropdown-tools-menu" id="tools-dropdown-menu">
             <button class="dropdown-item" onclick="openPrintModal()">
-              <span class="d-icon">🖨️</span> <span id="d-item-print">打印读书清单 (A4)</span>
+              <span class="d-icon">???</span> <span id="d-item-print">打印读书清单 (A4)</span>
             </button>
             <button class="dropdown-item" onclick="openShortcutsModal()">
-              <span class="d-icon">⌨️</span> <span id="d-item-keys">键盘快捷键指南 (?)</span>
+              <span class="d-icon">??</span> <span id="d-item-keys">键盘快捷键指南 (?)</span>
             </button>
             <div class="dropdown-divider"></div>
             <button class="dropdown-item" onclick="exportNilamCSV()">
-              <span class="d-icon">📥</span> <span id="d-item-export">导出当前表格 (CSV)</span>
+              <span class="d-icon">??</span> <span id="d-item-export">导出当前表格 (CSV)</span>
             </button>
             <button class="dropdown-item text-danger" onclick="resetCurrentSeries()">
-              <span class="d-icon">🔄</span> <span id="d-item-reset">重置当前系列完成状态</span>
+              <span class="d-icon">??</span> <span id="d-item-reset">重置当前系列完成状态</span>
             </button>
           </div>
         </div>
@@ -3120,7 +3120,7 @@
           </button>
         </div>
         <button class="btn-toggle-shelf" id="btn-toggle-shelf" onclick="toggleShelfCollapse()">
-          <span id="shelf-toggle-text">展开全部系列 ▾</span>
+          <span id="shelf-toggle-text">展开全部系列 ?</span>
         </button>
       </div>
       <div class="series-tabs-wrapper is-collapsed" id="series-tabs-wrapper">
@@ -3182,7 +3182,7 @@
           </div>
 
           <button class="btn-toolbar-opt" id="btn-toggle-batch" onclick="toggleBatchMode()" title="批量操作模式 (快捷键: B)">
-            <span>☑️ 批量操作</span>
+            <span>?? 批量操作</span>
           </button>
         </div>
       </div>
@@ -3257,17 +3257,17 @@
         <div class="form-row">
           <div class="form-group">
             <label id="lbl-series">所属系列 (Series) *</label>
-            <input type="text" id="m-series" class="form-control" placeholder="如：輝夜姬想讓人告白、海賊王..." required list="series-datalist">
+            <input type="text" id="m-series" class="form-control" placeholder="如：辉夜姬想让人告白、海贼王..." required list="series-datalist">
             <datalist id="series-datalist"></datalist>
           </div>
           <div class="form-group">
             <label id="lbl-category">书籍类别 (Category)</label>
             <select id="m-category" class="form-control">
-              <option value="漫畫">漫畫 (Comic / Manga)</option>
-              <option value="小說">小說 (Novel)</option>
-              <option value="散文/文學">散文 / 文學</option>
-              <option value="科普/知識">科普 / 知識</option>
-              <option value="傳記/勵志">傳記 / 勵志</option>
+              <option value="漫画">漫画 (Comic / Manga)</option>
+              <option value="小说">小说 (Novel)</option>
+              <option value="散文/文学">散文 / 文学</option>
+              <option value="科普/知识">科普 / 知识</option>
+              <option value="传记/励志">传记 / 励志</option>
               <option value="其他">其他</option>
             </select>
           </div>
@@ -3291,7 +3291,7 @@
           </div>
           <div class="form-group">
             <label id="lbl-publisher">出版社 (Penerbit) *</label>
-            <input type="text" id="m-publisher" class="form-control" placeholder="如：東立出版社、青文出版社、尖端出版" required>
+            <input type="text" id="m-publisher" class="form-control" placeholder="如：东立出版社、青文出版社、尖端出版" required>
           </div>
         </div>
 
@@ -3323,7 +3323,7 @@
 
         <div class="modal-footer">
           <button type="button" class="btn btn-outline" id="btn-add-cancel" onclick="closeAddModal()">取消</button>
-          <button type="submit" class="btn btn-gold" id="btn-add-submit">💾 保存并添加到系统</button>
+          <button type="submit" class="btn btn-gold" id="btn-add-submit">?? 保存并添加到系统</button>
         </div>
       </form>
     </div>
@@ -3332,7 +3332,7 @@
   <!-- Blind Box Lottery Roulette Modal -->
   <div id="roulette-modal" style="display: none; visibility: hidden; pointer-events: none;">
     <div class="roulette-box">
-      <div class="roulette-dice-icon">🎲</div>
+      <div class="roulette-dice-icon">??</div>
       <h2 id="roulette-heading" style="font-size: 1.4rem; font-weight: 800; color: #ffffff; letter-spacing: 1px;">
         盲盒天选抽书 · 正在探寻
       </h2>
@@ -3341,13 +3341,13 @@
       </p>
 
       <div class="roulette-title-slot">
-        <div id="roulette-series" class="roulette-series-tag">✦ 典藏检索中 ✦</div>
+        <div id="roulette-series" class="roulette-series-tag">? 典藏检索中 ?</div>
         <div id="roulette-name" class="roulette-book-name">火影忍者 (1) 漩涡鸣人</div>
       </div>
 
       <div style="display: flex; justify-content: center; gap: 0.8rem;">
         <button id="btn-roulette-go" class="btn btn-gold" style="padding: 0.65rem 1.8rem; font-size: 0.95rem; font-weight: 800; opacity: 0; pointer-events: none; transition: 0.2s;" onclick="finishRouletteJump()">
-          🚀 立即直达填报
+          ?? 立即直达填报
         </button>
       </div>
     </div>
@@ -3355,13 +3355,13 @@
 
   <!-- Top Alarm Floating Banner -->
   <div id="timer-alarm-modal" style="display: none;">
-    <div style="font-size: 2.2rem; line-height: 1;">🔔</div>
+    <div style="font-size: 2.2rem; line-height: 1;">??</div>
     <div>
       <div id="alarm-banner-title" style="font-size: 1.05rem; font-weight: 800; color: #ffffff;">3 分钟倒计时已到！</div>
       <div id="alarm-banner-desc" style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 2px;">Bahan 填报冷却已完成，现在可以开始 Key In 下一本了！</div>
     </div>
     <div style="display: flex; gap: 0.6rem; margin-left: 0.6rem;">
-      <button id="alarm-banner-btn-repeat" class="btn btn-gold" onclick="dismissTimerAlarm(true)">🔄 再来 3 分钟</button>
+      <button id="alarm-banner-btn-repeat" class="btn btn-gold" onclick="dismissTimerAlarm(true)">?? 再来 3 分钟</button>
       <button id="alarm-banner-btn-dismiss" class="btn btn-outline" onclick="dismissTimerAlarm(false)">我知道了</button>
     </div>
   </div>
@@ -3376,7 +3376,7 @@
           <span id="timer-title-text">阅读倒计时</span>
         </div>
         <div style="display: flex; align-items: center; gap: 6px;">
-          <button id="timer-sound-test-btn" class="timer-sound-test" onclick="testChimeSound(event)" title="试听金属响铃声">🔔 试听</button>
+          <button id="timer-sound-test-btn" class="timer-sound-test" onclick="testChimeSound(event)" title="试听金属响铃声">?? 试听</button>
           <button class="timer-min-btn" id="timer-min-btn" onclick="toggleMinimizeTimer(event)">&minus;</button>
         </div>
       </div>
@@ -3394,17 +3394,17 @@
 
       <div class="timer-controls">
         <button id="btn-timer-toggle" class="timer-btn timer-btn-primary" onclick="toggleTimer(event)">
-          ▶ 开始倒计时
+          ? 开始倒计时
         </button>
         <button id="btn-timer-reset" class="timer-btn timer-btn-secondary" onclick="resetTimer(event)">
-          🔄 重置
+          ?? 重置
         </button>
       </div>
 
       <div class="timer-setting-row">
         <label>
           <input type="checkbox" id="chk-auto-timer" checked onchange="toggleAutoTimer(event)">
-          <span id="chk-auto-timer-label">⚡ 复制资料后自动开启</span>
+          <span id="chk-auto-timer-label">? 复制资料后自动开启</span>
         </label>
       </div>
     </div>
@@ -3420,8 +3420,8 @@
       <div class="mini-timer-dot" id="mini-timer-dot"></div>
     </div>
     <span class="mini-timer-digits" id="dock-timer-digits">03:00</span>
-    <button class="mini-timer-btn" onclick="toggleTimer(event)" title="开始/暂停">▶</button>
-    <button class="mini-timer-btn" onclick="resetTimer(event)" title="重置">🔄</button>
+    <button class="mini-timer-btn" onclick="toggleTimer(event)" title="开始/暂停">?</button>
+    <button class="mini-timer-btn" onclick="resetTimer(event)" title="重置">??</button>
     <span class="dock-expand-hint" id="dock-expand-hint">展开</span>
   </div>
 
@@ -3441,7 +3441,7 @@
     <div class="modal-box" style="max-width: 800px;">
       <div class="modal-header">
         <h2>
-          <span style="font-size: 1.3rem;">🖨️</span> <span id="modal-print-title">打印官方标准学生个人读书证明清单</span>
+          <span style="font-size: 1.3rem;">???</span> <span id="modal-print-title">打印官方标准学生个人读书证明清单</span>
         </h2>
         <button class="btn-close-modal" onclick="closePrintModal()">&times;</button>
       </div>
@@ -3478,7 +3478,7 @@
 
         <div class="modal-footer" style="padding-top: 0;">
           <button type="button" class="btn btn-outline" id="btn-print-cancel" onclick="closePrintModal()">取消</button>
-          <button type="button" class="btn btn-gold" id="btn-print-execute" onclick="executePrintSlip()">🖨️ 立即打印 / 保存 PDF</button>
+          <button type="button" class="btn btn-gold" id="btn-print-execute" onclick="executePrintSlip()">??? 立即打印 / 保存 PDF</button>
         </div>
       </div>
     </div>
@@ -3492,7 +3492,7 @@
     <div class="modal-box" style="max-width: 500px;">
       <div class="modal-header">
         <h2>
-          <span>⌨️</span> <span id="modal-shortcuts-heading">全局键盘极速快捷键</span>
+          <span>??</span> <span id="modal-shortcuts-heading">全局键盘极速快捷键</span>
         </h2>
         <button class="btn-close-modal" onclick="closeShortcutsModal()">&times;</button>
       </div>
@@ -3514,7 +3514,7 @@
     <div class="modal-box" style="max-width: 520px;">
       <div class="modal-header">
         <h2>
-          <span>☁️</span> <span id="modal-sync-heading">多端云端自动同步</span>
+          <span>??</span> <span id="modal-sync-heading">多端云端自动同步</span>
         </h2>
         <button class="btn-close-modal" onclick="closeSyncModal()">&times;</button>
       </div>
@@ -3537,20 +3537,20 @@
         <div style="display: flex; gap: 8px;">
           <input type="text" id="input-sync-code" placeholder="例如: xiaoche-8888 或自定义" style="flex: 1; padding: 0.6rem 0.8rem; background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-sm); color: var(--text-main); font-size: 0.95rem;">
           <button type="button" class="btn btn-outline" onclick="generateRandomSyncCode()" title="随机生成一个暗号" style="white-space: nowrap;" id="btn-sync-random">
-            🎲 随机暗号
+            ?? 随机暗号
           </button>
         </div>
         <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.45rem;" id="lbl-sync-hint">
-          💡 建议使用您的名字加数字（如 xiaoche-8888），好记又专属！在手机上输入同一个暗号即可同步。
+          ?? 建议使用您的名字加数字（如 xiaoche-8888），好记又专属！在手机上输入同一个暗号即可同步。
         </div>
       </div>
 
       <div class="modal-footer" style="display: flex; gap: 10px; justify-content: flex-end;">
         <button type="button" class="btn btn-outline" id="btn-sync-disconnect" onclick="disconnectCloudSync()" style="display: none; color: #ef4444; border-color: rgba(239, 68, 68, 0.4);">
-          🔌 断开连接
+          ?? 断开连接
         </button>
         <button type="button" class="btn btn-gold" id="btn-sync-connect" onclick="connectAndSyncCloud()" style="min-width: 130px;">
-          🚀 连接并同步
+          ?? 连接并同步
         </button>
       </div>
     </div>
@@ -3586,7 +3586,7 @@
       document.documentElement.setAttribute('data-theme', theme);
       const icon = document.getElementById('theme-btn-icon');
       const text = document.getElementById('theme-btn-text');
-      if (icon) icon.innerText = theme === 'light' ? '☀️' : '🌙';
+      if (icon) icon.innerText = theme === 'light' ? '??' : '??';
       if (text) text.innerText = theme === 'light' ? (currentLang === 'ms' ? 'Cerah' : (currentLang === 'en' ? 'Light' : '明亮')) : (currentLang === 'ms' ? 'Gelap' : (currentLang === 'en' ? 'Dark' : '深色'));
     }
 
@@ -3620,10 +3620,10 @@
     "btnAddBook": "录入新书",
     "btnRandomBook": "盲盒抽书",
     "btnExportCsv": "导出表格",
-    "btnPoster": "📢 业务推广海报",
-    "btnBackup": "💾 备份",
-    "btnRestore": "📂 恢复",
-    "btnSync": "☁️ 云同步",
+    "btnPoster": "?? 业务推广海报",
+    "btnBackup": "?? 备份",
+    "btnRestore": "?? 恢复",
+    "btnSync": "?? 云同步",
     "syncModalTitle": "多端云端自动同步",
     "syncModalDesc": "无论在手机、平板或不同电脑浏览器，只要输入相同的专属暗号，读书勾选与收藏进度将全自动实时同步！",
     "syncStatusTitle": "当前云端状态",
@@ -3634,24 +3634,24 @@
     "syncNoCode": "无专属暗号（仅本地保存）",
     "syncCodeLabel": "专属同步暗号 (PIN / 识别码)：",
     "syncPlaceholder": "例如: xiaoche-8888 或自定义",
-    "syncHint": "💡 建议使用您的名字加数字（如 xiaoche-8888），好记又专属！在手机上输入同一个暗号即可同步。",
-    "btnGenerateCode": "🎲 随机暗号",
-    "btnConnectSync": "🚀 连接并同步",
-    "btnDisconnectSync": "🔌 断开连接",
+    "syncHint": "?? 建议使用您的名字加数字（如 xiaoche-8888），好记又专属！在手机上输入同一个暗号即可同步。",
+    "btnGenerateCode": "?? 随机暗号",
+    "btnConnectSync": "?? 连接并同步",
+    "btnDisconnectSync": "?? 断开连接",
     "syncCodeRequired": "请输入专属同步暗号",
     "syncSuccess": "云端同步成功！已载入最新进度",
     "syncInitSuccess": "专属暗号已激活，本地数据已上传至云端！",
     "syncDisconnected": "已断开云端连接，当前处于本地模式",
     "syncErrorNetwork": "云端同步失败，请检查网络",
-    "btnReset": "🔄 重置",
-    "btnTools": "更多工具 ▾",
+    "btnReset": "?? 重置",
+    "btnTools": "更多工具 ?",
     "toolPrint": "打印读书清单 (A4)",
     "toolKeys": "键盘快捷键指南 (?)",
     "toolExport": "导出当前表格 (CSV)",
     "toolReset": "重置当前系列完成状态",
     "shelfLabel": "典藏书架：",
-    "shelfExpand": "展开全部系列 ▾",
-    "shelfCollapse": "收起系列书架 ▴",
+    "shelfExpand": "展开全部系列 ?",
+    "shelfCollapse": "收起系列书架 ?",
     "allSeries": "全部系列",
     "allProgressTitle": "全馆所有藏书录入进度",
     "seriesProgressTitle": "【{0}】系列进度",
@@ -3677,7 +3677,7 @@
     "viewTableTip": "紧凑表格清单视图",
     "btnViewCard": "卡片",
     "btnViewTable": "清单",
-    "btnBatchMode": "☑️ 批量操作",
+    "btnBatchMode": "?? 批量操作",
     "sortDefault": "默认卷号",
     "sortVolDesc": "卷号倒序",
     "sortYearDesc": "年份由新到旧",
@@ -3708,7 +3708,7 @@
     "valUnknown": "未知",
     "valNone": "无",
     "btnCopy": "复制",
-    "copySuccessBadge": "✨ 已复制 (Copied!)",
+    "copySuccessBadge": "? 已复制 (Copied!)",
     "toastCopied": "已复制【{0}】！",
     "sinopsisHeader": "内容概述 (Sinopsis)",
     "insightHeader": "启示与品德 (Nilai Murni / Pengajaran)",
@@ -3727,15 +3727,15 @@
     "tableIsbn": "ISBN",
     "tableSinopsis": "内容概述 (Sinopsis)",
     "tableActions": "操作",
-    "tableDoneBadge": "✅ 已做",
-    "tablePendingBadge": "⏳ 待做",
+    "tableDoneBadge": "? 已做",
+    "tablePendingBadge": "? 待做",
     "fullCopyLabel": "{0} 全部资料",
-    "toastMarkDone": "🎉 恭喜！已标记为【已完成】",
+    "toastMarkDone": "?? 恭喜！已标记为【已完成】",
     "toastMarkPending": "已标记为【未做】",
     "confirmDeleteBook": "确定要删除这本自定义书籍吗？",
     "toastDeleted": "已删除该书籍",
-    "luckyDrawAllDone": "恭喜！本系列所有书籍均已录入完成！🎉",
-    "luckyDrawChosenToast": "🎲 盲盒抽中：{0}",
+    "luckyDrawAllDone": "恭喜！本系列所有书籍均已录入完成！??",
+    "luckyDrawChosenToast": "?? 盲盒抽中：{0}",
     "jumpedToast": "已直达：{0}",
     "exportCsvDone": "已成功导出【{0}】表格清单！",
     "exportDataDone": "完整数据与进度已备份导出！",
@@ -3758,18 +3758,18 @@
     "lblSummary": "内容概述 (Sinopsis - 约150字)",
     "lblInsight": "启示与道德价值 (Nilai Murni / Pengajaran - 约150字)",
     "btnAddCancel": "取消",
-    "btnAddSubmit": "💾 保存并添加到系统",
+    "btnAddSubmit": "?? 保存并添加到系统",
     "rouletteHeading": "盲盒天选抽书 · 正在探寻",
     "rouletteSubheading": "正从全馆 1,000+ 册典藏中为您随机锁定未读书籍...",
-    "rouletteSearching": "✦ 典藏检索中 ✦",
-    "rouletteChosenTag": "🏆 天选系列 · {0}",
-    "rouletteBtnGo": "🚀 立即直达该书",
+    "rouletteSearching": "? 典藏检索中 ?",
+    "rouletteChosenTag": "?? 天选系列 · {0}",
+    "rouletteBtnGo": "?? 立即直达该书",
     "alarmTitle": "3 分钟倒计时已到！",
     "alarmDesc": "阅读专注计时已完成，可以继续探索下一本书了！",
-    "alarmBtnRepeat": "🔄 再来 3 分钟",
+    "alarmBtnRepeat": "?? 再来 3 分钟",
     "alarmBtnDismiss": "我知道了",
     "timerTitle": "阅读专注倒计时",
-    "timerSoundTest": "🔔 试听",
+    "timerSoundTest": "?? 试听",
     "timerStatusReady": "待命 (Ready)",
     "timerStatusRunning": "计时中 (Running)",
     "timerStatusPaused": "已暂停 (Paused)",
@@ -3777,35 +3777,35 @@
     "timerPreset1m": "1 分钟",
     "timerPreset3m": "3 分钟",
     "timerPreset5m": "5 分钟",
-    "timerBtnStart": "▶️ 开始倒计时",
-    "timerBtnPause": "⏸️ 暂停计时",
-    "timerBtnRestart": "🔄 重新开始",
-    "timerBtnReset": "🔄 重置",
-    "timerAutoStartLabel": "⚡ 复制资料后自动开启",
+    "timerBtnStart": "?? 开始倒计时",
+    "timerBtnPause": "?? 暂停计时",
+    "timerBtnRestart": "?? 重新开始",
+    "timerBtnReset": "?? 重置",
+    "timerAutoStartLabel": "? 复制资料后自动开启",
     "timerExpand": "展开",
-    "toastSoundTest": "🔔 响铃测试成功！声音清脆清晰",
+    "toastSoundTest": "?? 响铃测试成功！声音清脆清晰",
     "toastPresetSwitched": "已切换倒计时时长为 {0} 分钟",
-    "toastAutoTimerOn": "⚡ 已开启：复制资料后自动开启 3 分钟倒计时",
+    "toastAutoTimerOn": "? 已开启：复制资料后自动开启 3 分钟倒计时",
     "toastAutoTimerOff": "已关闭复制自动倒计时",
-    "toastAutoTimerTriggered": "已复制！⏱️ 阅读专注倒计时已自动启动",
+    "toastAutoTimerTriggered": "已复制！?? 阅读专注倒计时已自动启动",
     "batchSelectedCount": "已选中 {0} 本",
-    "btnBatchDone": "✅ 标记为已做",
-    "btnBatchPending": "⏳ 标记为未做",
-    "btnBatchStar": "⭐ 批量收藏",
+    "btnBatchDone": "? 标记为已做",
+    "btnBatchPending": "? 标记为未做",
+    "btnBatchStar": "? 批量收藏",
     "btnBatchSelectAll": "全选本页",
-    "btnBatchExit": "✕ 退出批量",
-    "toastBookmarkAdded": "⭐ 已加入重点收藏！",
+    "btnBatchExit": "? 退出批量",
+    "toastBookmarkAdded": "? 已加入重点收藏！",
     "toastBookmarkRemoved": "已取消收藏",
-    "toastBatchModeOn": "☑️ 已开启批量操作模式",
+    "toastBatchModeOn": "?? 已开启批量操作模式",
     "toastBatchModeOff": "已退出批量模式",
-    "toastAutoNext": "⚡ 自动直达下一本：{0}",
+    "toastAutoNext": "? 自动直达下一本：{0}",
     "toastBatchSelectAll": "已全选当前筛选的 {0} 本书籍",
     "toastBatchDeselectAll": "已取消全部勾选",
-    "toastBatchDone": "🎉 批量成功：已将 {0} 册标记为【{1}】",
-    "toastBatchStar": "⭐ 已将 {0} 册批量加入重点收藏",
+    "toastBatchDone": "?? 批量成功：已将 {0} 册标记为【{1}】",
+    "toastBatchStar": "? 已将 {0} 册批量加入重点收藏",
     "batchEmptyAlert": "请先勾选需要操作的书籍！",
-    "statsCollapse": "收起看板 ▴",
-    "statsExpand": "详细看板 ▾",
+    "statsCollapse": "收起看板 ?",
+    "statsExpand": "详细看板 ?",
     "slipDocTitle": "学生阅读记录清单 (NILAM)",
     "slipDocSubtitle": "个人阅读典藏与心得确认单",
     "slipStudentName": "学生姓名",
@@ -3829,10 +3829,10 @@
     "btnAddBook": "Rekod Buku Baharu",
     "btnRandomBook": "Cabutan Bertuah",
     "btnExportCsv": "Eksport CSV",
-    "btnPoster": "📢 Poster Promosi Servis",
-    "btnBackup": "💾 Sandaran",
-    "btnRestore": "📂 Pulih",
-    "btnSync": "☁️ Segerak Awan",
+    "btnPoster": "?? Poster Promosi Servis",
+    "btnBackup": "?? Sandaran",
+    "btnRestore": "?? Pulih",
+    "btnSync": "?? Segerak Awan",
     "syncModalTitle": "Penyegerakan Awan Pelbagai Peranti",
     "syncModalDesc": "Di telefon, tablet atau pelayar lain, hanya masukkan kod rahsia yang sama, kemajuan bacaan & penanda buku akan disegerakkan secara automatik!",
     "syncStatusTitle": "Status Awan Semasa",
@@ -3843,24 +3843,24 @@
     "syncNoCode": "Tiada kod rahsia (simpanan tempatan)",
     "syncCodeLabel": "Kod Segerak Eksklusif (PIN):",
     "syncPlaceholder": "Cth: xiaoche-8888 atau tersuai",
-    "syncHint": "💡 Cadangan: gunakan nama anda + nombor (cth: xiaoche-8888). Masukkan kod yang sama di telefon untuk segerak.",
-    "btnGenerateCode": "🎲 Kod Rawak",
-    "btnConnectSync": "🚀 Sambung & Segerak",
-    "btnDisconnectSync": "🔌 Putuskan Sambungan",
+    "syncHint": "?? Cadangan: gunakan nama anda + nombor (cth: xiaoche-8888). Masukkan kod yang sama di telefon untuk segerak.",
+    "btnGenerateCode": "?? Kod Rawak",
+    "btnConnectSync": "?? Sambung & Segerak",
+    "btnDisconnectSync": "?? Putuskan Sambungan",
     "syncCodeRequired": "Sila masukkan kod rahsia segerak",
     "syncSuccess": "Segerak awan berjaya! Kemajuan terkini dimuatkan",
     "syncInitSuccess": "Kod rahsia diaktifkan, data tempatan dimuat naik ke awan!",
     "syncDisconnected": "Sambungan awan diputuskan, kini dalam mod tempatan",
     "syncErrorNetwork": "Gagal menyegerak ke awan, sila semak rangkaian",
-    "btnReset": "🔄 Tetap Semula",
-    "btnTools": "Alatan Lanjut ▾",
+    "btnReset": "?? Tetap Semula",
+    "btnTools": "Alatan Lanjut ?",
     "toolPrint": "Cetak Slip Bacaan (A4)",
     "toolKeys": "Pintasan Papan Kekunci (?)",
     "toolExport": "Eksport Jadual (CSV)",
     "toolReset": "Tetap Semula Status Selesai",
     "shelfLabel": "Rak Koleksi:",
-    "shelfExpand": "Buka Semua Siri ▾",
-    "shelfCollapse": "Tutup Senarai Siri ▴",
+    "shelfExpand": "Buka Semua Siri ?",
+    "shelfCollapse": "Tutup Senarai Siri ?",
     "allSeries": "Semua Siri",
     "allProgressTitle": "Kemajuan Rekod Keseluruhan Buku",
     "seriesProgressTitle": "Kemajuan Siri 【{0}】",
@@ -3886,7 +3886,7 @@
     "viewTableTip": "Paparan Jadual Padat",
     "btnViewCard": "Kad",
     "btnViewTable": "Jadual",
-    "btnBatchMode": "☑️ Mod Pukal",
+    "btnBatchMode": "?? Mod Pukal",
     "sortDefault": "Jilid Lalai",
     "sortVolDesc": "Jilid Menurun",
     "sortYearDesc": "Tahun Terbaharu",
@@ -3917,7 +3917,7 @@
     "valUnknown": "Tidak Diketahui",
     "valNone": "Tiada",
     "btnCopy": "Salin",
-    "copySuccessBadge": "✨ Disalin!",
+    "copySuccessBadge": "? Disalin!",
     "toastCopied": "Disalin 【{0}】!",
     "sinopsisHeader": "Sinopsis / Ringkasan Buku",
     "insightHeader": "Nilai Murni & Pengajaran",
@@ -3936,15 +3936,15 @@
     "tableIsbn": "ISBN",
     "tableSinopsis": "Sinopsis",
     "tableActions": "Tindakan",
-    "tableDoneBadge": "✅ Selesai",
-    "tablePendingBadge": "⏳ Belum",
+    "tableDoneBadge": "? Selesai",
+    "tablePendingBadge": "? Belum",
     "fullCopyLabel": "Semua Maklumat {0}",
-    "toastMarkDone": "🎉 Tahniah! Ditandakan sebagai 【Selesai】",
+    "toastMarkDone": "?? Tahniah! Ditandakan sebagai 【Selesai】",
     "toastMarkPending": "Ditandakan sebagai 【Belum Selesai】",
     "confirmDeleteBook": "Adakah anda pasti mahu memadam buku tersuai ini?",
     "toastDeleted": "Buku telah dipadam",
-    "luckyDrawAllDone": "Tahniah! Semua buku dalam siri ini telah selesai dibaca! 🎉",
-    "luckyDrawChosenToast": "🎲 Cabutan Bertuah: {0}",
+    "luckyDrawAllDone": "Tahniah! Semua buku dalam siri ini telah selesai dibaca! ??",
+    "luckyDrawChosenToast": "?? Cabutan Bertuah: {0}",
     "jumpedToast": "Telah pergi ke: {0}",
     "exportCsvDone": "Berjaya mengeksport jadual CSV 【{0}】!",
     "exportDataDone": "Data dan kemajuan lengkap telah berjaya disandarkan!",
@@ -3967,18 +3967,18 @@
     "lblSummary": "Sinopsis Buku (~150 patah perkataan)",
     "lblInsight": "Nilai Murni & Pengajaran (~150 patah perkataan)",
     "btnAddCancel": "Batal",
-    "btnAddSubmit": "💾 Simpan ke Koleksi",
+    "btnAddSubmit": "?? Simpan ke Koleksi",
     "rouletteHeading": "Cabutan Bertuah Bahan Bacaan",
     "rouletteSubheading": "Memilih bahan bacaan belum dibaca secara rawak daripada 1,000+ jilid...",
-    "rouletteSearching": "✦ Sedang Memilih ✦",
-    "rouletteChosenTag": "🏆 Pilihan Bertuah · Siri {0}",
-    "rouletteBtnGo": "🚀 Terus ke Buku Ini",
+    "rouletteSearching": "? Sedang Memilih ?",
+    "rouletteChosenTag": "?? Pilihan Bertuah · Siri {0}",
+    "rouletteBtnGo": "?? Terus ke Buku Ini",
     "alarmTitle": "Pemasa 3 Minit Tamat!",
     "alarmDesc": "Masa bertenang membaca selesai! Anda kini boleh meneruskan bacaan buku seterusnya.",
-    "alarmBtnRepeat": "🔄 Ulang 3 Minit",
+    "alarmBtnRepeat": "?? Ulang 3 Minit",
     "alarmBtnDismiss": "Faham",
     "timerTitle": "Pemasa Bacaan",
-    "timerSoundTest": "🔔 Uji Bunyi",
+    "timerSoundTest": "?? Uji Bunyi",
     "timerStatusReady": "Sedia",
     "timerStatusRunning": "Sedang Mengira",
     "timerStatusPaused": "Dijeda",
@@ -3986,35 +3986,35 @@
     "timerPreset1m": "1 Minit",
     "timerPreset3m": "3 Minit",
     "timerPreset5m": "5 Minit",
-    "timerBtnStart": "▶️ Mula Pemasa",
-    "timerBtnPause": "⏸️ Jeda Pemasa",
-    "timerBtnRestart": "🔄 Mula Semula",
-    "timerBtnReset": "🔄 Tetap Semula",
-    "timerAutoStartLabel": "⚡ Mula automatik selepas salin data",
+    "timerBtnStart": "?? Mula Pemasa",
+    "timerBtnPause": "?? Jeda Pemasa",
+    "timerBtnRestart": "?? Mula Semula",
+    "timerBtnReset": "?? Tetap Semula",
+    "timerAutoStartLabel": "? Mula automatik selepas salin data",
     "timerExpand": "Kembang",
-    "toastSoundTest": "🔔 Ujian loceng berjaya! Nada berbunyi jelas",
+    "toastSoundTest": "?? Ujian loceng berjaya! Nada berbunyi jelas",
     "toastPresetSwitched": "Tempoh pemasa ditukar ke {0} minit",
-    "toastAutoTimerOn": "⚡ Diaktifkan: Pemasa 3 minit mula automatik selepas salin",
+    "toastAutoTimerOn": "? Diaktifkan: Pemasa 3 minit mula automatik selepas salin",
     "toastAutoTimerOff": "Pemasa automatik dimatikan",
-    "toastAutoTimerTriggered": "Disalin! ⏱️ Pemasa fokus membaca telah dimulakan secara automatik",
+    "toastAutoTimerTriggered": "Disalin! ?? Pemasa fokus membaca telah dimulakan secara automatik",
     "batchSelectedCount": "Dipilih {0} jilid",
-    "btnBatchDone": "✅ Tandakan Selesai",
-    "btnBatchPending": "⏳ Tandakan Belum",
-    "btnBatchStar": "⭐ Bintang Pilihan",
+    "btnBatchDone": "? Tandakan Selesai",
+    "btnBatchPending": "? Tandakan Belum",
+    "btnBatchStar": "? Bintang Pilihan",
     "btnBatchSelectAll": "Pilih Semua Halaman Ini",
-    "btnBatchExit": "✕ Keluar Mod Pukal",
-    "toastBookmarkAdded": "⭐ Ditambah ke Pilihan Utama!",
+    "btnBatchExit": "? Keluar Mod Pukal",
+    "toastBookmarkAdded": "? Ditambah ke Pilihan Utama!",
     "toastBookmarkRemoved": "Pilihan dibatalkan",
-    "toastBatchModeOn": "☑️ Mod Pukal diaktifkan",
+    "toastBatchModeOn": "?? Mod Pukal diaktifkan",
     "toastBatchModeOff": "Mod Pukal ditamatkan",
-    "toastAutoNext": "⚡ Melompat ke buku seterusnya: {0}",
+    "toastAutoNext": "? Melompat ke buku seterusnya: {0}",
     "toastBatchSelectAll": "Semua {0} buku dalam tapisan dipilih",
     "toastBatchDeselectAll": "Semua pilihan dibatalkan",
-    "toastBatchDone": "🎉 Berjaya secara pukal: {0} jilid ditandakan sebagai 【{1}】",
-    "toastBatchStar": "⭐ {0} jilid ditambah ke pilihan utama",
+    "toastBatchDone": "?? Berjaya secara pukal: {0} jilid ditandakan sebagai 【{1}】",
+    "toastBatchStar": "? {0} jilid ditambah ke pilihan utama",
     "batchEmptyAlert": "Sila pilih buku terlebih dahulu!",
-    "statsCollapse": "Tutup Papan ▴",
-    "statsExpand": "Papan Terperinci ▾",
+    "statsCollapse": "Tutup Papan ?",
+    "statsExpand": "Papan Terperinci ?",
     "slipDocTitle": "REKOD BACAAN BUKU (NILAM)",
     "slipDocSubtitle": "BORANG PENGESAHAN REKOD BACAAN INDIVIDU",
     "slipStudentName": "Nama Murid",
@@ -4038,10 +4038,10 @@
     "btnAddBook": "Record New Book",
     "btnRandomBook": "Lucky Draw",
     "btnExportCsv": "Export CSV",
-    "btnPoster": "📢 Promo Poster",
-    "btnBackup": "💾 Backup",
-    "btnRestore": "📂 Restore",
-    "btnSync": "☁️ Cloud Sync",
+    "btnPoster": "?? Promo Poster",
+    "btnBackup": "?? Backup",
+    "btnRestore": "?? Restore",
+    "btnSync": "?? Cloud Sync",
     "syncModalTitle": "Multi-Device Cloud Sync",
     "syncModalDesc": "On your phone, tablet, or another browser, just enter the same exclusive sync code to automatically sync reading progress & bookmarks in real time!",
     "syncStatusTitle": "Current Cloud Status",
@@ -4052,24 +4052,24 @@
     "syncNoCode": "No sync code (local storage only)",
     "syncCodeLabel": "Exclusive Sync Code (PIN):",
     "syncPlaceholder": "e.g. xiaoche-8888 or custom",
-    "syncHint": "💡 Tip: Use your name + numbers (e.g. xiaoche-8888). Enter the same code on your phone to sync instantly.",
-    "btnGenerateCode": "🎲 Random Code",
-    "btnConnectSync": "🚀 Connect & Sync",
-    "btnDisconnectSync": "🔌 Disconnect",
+    "syncHint": "?? Tip: Use your name + numbers (e.g. xiaoche-8888). Enter the same code on your phone to sync instantly.",
+    "btnGenerateCode": "?? Random Code",
+    "btnConnectSync": "?? Connect & Sync",
+    "btnDisconnectSync": "?? Disconnect",
     "syncCodeRequired": "Please enter your sync code",
     "syncSuccess": "Cloud sync successful! Latest progress loaded",
     "syncInitSuccess": "Sync code activated! Local data uploaded to cloud",
     "syncDisconnected": "Cloud disconnected, now in local mode",
     "syncErrorNetwork": "Cloud sync failed, please check your connection",
-    "btnReset": "🔄 Reset",
-    "btnTools": "More Tools ▾",
+    "btnReset": "?? Reset",
+    "btnTools": "More Tools ?",
     "toolPrint": "Print Reading Slip (A4)",
     "toolKeys": "Keyboard Shortcuts (?)",
     "toolExport": "Export Table (CSV)",
     "toolReset": "Reset Completed Status",
     "shelfLabel": "Library Shelf:",
-    "shelfExpand": "Expand All Series ▾",
-    "shelfCollapse": "Collapse Series Shelf ▴",
+    "shelfExpand": "Expand All Series ?",
+    "shelfCollapse": "Collapse Series Shelf ?",
     "allSeries": "All Series",
     "allProgressTitle": "Overall Library Progress",
     "seriesProgressTitle": "Progress: [{0}]",
@@ -4095,7 +4095,7 @@
     "viewTableTip": "Compact Table View",
     "btnViewCard": "Cards",
     "btnViewTable": "Table",
-    "btnBatchMode": "☑️ Batch Mode",
+    "btnBatchMode": "?? Batch Mode",
     "sortDefault": "Default Volume",
     "sortVolDesc": "Volume Descending",
     "sortYearDesc": "Year Newest First",
@@ -4126,7 +4126,7 @@
     "valUnknown": "Unknown",
     "valNone": "None",
     "btnCopy": "Copy",
-    "copySuccessBadge": "✨ Copied!",
+    "copySuccessBadge": "? Copied!",
     "toastCopied": "Copied [{0}]!",
     "sinopsisHeader": "Synopsis / Summary",
     "insightHeader": "Moral Values & Lessons",
@@ -4145,15 +4145,15 @@
     "tableIsbn": "ISBN",
     "tableSinopsis": "Synopsis",
     "tableActions": "Actions",
-    "tableDoneBadge": "✅ Done",
-    "tablePendingBadge": "⏳ Pending",
+    "tableDoneBadge": "? Done",
+    "tablePendingBadge": "? Pending",
     "fullCopyLabel": "All data for {0}",
-    "toastMarkDone": "🎉 Great! Marked as 【Completed】",
+    "toastMarkDone": "?? Great! Marked as 【Completed】",
     "toastMarkPending": "Marked as 【Pending】",
     "confirmDeleteBook": "Are you sure you want to delete this custom book?",
     "toastDeleted": "Book deleted",
-    "luckyDrawAllDone": "Congratulations! All books in this series have been read! 🎉",
-    "luckyDrawChosenToast": "🎲 Lucky draw picked: {0}",
+    "luckyDrawAllDone": "Congratulations! All books in this series have been read! ??",
+    "luckyDrawChosenToast": "?? Lucky draw picked: {0}",
     "jumpedToast": "Navigated to: {0}",
     "exportCsvDone": "Successfully exported CSV for 【{0}】!",
     "exportDataDone": "Complete library data and progress backed up!",
@@ -4176,18 +4176,18 @@
     "lblSummary": "Synopsis (~150 words)",
     "lblInsight": "Moral Values & Lessons (~150 words)",
     "btnAddCancel": "Cancel",
-    "btnAddSubmit": "💾 Save to Library",
+    "btnAddSubmit": "?? Save to Library",
     "rouletteHeading": "Lucky Draw Reading Material",
     "rouletteSubheading": "Selecting an unread volume at random from 1,000+ volumes...",
-    "rouletteSearching": "✦ Selecting ✦",
-    "rouletteChosenTag": "🏆 Chosen Series · {0}",
-    "rouletteBtnGo": "🚀 Jump to Book Now",
+    "rouletteSearching": "? Selecting ?",
+    "rouletteChosenTag": "?? Chosen Series · {0}",
+    "rouletteBtnGo": "?? Jump to Book Now",
     "alarmTitle": "3-Minute Cooldown Complete!",
     "alarmDesc": "Reading session complete! You can now proceed to explore the next book.",
-    "alarmBtnRepeat": "🔄 Another 3 Mins",
+    "alarmBtnRepeat": "?? Another 3 Mins",
     "alarmBtnDismiss": "Got it",
     "timerTitle": "Reading Focus Timer",
-    "timerSoundTest": "🔔 Test Bell",
+    "timerSoundTest": "?? Test Bell",
     "timerStatusReady": "Ready",
     "timerStatusRunning": "Running",
     "timerStatusPaused": "Paused",
@@ -4195,35 +4195,35 @@
     "timerPreset1m": "1 Min",
     "timerPreset3m": "3 Min",
     "timerPreset5m": "5 Min",
-    "timerBtnStart": "▶️ Start Timer",
-    "timerBtnPause": "⏸️ Pause Timer",
-    "timerBtnRestart": "🔄 Restart",
-    "timerBtnReset": "🔄 Reset",
-    "timerAutoStartLabel": "⚡ Auto-start after copying",
+    "timerBtnStart": "?? Start Timer",
+    "timerBtnPause": "?? Pause Timer",
+    "timerBtnRestart": "?? Restart",
+    "timerBtnReset": "?? Reset",
+    "timerAutoStartLabel": "? Auto-start after copying",
     "timerExpand": "Expand",
-    "toastSoundTest": "🔔 Chime test successful! Crisp and clear tone",
+    "toastSoundTest": "?? Chime test successful! Crisp and clear tone",
     "toastPresetSwitched": "Timer duration switched to {0} minutes",
-    "toastAutoTimerOn": "⚡ Enabled: Timer auto-starts for 3 minutes after copying",
+    "toastAutoTimerOn": "? Enabled: Timer auto-starts for 3 minutes after copying",
     "toastAutoTimerOff": "Auto timer on copy disabled",
-    "toastAutoTimerTriggered": "Copied! ⏱️ Reading timer auto-started",
+    "toastAutoTimerTriggered": "Copied! ?? Reading timer auto-started",
     "batchSelectedCount": "Selected {0} books",
-    "btnBatchDone": "✅ Mark as Done",
-    "btnBatchPending": "⏳ Mark as Pending",
-    "btnBatchStar": "⭐ Batch Favorite",
+    "btnBatchDone": "? Mark as Done",
+    "btnBatchPending": "? Mark as Pending",
+    "btnBatchStar": "? Batch Favorite",
     "btnBatchSelectAll": "Select All",
-    "btnBatchExit": "✕ Exit Batch",
-    "toastBookmarkAdded": "⭐ Added to Starred!",
+    "btnBatchExit": "? Exit Batch",
+    "toastBookmarkAdded": "? Added to Starred!",
     "toastBookmarkRemoved": "Removed from Starred",
-    "toastBatchModeOn": "☑️ Batch Mode Enabled",
+    "toastBatchModeOn": "?? Batch Mode Enabled",
     "toastBatchModeOff": "Batch Mode Disabled",
-    "toastAutoNext": "⚡ Auto-advanced to next: {0}",
+    "toastAutoNext": "? Auto-advanced to next: {0}",
     "toastBatchSelectAll": "Selected all {0} filtered books",
     "toastBatchDeselectAll": "Cleared all selections",
-    "toastBatchDone": "🎉 Batch success: Marked {0} volumes as 【{1}】",
-    "toastBatchStar": "⭐ Added {0} volumes to Starred",
+    "toastBatchDone": "?? Batch success: Marked {0} volumes as 【{1}】",
+    "toastBatchStar": "? Added {0} volumes to Starred",
     "batchEmptyAlert": "Please select books first!",
-    "statsCollapse": "Collapse Stats ▴",
-    "statsExpand": "Detailed Stats ▾",
+    "statsCollapse": "Collapse Stats ?",
+    "statsExpand": "Detailed Stats ?",
     "slipDocTitle": "STUDENT READING RECORD (NILAM)",
     "slipDocSubtitle": "INDIVIDUAL READING VERIFICATION SLIP",
     "slipStudentName": "Student Name",
@@ -4247,156 +4247,156 @@
   "series_i18n": {
     "en": {
       "排球少年！！": "Haikyu!!",
-      "灌籃高手": "Slam Dunk",
-      "我的英雄學院": "My Hero Academia",
-      "鬼滅之刃": "Demon Slayer: Kimetsu no Yaiba",
-      "鋼之鍊金術師": "Fullmetal Alchemist",
-      "咒術迴戰": "Jujutsu Kaisen",
+      "灌篮高手": "Slam Dunk",
+      "我的英雄学院": "My Hero Academia",
+      "鬼灭之刃": "Demon Slayer: Kimetsu no Yaiba",
+      "钢之链金术师": "Fullmetal Alchemist",
+      "咒术回战": "Jujutsu Kaisen",
       "棋魂": "Hikaru no Go",
-      "黑子的籃球": "Kuroko's Basketball",
-      "藍色監獄": "BLUE LOCK",
-      "進擊的巨人": "Attack on Titan",
+      "黑子的篮球": "Kuroko's Basketball",
+      "蓝色监狱": "BLUE LOCK",
+      "进击的巨人": "Attack on Titan",
       "BLEACH 死神": "BLEACH",
       "火影忍者": "Naruto",
-      "海賊王": "One Piece",
-      "烏龍派出所": "Kochikame",
-      "美味大挑戰": "Oishinbo",
-      "格鬥天王 刃牙": "Baki the Grappler",
-      "輝夜姬想讓人告白": "Kaguya-sama: Love Is War",
+      "海贼王": "One Piece",
+      "乌龙派出所": "Kochikame",
+      "美味大挑战": "Oishinbo",
+      "格斗天王 刃牙": "Baki the Grappler",
+      "辉夜姬想让人告白": "Kaguya-sama: Love Is War",
       "五等分的新娘": "The Quintessential Quintuplets",
-      "擅長捉弄人的高木同學": "Teasing Master Takagi-san",
-      "堀與宮村": "Horimiya",
-      "閃爍的青春": "Ao Haru Ride",
-      "只想告訴你": "Kimi ni Todoke: From Me to You",
-      "只要妳說妳愛我": "Say I Love You",
-      "強風吹拂": "Run with the Wind"
+      "擅长捉弄人的高木同学": "Teasing Master Takagi-san",
+      "堀与宫村": "Horimiya",
+      "闪烁的青春": "Ao Haru Ride",
+      "只想告诉你": "Kimi ni Todoke: From Me to You",
+      "只要你说你爱我": "Say I Love You",
+      "强风吹拂": "Run with the Wind"
     },
     "ms": {
       "排球少年！！": "Haikyu!!",
-      "灌籃高手": "Slam Dunk",
-      "我的英雄學院": "Akademi Hero Saya",
-      "鬼滅之刃": "Demon Slayer",
-      "鋼之鍊金術師": "Fullmetal Alchemist",
-      "咒術迴戰": "Jujutsu Kaisen",
+      "灌篮高手": "Slam Dunk",
+      "我的英雄学院": "Akademi Hero Saya",
+      "鬼灭之刃": "Demon Slayer",
+      "钢之链金术师": "Fullmetal Alchemist",
+      "咒术回战": "Jujutsu Kaisen",
       "棋魂": "Hikaru no Go",
-      "黑子的籃球": "Bola Keranjang Kuroko",
-      "藍色監獄": "BLUE LOCK",
-      "進擊的巨人": "Attack on Titan",
+      "黑子的篮球": "Bola Keranjang Kuroko",
+      "蓝色监狱": "BLUE LOCK",
+      "进击的巨人": "Attack on Titan",
       "BLEACH 死神": "BLEACH",
       "火影忍者": "Naruto",
-      "海賊王": "One Piece",
-      "烏龍派出所": "Balai Polis Kochikame",
-      "美味大挑戰": "Oishinbo",
-      "格鬥天王 刃牙": "Baki the Grappler",
-      "輝夜姬想讓人告白": "Kaguya-sama: Love Is War",
+      "海贼王": "One Piece",
+      "乌龙派出所": "Balai Polis Kochikame",
+      "美味大挑战": "Oishinbo",
+      "格斗天王 刃牙": "Baki the Grappler",
+      "辉夜姬想让人告白": "Kaguya-sama: Love Is War",
       "五等分的新娘": "The Quintessential Quintuplets",
-      "擅長捉弄人的高木同學": "Teasing Master Takagi-san",
-      "堀與宮村": "Horimiya",
-      "閃爍的青春": "Ao Haru Ride",
-      "只想告訴你": "Kimi ni Todoke",
-      "只要妳說妳愛我": "Katakan Awak Sayangkan Saya",
-      "強風吹拂": "Berlari Bersama Angin"
+      "擅长捉弄人的高木同学": "Teasing Master Takagi-san",
+      "堀与宫村": "Horimiya",
+      "闪烁的青春": "Ao Haru Ride",
+      "只想告诉你": "Kimi ni Todoke",
+      "只要你说你爱我": "Katakan Awak Sayangkan Saya",
+      "强风吹拂": "Berlari Bersama Angin"
     }
   },
   "author_i18n": {
     "en": {
-      "古館春一": "Haruichi Furudate",
-      "井上雄彥": "Takehiko Inoue",
+      "古馆春一": "Haruichi Furudate",
+      "井上雄彦": "Takehiko Inoue",
       "堀越耕平": "Kohei Horikoshi",
       "吾峠呼世晴": "Koyoharu Gotouge",
       "荒川弘": "Hiromu Arakawa",
-      "芥見下々": "Gege Akutami",
+      "芥见下々": "Gege Akutami",
       "堀田由美、小畑健": "Yumi Hotta and Takeshi Obata",
       "藤卷忠俊": "Tadatoshi Fujimaki",
-      "金城宗幸、野村優介": "Muneyuki Kaneshiro and Yusuke Nomura",
-      "諫山創": "Hajime Isayama",
-      "久保帶人": "Tite Kubo",
-      "岸本齊史": "Masashi Kishimoto",
-      "尾田榮一郎": "Eiichiro Oda",
+      "金城宗幸、野村优介": "Muneyuki Kaneshiro and Yusuke Nomura",
+      "谏山创": "Hajime Isayama",
+      "久保带人": "Tite Kubo",
+      "岸本齐史": "Masashi Kishimoto",
+      "尾田荣一郎": "Eiichiro Oda",
       "秋本治": "Osamu Akimoto",
       "雁屋哲、花咲昭": "Tetsu Kariya and Akira Hanasaki",
       "板垣惠介": "Keisuke Itagaki",
       "赤坂明": "Aka Akasaka",
-      "春場蔥": "Negi Haruba",
+      "春场葱": "Negi Haruba",
       "山本崇一朗": "Soichiro Yamamoto",
-      "HERO、萩原大輔": "HERO and Daisuke Hagiwara",
-      "咲坂伊緒": "Io Sakisaka",
-      "椎名輕穗": "Karuho Shiina",
-      "葉月鼎": "Kanae Hazuki",
+      "HERO、萩原大辅": "HERO and Daisuke Hagiwara",
+      "咲坂伊绪": "Io Sakisaka",
+      "椎名轻穗": "Karuho Shiina",
+      "叶月鼎": "Kanae Hazuki",
       "三浦紫苑": "Shion Miura",
-      "三浦紫苑 原作 / 海野空太 漫畫": "Shion Miura and Sorata Unno",
+      "三浦紫苑 原作 / 海野空太 漫画": "Shion Miura and Sorata Unno",
       "HERO / 萩原ダイスケ": "HERO and Daisuke Hagiwara",
       "堀田由美 / 小畑健": "Yumi Hotta and Takeshi Obata",
-      "金城宗幸 / 野村優介": "Muneyuki Kaneshiro and Yusuke Nomura",
-      "芥見下下": "Gege Akutami",
-      "進擊的巨人": "Hajime Isayama"
+      "金城宗幸 / 野村优介": "Muneyuki Kaneshiro and Yusuke Nomura",
+      "芥见下下": "Gege Akutami",
+      "进击的巨人": "Hajime Isayama"
     },
     "ms": {
-      "古館春一": "Haruichi Furudate",
-      "井上雄彥": "Takehiko Inoue",
+      "古馆春一": "Haruichi Furudate",
+      "井上雄彦": "Takehiko Inoue",
       "堀越耕平": "Kohei Horikoshi",
       "吾峠呼世晴": "Koyoharu Gotouge",
       "荒川弘": "Hiromu Arakawa",
-      "芥見下々": "Gege Akutami",
+      "芥见下々": "Gege Akutami",
       "堀田由美、小畑健": "Yumi Hotta and Takeshi Obata",
       "藤卷忠俊": "Tadatoshi Fujimaki",
-      "金城宗幸、野村優介": "Muneyuki Kaneshiro and Yusuke Nomura",
-      "諫山創": "Hajime Isayama",
-      "久保帶人": "Tite Kubo",
-      "岸本齊史": "Masashi Kishimoto",
-      "尾田榮一郎": "Eiichiro Oda",
+      "金城宗幸、野村优介": "Muneyuki Kaneshiro and Yusuke Nomura",
+      "谏山创": "Hajime Isayama",
+      "久保带人": "Tite Kubo",
+      "岸本齐史": "Masashi Kishimoto",
+      "尾田荣一郎": "Eiichiro Oda",
       "秋本治": "Osamu Akimoto",
       "雁屋哲、花咲昭": "Tetsu Kariya and Akira Hanasaki",
       "板垣惠介": "Keisuke Itagaki",
       "赤坂明": "Aka Akasaka",
-      "春場蔥": "Negi Haruba",
+      "春场葱": "Negi Haruba",
       "山本崇一朗": "Soichiro Yamamoto",
-      "HERO、萩原大輔": "HERO and Daisuke Hagiwara",
-      "咲坂伊緒": "Io Sakisaka",
-      "椎名輕穗": "Karuho Shiina",
-      "葉月鼎": "Kanae Hazuki",
+      "HERO、萩原大辅": "HERO and Daisuke Hagiwara",
+      "咲坂伊绪": "Io Sakisaka",
+      "椎名轻穗": "Karuho Shiina",
+      "叶月鼎": "Kanae Hazuki",
       "三浦紫苑": "Shion Miura",
-      "三浦紫苑 原作 / 海野空太 漫畫": "Shion Miura and Sorata Unno",
+      "三浦紫苑 原作 / 海野空太 漫画": "Shion Miura and Sorata Unno",
       "HERO / 萩原ダイスケ": "HERO and Daisuke Hagiwara",
       "堀田由美 / 小畑健": "Yumi Hotta and Takeshi Obata",
-      "金城宗幸 / 野村優介": "Muneyuki Kaneshiro and Yusuke Nomura",
-      "芥見下下": "Gege Akutami",
-      "進擊的巨人": "Hajime Isayama"
+      "金城宗幸 / 野村优介": "Muneyuki Kaneshiro and Yusuke Nomura",
+      "芥见下下": "Gege Akutami",
+      "进击的巨人": "Hajime Isayama"
     }
   },
   "publisher_i18n": {
     "en": {
-      "東立出版社": "Tong Li Publishing",
+      "东立出版社": "Tong Li Publishing",
       "尖端出版": "Sharp Point Press",
-      "台灣東販": "Taiwan Tohan",
+      "台湾东贩": "Taiwan Tohan",
       "青文出版社": "Ching Win Publishing",
-      "漫遊者文化": "Rambler Publishing",
-      "長鴻出版社": "Ever Glory Publishing"
+      "漫游者文化": "Rambler Publishing",
+      "长鸿出版社": "Ever Glory Publishing"
     },
     "ms": {
-      "東立出版社": "Penerbitan Tong Li",
+      "东立出版社": "Penerbitan Tong Li",
       "尖端出版": "Penerbitan Sharp Point",
-      "台灣東販": "Penerbitan Taiwan Tohan",
+      "台湾东贩": "Penerbitan Taiwan Tohan",
       "青文出版社": "Penerbitan Ching Win",
-      "漫遊者文化": "Penerbitan Rambler",
-      "長鴻出版社": "Penerbitan Ever Glory"
+      "漫游者文化": "Penerbitan Rambler",
+      "长鸿出版社": "Penerbitan Ever Glory"
     }
   },
   "category_i18n": {
     "en": {
-      "漫畫": "Manga / Comic",
-      "小說": "Novel",
-      "散文/文學": "Prose / Literature",
-      "科普/知識": "Science / Knowledge",
-      "傳記/勵志": "Biography / Motivational",
+      "漫画": "Manga / Comic",
+      "小说": "Novel",
+      "散文/文学": "Prose / Literature",
+      "科普/知识": "Science / Knowledge",
+      "传记/励志": "Biography / Motivational",
       "其他": "Other"
     },
     "ms": {
-      "漫畫": "Komik",
-      "小說": "Novel",
-      "散文/文學": "Prosa / Kesusasteraan",
-      "科普/知識": "Sains / Pengetahuan",
-      "傳記/勵志": "Biografi / Motivasi",
+      "漫画": "Komik",
+      "小说": "Novel",
+      "散文/文学": "Prosa / Kesusasteraan",
+      "科普/知识": "Sains / Pengetahuan",
+      "传记/励志": "Biografi / Motivasi",
       "其他": "Lain-lain"
     }
   }
@@ -4430,7 +4430,7 @@
       if (!vol && vol !== 0) return '';
       if (typeof vol === 'number') return vol;
       const str = String(vol);
-      if (str.includes('全一冊')) return currentLang === 'ms' ? 'Lengkap' : (currentLang === 'en' ? 'Complete' : '全一冊');
+      if (str.includes('全一册')) return currentLang === 'ms' ? 'Lengkap' : (currentLang === 'en' ? 'Complete' : '全一册');
       const m = str.match(/\d+/);
       return m ? m[0] : str;
     }
@@ -4479,22 +4479,22 @@
       // Deduce 2-3 KPM values based on series / insight
       const txt = ((b.summary || '') + ' ' + (b.insight || '')).toLowerCase();
       const res = [];
-      if (txt.includes('合作') || txt.includes('夥伴') || txt.includes('伙伴') || txt.includes('默契') || txt.includes('團隊') || txt.includes('团队')) {
+      if (txt.includes('合作') || txt.includes('夥伴') || txt.includes('伙伴') || txt.includes('默契') || txt.includes('团队') || txt.includes('团队')) {
         res.push(currentLang === 'zh' ? '团结协作' : (currentLang === 'en' ? 'Teamwork' : 'Kerjasama'));
       }
-      if (txt.includes('毅力') || txt.includes('堅持') || txt.includes('坚持') || txt.includes('不屈') || txt.includes('努力') || txt.includes('拼搏')) {
+      if (txt.includes('毅力') || txt.includes('坚持') || txt.includes('坚持') || txt.includes('不屈') || txt.includes('努力') || txt.includes('拼搏')) {
         res.push(currentLang === 'zh' ? '坚毅不拔' : (currentLang === 'en' ? 'Perseverance' : 'Kegigihan'));
       }
-      if (txt.includes('勇氣') || txt.includes('勇气') || txt.includes('無畏') || txt.includes('无畏') || txt.includes('突破') || txt.includes('挑戰') || txt.includes('挑战')) {
+      if (txt.includes('勇气') || txt.includes('勇气') || txt.includes('无畏') || txt.includes('无畏') || txt.includes('突破') || txt.includes('挑战') || txt.includes('挑战')) {
         res.push(currentLang === 'zh' ? '见义勇为' : (currentLang === 'en' ? 'Courage' : 'Keberanian'));
       }
-      if (txt.includes('關懷') || txt.includes('关怀') || txt.includes('溫暖') || txt.includes('温暖') || txt.includes('愛') || txt.includes('爱') || txt.includes('友誼') || txt.includes('友谊')) {
+      if (txt.includes('关怀') || txt.includes('关怀') || txt.includes('温暖') || txt.includes('温暖') || txt.includes('爱') || txt.includes('爱') || txt.includes('友谊') || txt.includes('友谊')) {
         res.push(currentLang === 'zh' ? '仁爱关怀' : (currentLang === 'en' ? 'Love & Compassion' : 'Kasih Sayang'));
       }
-      if (txt.includes('禮') || txt.includes('礼') || txt.includes('敬') || txt.includes('尊') || txt.includes('謙') || txt.includes('谦')) {
+      if (txt.includes('礼') || txt.includes('礼') || txt.includes('敬') || txt.includes('尊') || txt.includes('谦') || txt.includes('谦')) {
         res.push(currentLang === 'zh' ? '崇高品德' : (currentLang === 'en' ? 'High Courtesy' : 'Hemah Tinggi'));
       }
-      if (txt.includes('理智') || txt.includes('思考') || txt.includes('智慧') || txt.includes('策略') || txt.includes('冷靜') || txt.includes('冷静')) {
+      if (txt.includes('理智') || txt.includes('思考') || txt.includes('智慧') || txt.includes('策略') || txt.includes('冷静') || txt.includes('冷静')) {
         res.push(currentLang === 'zh' ? '理性明辨' : (currentLang === 'en' ? 'Rationality' : 'Rasional'));
       }
       if (res.length < 2) {
@@ -4580,7 +4580,7 @@
       if (badgeEl) {
         const nextDef = SEQ_STEPS[nextStep];
         const nextLbl = currentLang === 'ms' ? nextDef.labelMs : (currentLang === 'en' ? nextDef.labelEn : nextDef.labelZh);
-        badgeEl.innerText = nextStep === 0 ? `[✓ AINS 完成/重置]` : `[${nextStep + 1}/8 ${nextLbl}]`;
+        badgeEl.innerText = nextStep === 0 ? `[? AINS 完成/重置]` : `[${nextStep + 1}/8 ${nextLbl}]`;
       }
 
       const toastMsg = currentLang === 'ms'
@@ -4869,11 +4869,11 @@
       const catSelect = el('m-category');
       if (catSelect) {
         const catMap = {
-          '漫畫': currentLang === 'ms' ? 'Komik (Manga)' : (currentLang === 'en' ? 'Manga / Comic' : '漫畫 (Comic / Manga)'),
-          '小說': currentLang === 'ms' ? 'Novel' : (currentLang === 'en' ? 'Novel' : '小說 (Novel)'),
-          '散文/文學': currentLang === 'ms' ? 'Prosa / Kesusasteraan' : (currentLang === 'en' ? 'Prose / Literature' : '散文 / 文學'),
-          '科普/知識': currentLang === 'ms' ? 'Sains / Pengetahuan' : (currentLang === 'en' ? 'Science / Knowledge' : '科普 / 知識'),
-          '傳記/勵志': currentLang === 'ms' ? 'Biografi / Motivasi' : (currentLang === 'en' ? 'Biography / Motivational' : '傳記 / 勵志'),
+          '漫画': currentLang === 'ms' ? 'Komik (Manga)' : (currentLang === 'en' ? 'Manga / Comic' : '漫画 (Comic / Manga)'),
+          '小说': currentLang === 'ms' ? 'Novel' : (currentLang === 'en' ? 'Novel' : '小说 (Novel)'),
+          '散文/文学': currentLang === 'ms' ? 'Prosa / Kesusasteraan' : (currentLang === 'en' ? 'Prose / Literature' : '散文 / 文学'),
+          '科普/知识': currentLang === 'ms' ? 'Sains / Pengetahuan' : (currentLang === 'en' ? 'Science / Knowledge' : '科普 / 知识'),
+          '传记/励志': currentLang === 'ms' ? 'Biografi / Motivasi' : (currentLang === 'en' ? 'Biography / Motivational' : '传记 / 励志'),
           '其他': currentLang === 'ms' ? 'Lain-lain' : (currentLang === 'en' ? 'Other' : '其他')
         };
         Array.from(catSelect.options).forEach(opt => {
@@ -4888,7 +4888,7 @@
       if (el('lbl-slip-school')) el('lbl-slip-school').innerText = t('slipSchool');
       if (el('lbl-slip-scope')) el('lbl-slip-scope').innerText = currentLang === 'ms' ? 'Skop Cetakan' : (currentLang === 'en' ? 'Print Scope' : '打印清单范围');
       if (el('btn-print-cancel')) el('btn-print-cancel').innerText = t('btnAddCancel');
-      if (el('btn-print-execute')) el('btn-print-execute').innerText = currentLang === 'ms' ? '🖨️ Cetak / Simpan PDF' : (currentLang === 'en' ? '🖨️ Print / Save PDF' : '🖨️ 立即打印 / 保存 PDF');
+      if (el('btn-print-execute')) el('btn-print-execute').innerText = currentLang === 'ms' ? '??? Cetak / Simpan PDF' : (currentLang === 'en' ? '??? Print / Save PDF' : '??? 立即打印 / 保存 PDF');
       const slipScope = el('slip-scope');
       if (slipScope) {
         const scopeMap = {
@@ -4972,15 +4972,15 @@
     function getSeriesCategory(s) {
       if (!s) return 'bukan_fiksyen';
       // 1. Bukan Fiksyen / Non-fiction (Science, History, Biography, Motivation, Finance)
-      if (s.includes('科學') || s.includes('科学') || s.includes('宇宙') || s.includes('物理') || s.includes('醫學') || s.includes('医学') || s.includes('歷史') || s.includes('历史') || s.includes('文明') || s.includes('先驅') || s.includes('先驱') || s.includes('領袖') || s.includes('领袖') || s.includes('偉人') || s.includes('伟人') || s.includes('傳記') || s.includes('传记') || s.includes('認知') || s.includes('认知') || s.includes('財商') || s.includes('财商') || s.includes('思維') || s.includes('思维') || s.includes('哲學') || s.includes('哲学') || s.includes('人工智能') || s.includes('理財') || s.includes('理财') || s.includes('成長') || s.includes('成长') || s.includes('心理') || s.includes('地球') || s.includes('生物') || s.includes('大英') || s.includes('華夏') || s.includes('华夏') || s.includes('人類') || s.includes('人类')) return 'bukan_fiksyen';
+      if (s.includes('科学') || s.includes('科学') || s.includes('宇宙') || s.includes('物理') || s.includes('医学') || s.includes('医学') || s.includes('历史') || s.includes('历史') || s.includes('文明') || s.includes('先驱') || s.includes('先驱') || s.includes('领袖') || s.includes('领袖') || s.includes('伟人') || s.includes('伟人') || s.includes('传记') || s.includes('传记') || s.includes('认知') || s.includes('认知') || s.includes('财商') || s.includes('财商') || s.includes('思维') || s.includes('思维') || s.includes('哲学') || s.includes('哲学') || s.includes('人工智能') || s.includes('理财') || s.includes('理财') || s.includes('成长') || s.includes('成长') || s.includes('心理') || s.includes('地球') || s.includes('生物') || s.includes('大英') || s.includes('华夏') || s.includes('华夏') || s.includes('人类') || s.includes('人类')) return 'bukan_fiksyen';
       
       // 2. Sastera / Classic Literature (Masterpieces, Fables, World Classics)
-      if (s.includes('文學') || s.includes('文学') || s.includes('名著') || s.includes('三國') || s.includes('三国') || s.includes('水滸') || s.includes('水浒') || s.includes('西遊') || s.includes('西游') || s.includes('紅樓') || s.includes('红楼') || s.includes('莎士比亞') || s.includes('莎士比亚') || s.includes('寓言') || s.includes('童話') || s.includes('童话') || s.includes('福爾摩斯') || s.includes('福尔摩斯') || s.includes('格林') || s.includes('安徒生') || s.includes('伊索') || s.includes('小王子') || s.includes('老人與海') || s.includes('傲慢與偏見') || s.includes('悲慘世界') || s.includes('基督山') || s.includes('詩經') || s.includes('诗经') || s.includes('唐詩') || s.includes('宋詞')) return 'sastera';
+      if (s.includes('文学') || s.includes('文学') || s.includes('名着') || s.includes('三国') || s.includes('三国') || s.includes('水浒') || s.includes('水浒') || s.includes('西游') || s.includes('西游') || s.includes('红楼') || s.includes('红楼') || s.includes('莎士比亚') || s.includes('莎士比亚') || s.includes('寓言') || s.includes('童话') || s.includes('童话') || s.includes('福尔摩斯') || s.includes('福尔摩斯') || s.includes('格林') || s.includes('安徒生') || s.includes('伊索') || s.includes('小王子') || s.includes('老人与海') || s.includes('傲慢与偏见') || s.includes('悲惨世界') || s.includes('基督山') || s.includes('诗经') || s.includes('诗经') || s.includes('唐诗') || s.includes('宋词')) return 'sastera';
 
       // 3. Manga Subcategories
-      if (s.includes('火影') || s.includes('海賊') || s.includes('海贼') || s.includes('航海王') || s.includes('刃牙') || s.includes('格鬥天王') || s.includes('格斗天王') || s.includes('排球') || s.includes('灌籃') || s.includes('灌篮') || s.includes('英雄') || s.includes('鬼滅') || s.includes('鬼灭') || s.includes('鋼之') || s.includes('钢之') || s.includes('咒術') || s.includes('咒术') || s.includes('棋魂') || s.includes('黑子') || s.includes('巨人') || s.includes('藍色監獄') || s.includes('蓝色监狱') || s.includes('死神') || s.includes('BLEACH')) return 'shonen';
-      if (s.includes('輝夜') || s.includes('辉夜') || s.includes('五等分') || s.includes('高木') || s.includes('堀與') || s.includes('堀与') || s.includes('青春') || s.includes('閃爍') || s.includes('闪烁') || s.includes('告訴') || s.includes('告诉') || s.includes('只要妳') || s.includes('只要你')) return 'romance';
-      if (s.includes('美味') || s.includes('烏龍') || s.includes('乌龙') || s.includes('強風') || s.includes('强风')) return 'daily';
+      if (s.includes('火影') || s.includes('海贼') || s.includes('海贼') || s.includes('航海王') || s.includes('刃牙') || s.includes('格斗天王') || s.includes('格斗天王') || s.includes('排球') || s.includes('灌篮') || s.includes('灌篮') || s.includes('英雄') || s.includes('鬼灭') || s.includes('鬼灭') || s.includes('钢之') || s.includes('钢之') || s.includes('咒术') || s.includes('咒术') || s.includes('棋魂') || s.includes('黑子') || s.includes('巨人') || s.includes('蓝色监狱') || s.includes('蓝色监狱') || s.includes('死神') || s.includes('BLEACH')) return 'shonen';
+      if (s.includes('辉夜') || s.includes('辉夜') || s.includes('五等分') || s.includes('高木') || s.includes('堀与') || s.includes('堀与') || s.includes('青春') || s.includes('闪烁') || s.includes('闪烁') || s.includes('告诉') || s.includes('告诉') || s.includes('只要你') || s.includes('只要你')) return 'romance';
+      if (s.includes('美味') || s.includes('乌龙') || s.includes('乌龙') || s.includes('强风') || s.includes('强风')) return 'daily';
 
       return 'bukan_fiksyen';
     }
@@ -4989,18 +4989,18 @@
     function getSeriesIconId(seriesName) {
       if (!seriesName) return '#icon-book-gold';
       if (seriesName.includes('火影')) return '#icon-naruto-gold';
-      if (seriesName.includes('海賊') || seriesName.includes('海贼') || seriesName.includes('航海王')) return '#icon-onepiece-gold';
-      if (seriesName.includes('強風') || seriesName.includes('强风')) return '#icon-wind-gold';
-      if (seriesName.includes('輝夜') || seriesName.includes('辉夜')) return '#icon-kaguya-gold';
-      if (seriesName.includes('告訴') || seriesName.includes('告诉')) return '#icon-kimini-gold';
-      if (seriesName.includes('堀與') || seriesName.includes('堀与')) return '#icon-horimiya-gold';
+      if (seriesName.includes('海贼') || seriesName.includes('海贼') || seriesName.includes('航海王')) return '#icon-onepiece-gold';
+      if (seriesName.includes('强风') || seriesName.includes('强风')) return '#icon-wind-gold';
+      if (seriesName.includes('辉夜') || seriesName.includes('辉夜')) return '#icon-kaguya-gold';
+      if (seriesName.includes('告诉') || seriesName.includes('告诉')) return '#icon-kimini-gold';
+      if (seriesName.includes('堀与') || seriesName.includes('堀与')) return '#icon-horimiya-gold';
       if (seriesName.includes('五等分')) return '#icon-quintuplets-gold';
       if (seriesName.includes('高木')) return '#icon-takagi-gold';
-      if (seriesName.includes('青春') || seriesName.includes('閃爍') || seriesName.includes('闪烁')) return '#icon-aoharuride-gold';
-      if (seriesName.includes('只要妳') || seriesName.includes('只要你')) return '#icon-sukitte-gold';
-      if (seriesName.includes('烏龍') || seriesName.includes('乌龙') || seriesName.includes('派出所')) return '#icon-kochikame-gold';
-      if (seriesName.includes('刃牙') || seriesName.includes('格鬥天王') || seriesName.includes('格斗天王')) return '#icon-baki-gold';
-      if (seriesName.includes('美味') || seriesName.includes('大挑戰') || seriesName.includes('大挑战')) return '#icon-oishinbo-gold';
+      if (seriesName.includes('青春') || seriesName.includes('闪烁') || seriesName.includes('闪烁')) return '#icon-aoharuride-gold';
+      if (seriesName.includes('只要你') || seriesName.includes('只要你')) return '#icon-sukitte-gold';
+      if (seriesName.includes('乌龙') || seriesName.includes('乌龙') || seriesName.includes('派出所')) return '#icon-kochikame-gold';
+      if (seriesName.includes('刃牙') || seriesName.includes('格斗天王') || seriesName.includes('格斗天王')) return '#icon-baki-gold';
+      if (seriesName.includes('美味') || seriesName.includes('大挑战') || seriesName.includes('大挑战')) return '#icon-oishinbo-gold';
       return '#icon-book-gold';
     }
 
@@ -5118,7 +5118,7 @@
       } else if (currentLang === 'en') {
         fullText = `Series: ${s}\nVolume: ${b.vol || '-'}\nTitle: ${title}\nAuthor: ${author}\nPublisher: ${publisher}\nCategory: ${category}\nPublication Year: ${cleanYear || b.year || t('valUnknown')}${pubDate ? ' (' + pubDate + ')' : ''}\nPages: ${cleanPages || b.pages || t('valUnknown')}\nISBN: ${cleanIsbn || t('valNone')}${b.url ? '\nSource Link (URL): ' + b.url : ''}\n\nSynopsis:\n${summary}\n\nMoral Values & Lessons:\n${insight}`;
       } else {
-        fullText = `【系列/Siri】: ${b.series || '未分类'}\n【书名/Judul】: ${title}\n【作者/Pengarang】: ${author}\n【出版社/Penerbit】: ${publisher}\n【类别/Kategori】: ${category || '漫畫'}\n【出版年份/Tahun】: ${cleanYear || b.year || '未知'}${b.pubDate ? ' (' + b.pubDate + ')' : ''}\n【页数/Muka Surat】: ${cleanPages || b.pages || '未知'}\n【ISBN】: ${cleanIsbn || '无'}${b.url ? '\n【来源链接/URL】: ' + b.url : ''}\n\n【内容概述/Sinopsis】:\n${summary || '无'}\n\n【启示与品德/Nilai Murni & Pengajaran】:\n${insight || '无'}`;
+        fullText = `【系列/Siri】: ${b.series || '未分类'}\n【书名/Judul】: ${title}\n【作者/Pengarang】: ${author}\n【出版社/Penerbit】: ${publisher}\n【类别/Kategori】: ${category || '漫画'}\n【出版年份/Tahun】: ${cleanYear || b.year || '未知'}${b.pubDate ? ' (' + b.pubDate + ')' : ''}\n【页数/Muka Surat】: ${cleanPages || b.pages || '未知'}\n【ISBN】: ${cleanIsbn || '无'}${b.url ? '\n【来源链接/URL】: ' + b.url : ''}\n\n【内容概述/Sinopsis】:\n${summary || '无'}\n\n【启示与品德/Nilai Murni & Pengajaran】:\n${insight || '无'}`;
       }
 
       // Attach stealth JSON payload for 100% loss-less parsing by Tampermonkey companion
@@ -5474,7 +5474,7 @@
       if (!controls) return;
 
       let btnsHtml = '';
-      btnsHtml += `<button class="btn-page" ${currentPage <= 1 ? 'disabled' : ''} onclick="changePage(${currentPage - 1})" title="上一页">‹</button>`;
+      btnsHtml += `<button class="btn-page" ${currentPage <= 1 ? 'disabled' : ''} onclick="changePage(${currentPage - 1})" title="上一页">?</button>`;
 
       const delta = 2;
       const range = [];
@@ -5491,7 +5491,7 @@
       if (totalPages > 1) {
         btnsHtml += `<button class="btn-page ${currentPage === totalPages ? 'active' : ''}" onclick="changePage(${totalPages})">${totalPages}</button>`;
       }
-      btnsHtml += `<button class="btn-page ${currentPage >= totalPages ? 'disabled' : ''}" onclick="changePage(${currentPage + 1})" title="下一页">›</button>`;
+      btnsHtml += `<button class="btn-page ${currentPage >= totalPages ? 'disabled' : ''}" onclick="changePage(${currentPage + 1})" title="下一页">?</button>`;
 
       controls.innerHTML = btnsHtml;
     }
@@ -5755,14 +5755,14 @@
           <div class="full-copy-bar" style="display: flex; gap: 8px; flex-wrap: wrap; justify-content: space-between; align-items: center;">
             <div class="seq-copy-group">
               <button class="btn-seq-copy" id="btn-seq-${b.id}" onclick="copySequentialStep('${b.id}', this)" title="${currentLang === 'ms' ? 'Salin ikut turutan borang AINS NILAM: Tajuk > Penulis > Penerbit > Tahun > Muka Surat > ISBN > Rumusan > Pengajaran (Tekan Bar Ruang)' : (currentLang === 'en' ? 'AINS NILAM sequential copy: Title > Author > Publisher > Year > Pages > ISBN > Rumusan > Pengajaran (Press Space)' : 'AINS 顺序连击复制：书名 > 作者 > 出版社 > 年份 > 页数 > ISBN > 读后总结 > 品德启示 (支持空格键)')}">
-                <span>⚡ 连击复制 (AINS)</span> <span class="badge-step" id="seq-step-badge-${b.id}">[1/8 ${currentLang === 'ms' ? 'Tajuk' : (currentLang === 'en' ? 'Title' : '书名')}]</span>
+                <span>? 连击复制 (AINS)</span> <span class="badge-step" id="seq-step-badge-${b.id}">[1/8 ${currentLang === 'ms' ? 'Tajuk' : (currentLang === 'en' ? 'Title' : '书名')}]</span>
               </button>
               <button class="btn btn-outline" style="font-size: 0.8rem; white-space: nowrap;" onclick="copyFullVolume(getAllBooks().find(x => x.id === '${b.id}'))">
                 <svg class="g-icon"><use href="#icon-copy"></use></svg> ${t('btnCopyFull')}
               </button>
               ${isCustom ? `
                 <button class="btn-card-edit" onclick="openEditCustomModal('${b.id}')" title="编辑这本自定义书籍">
-                  ✏️ 编辑
+                  ?? 编辑
                 </button>
               ` : ''}
             </div>
@@ -5868,7 +5868,7 @@
 
       document.getElementById('m-edit-id').value = bookId;
       document.getElementById('m-series').value = b.series || '';
-      document.getElementById('m-category').value = b.category || '漫畫';
+      document.getElementById('m-category').value = b.category || '漫画';
       document.getElementById('m-title').value = b.title || '';
       document.getElementById('m-vol').value = b.vol || '';
       document.getElementById('m-author').value = b.author || '';
@@ -6545,7 +6545,7 @@
       }
 
       if (timerRunning) {
-        document.title = `⏱️ [${timeStr}] - ${t('appTitle')}`;
+        document.title = `?? [${timeStr}] - ${t('appTitle')}`;
       } else if (timerRemaining > 0) {
         document.title = t('pageTitle');
       }
@@ -6621,7 +6621,7 @@
       if (titleBlinkInterval) clearInterval(titleBlinkInterval);
       let flag = false;
       titleBlinkInterval = setInterval(() => {
-        document.title = flag ? '🔔 Time\'s Up!' : `⏱️ [00:00] ${t('appTitle')}`;
+        document.title = flag ? '?? Time\'s Up!' : `?? [00:00] ${t('appTitle')}`;
         flag = !flag;
       }, 800);
     }
@@ -7103,7 +7103,7 @@
       }
       if (connectBtn) {
         connectBtn.disabled = false;
-        connectBtn.innerText = t('btnConnectSync') || '🚀 连接并同步';
+        connectBtn.innerText = t('btnConnectSync') || '?? 连接并同步';
       }
     }
 
