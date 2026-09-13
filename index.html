@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
@@ -1822,90 +1822,29 @@
     }
 
     /* Roulette Blind Box Lottery Modal */
-    #roulette-modal {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: 2000;
-      background: rgba(12, 14, 20, 0.92);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      display: none;
-      visibility: hidden;
-      pointer-events: none;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      transition: opacity 0.25s ease;
-    }
+    
 
-    #roulette-modal.active {
-      display: flex !important;
-      visibility: visible !important;
-      pointer-events: auto !important;
-      opacity: 1 !important;
-    }
+    
 
-    .roulette-box {
-      background: linear-gradient(145deg, #1a1e2c, #121520);
-      border: 2px solid var(--gold-primary);
-      border-radius: 18px;
-      padding: 2.2rem 2.5rem;
-      max-width: 520px;
-      width: 90%;
-      text-align: center;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 35px var(--gold-glow);
-      animation: roulettePopIn 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      position: relative;
-      overflow: hidden;
-    }
+    
 
     @keyframes roulettePopIn {
       from { transform: scale(0.85); opacity: 0; }
       to { transform: scale(1); opacity: 1; }
     }
 
-    .roulette-dice-icon {
-      font-size: 3.2rem;
-      margin-bottom: 0.8rem;
-      display: inline-block;
-      animation: diceShake 0.4s infinite alternate ease-in-out;
-    }
+    
 
     @keyframes diceShake {
       0% { transform: rotate(-12deg) scale(1); }
       100% { transform: rotate(12deg) scale(1.12); }
     }
 
-    .roulette-title-slot {
-      background: rgba(0, 0, 0, 0.4);
-      border: 1px solid var(--gold-border);
-      border-radius: 10px;
-      padding: 1.1rem 1.4rem;
-      margin: 1.2rem 0 1.5rem 0;
-      min-height: 85px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      box-shadow: inset 0 2px 8px rgba(0,0,0,0.5);
-    }
+    
 
-    .roulette-series-tag {
-      font-size: 0.8rem;
-      color: var(--gold-primary);
-      font-weight: 700;
-      margin-bottom: 0.35rem;
-    }
+    
 
-    .roulette-book-name {
-      font-size: 1.25rem;
-      font-weight: 800;
-      color: #ffffff;
-      line-height: 1.35;
-    }
+    
 
     /* ==================================================== */
     /* UI STREAMLINING & 10 PRACTICAL ENHANCEMENTS CSS     */
@@ -2549,44 +2488,34 @@
     }
   
     /* ==================================================== */
-    /* ==================================================== */
-    /* Light Mode (Paper Cream / Crisp Clean)               */
+    /* Light Mode (Paper Cream / Crisp Clean Luxury)        */
     /* ==================================================== */
     [data-theme="light"] {
-      --bg: #f6f8fb;
+      --bg: #f5f7fb;
       --bg-surface: #ffffff;
       --card-bg: #ffffff;
       --card-inner: #f8fafc;
       --card-inner-hover: #f1f5f9;
       
-            /* Pure Dark Luxury Obsidian Frosted Glass (100% Dark Gaussian Blur - Zero Rainbow) */
-      --glass-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(18, 22, 34, 0.72) 40%, rgba(11, 14, 22, 0.85) 100%);
-      --glass-bg-hover: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(24, 30, 46, 0.78) 40%, rgba(14, 18, 28, 0.90) 100%);
-      --glass-card-inner: rgba(9, 12, 20, 0.58);
-      --glass-border: 1px solid rgba(255, 255, 255, 0.08);
-      --glass-border-gold: 1px solid rgba(212, 175, 55, 0.38);
-      --glass-border-hover: 1px solid rgba(212, 175, 55, 0.60);
-      --glass-specular: inset 0 1px 1px 0 rgba(255, 255, 255, 0.14), inset 0 0 0 1px rgba(255, 255, 255, 0.02);
-      --glass-shadow: var(--glass-specular), 0 14px 40px rgba(0, 0, 0, 0.55);
-      --glass-shadow-hover: inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.22), 0 20px 50px rgba(0, 0, 0, 0.70), 0 0 22px rgba(212, 175, 55, 0.18);
-      --glass-blur: blur(28px) saturate(140%) brightness(1.02);
-      --glass-blur-sm: blur(14px) saturate(130%);
-      --glass-blur-lg: blur(40px) saturate(150%) brightness(1.03);
+      /* Light High-End Glass & Surfaces */
+      --glass-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(248, 250, 252, 0.92) 100%);
+      --glass-bg-hover: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+      --glass-card-inner: #f8fafc;
+      --glass-border: 1px solid rgba(226, 232, 240, 0.9);
+      --glass-border-gold: 1px solid rgba(184, 134, 11, 0.35);
+      --glass-border-hover: 1px solid rgba(184, 134, 11, 0.6);
+      --glass-specular: inset 0 1px 1px 0 rgba(255, 255, 255, 0.9);
+      --glass-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      --glass-shadow-hover: 0 8px 24px rgba(184, 134, 11, 0.12), 0 2px 6px rgba(0, 0, 0, 0.04);
+      --glass-blur: blur(20px) saturate(140%);
+      --glass-blur-sm: blur(10px);
+      --glass-blur-lg: blur(30px);
 
-      /* High-Performance Elastic Spring Physics Easing */
       --ease-spring-snappy: cubic-bezier(0.34, 1.56, 0.64, 1);
       --ease-spring-gentle: cubic-bezier(0.16, 1, 0.3, 1);
       --ease-spring-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      --glass-bg-hover: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
-      --glass-card-inner: #f8fafc;
-      --glass-border: 1px solid rgba(0, 0, 0, 0.08);
-      --glass-border-gold: 1px solid rgba(184, 144, 48, 0.35);
-      --glass-border-hover: 1px solid rgba(184, 144, 48, 0.55);
-      --glass-specular: inset 0 1px 1px 0 rgba(255, 255, 255, 0.9);
-      --glass-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-      --glass-shadow-hover: 0 8px 24px rgba(184, 144, 48, 0.14), 0 2px 6px rgba(0, 0, 0, 0.04);
 
-      --text-main: #1e293b;
+      --text-main: #0f172a;
       --text-secondary: #475569;
       --text-muted: #64748b;
 
@@ -2594,60 +2523,98 @@
       --gold-hover: #996515;
       --gold-dark: #8b6508;
       --gold-deep: #684a00;
-      --gold-bg-subtle: rgba(184, 134, 11, 0.1);
-      --gold-bg-hover: rgba(184, 134, 11, 0.18);
-      --gold-border: rgba(184, 134, 11, 0.3);
-      --gold-border-bright: rgba(184, 134, 11, 0.65);
-      --gold-glow: rgba(184, 134, 11, 0.2);
+      --gold-bg-subtle: rgba(184, 134, 11, 0.09);
+      --gold-bg-hover: rgba(184, 134, 11, 0.16);
+      --gold-border: rgba(184, 134, 11, 0.28);
+      --gold-border-bright: rgba(184, 134, 11, 0.6);
+      --gold-glow: rgba(184, 134, 11, 0.18);
 
       --border: #e2e8f0;
       --border-light: #cbd5e1;
       --border-focus: #b8860b;
 
-      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
-      --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
-      --shadow-lg: 0 10px 24px rgba(0, 0, 0, 0.08);
-      --shadow-gold: 0 0 16px rgba(184, 134, 11, 0.16);
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 12px 28px rgba(0, 0, 0, 0.08);
+      --shadow-gold: 0 0 16px rgba(184, 134, 11, 0.14);
     }
     [data-theme="light"] body {
-      background-color: #f6f8fb;
+      background-color: #f5f7fb;
       background-image: 
         radial-gradient(circle at 10% 12%, rgba(184, 134, 11, 0.035) 0%, transparent 40%),
         radial-gradient(circle at 90% 88%, rgba(100, 116, 139, 0.045) 0%, transparent 50%);
-      color: #1e293b;
-    }
-    [data-theme="light"] .vol-card {
-      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
-      background: #ffffff;
-    }
-    [data-theme="light"] .vol-title {
-      color: #0f172a;
-    }
-    [data-theme="light"] .content-box {
-      background: #f8fafc;
-      border-color: #e2e8f0;
-    }
-    [data-theme="light"] .content-text {
-      color: #334155;
-    }
-    [data-theme="light"] .meta-box {
-      background: #f8fafc;
-      border-color: #e2e8f0;
-    }
-    [data-theme="light"] .meta-value {
       color: #0f172a;
     }
     [data-theme="light"] header {
-      background: rgba(255, 255, 255, 0.92);
+      background: rgba(255, 255, 255, 0.94);
       border-bottom: 1px solid #e2e8f0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    }
+    [data-theme="light"] .logo-text h1 {
+      color: #0f172a;
+    }
+    [data-theme="light"] .series-nav-wrap,
+    [data-theme="light"] .stats-compact-bar,
+    [data-theme="light"] .toolbar {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    }
+    [data-theme="light"] .compact-progress-track {
+      background: #e2e8f0;
+      border-color: #cbd5e1;
+    }
+    [data-theme="light"] .compact-pill {
+      background: #f8fafc;
+      border-color: #e2e8f0;
+      color: #475569;
+    }
+    [data-theme="light"] .compact-pill strong {
+      color: #0f172a;
+    }
+    [data-theme="light"] .compact-pill.gold strong {
+      color: #b8860b;
+    }
+    [data-theme="light"] .btn-toolbar-opt {
+      background: #f8fafc;
+      border-color: #e2e8f0;
+      color: #475569;
+    }
+    [data-theme="light"] .btn-toolbar-opt:hover {
+      background: #f1f5f9;
+      color: #b8860b;
+      border-color: #b8860b;
+    }
+    [data-theme="light"] .btn-toolbar-opt.active {
+      background: rgba(184, 134, 11, 0.1);
+      border-color: #b8860b;
+      color: #b8860b;
+    }
+    [data-theme="light"] .btn-view-toggle {
+      background: #f1f5f9;
+      color: #475569;
+      border-color: #e2e8f0;
+    }
+    [data-theme="light"] .btn-view-toggle.active {
+      background: #ffffff;
+      color: #b8860b;
+      border-color: #b8860b;
+      box-shadow: 0 2px 6px rgba(184, 134, 11, 0.15);
+    }
+    [data-theme="light"] .search-box-wrap {
+      background: #ffffff;
     }
     [data-theme="light"] .search-input {
-      background: #ffffff;
+      background: #f8fafc;
       color: #0f172a;
       border-color: #cbd5e1;
     }
+    [data-theme="light"] .search-input:focus {
+      background: #ffffff;
+      border-color: #b8860b;
+    }
     [data-theme="light"] .sorter-select, [data-theme="light"] .jump-select {
-      background-color: #ffffff;
+      background-color: #f8fafc;
       color: #0f172a;
       border-color: #cbd5e1;
     }
@@ -2682,10 +2649,167 @@
       color: #b8860b;
       border-color: #b8860b;
     }
+    [data-theme="light"] .vol-card {
+      background: #ffffff;
+      border-color: #e2e8f0;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    }
+    [data-theme="light"] .card-header {
+      border-bottom-color: #e2e8f0;
+    }
+    [data-theme="light"] .vol-title {
+      color: #0f172a;
+    }
+    [data-theme="light"] .vol-badge {
+      background: #f1f5f9;
+      color: #475569;
+      border-color: #e2e8f0;
+    }
+    [data-theme="light"] .badge-series {
+      background: rgba(184, 134, 11, 0.1);
+      color: #b8860b;
+    }
+    [data-theme="light"] .status-toggle-btn {
+      background: #f8fafc;
+      border-color: #cbd5e1;
+      color: #475569;
+    }
+    [data-theme="light"] .status-toggle-btn.is-completed {
+      background: rgba(184, 134, 11, 0.1);
+      border-color: #b8860b;
+      color: #b8860b;
+    }
+    [data-theme="light"] .meta-box {
+      background: #f8fafc;
+      border-color: #e2e8f0;
+    }
+    [data-theme="light"] .meta-label {
+      color: #64748b;
+    }
+    [data-theme="light"] .meta-value {
+      color: #0f172a;
+    }
+    [data-theme="light"] .btn-copy-small,
+    [data-theme="light"] .btn-copy-block {
+      background: #ffffff;
+      border-color: #cbd5e1;
+      color: #475569;
+    }
+    [data-theme="light"] .btn-copy-small:hover,
+    [data-theme="light"] .btn-copy-block:hover {
+      background: #f1f5f9;
+      color: #b8860b;
+      border-color: #b8860b;
+    }
+    [data-theme="light"] .content-box {
+      background: #f8fafc;
+      border-color: #e2e8f0;
+    }
+    [data-theme="light"] .content-title {
+      color: #0f172a;
+    }
+    [data-theme="light"] .content-text {
+      color: #334155;
+    }
+    [data-theme="light"] .content-box.gold-toned {
+      background: rgba(184, 134, 11, 0.04);
+      border-color: rgba(184, 134, 11, 0.25);
+    }
+    [data-theme="light"] .btn-seq-copy {
+      background: #fdfaf3;
+      border-color: rgba(184, 134, 11, 0.4);
+      color: #996515;
+    }
+    [data-theme="light"] .btn-seq-copy:hover {
+      background: rgba(184, 134, 11, 0.12);
+    }
+    [data-theme="light"] .floating-mini-timer-dock {
+      background: #ffffff !important;
+      border-color: rgba(184, 134, 11, 0.45);
+      color: #0f172a;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12), 0 0 16px rgba(184, 134, 11, 0.15);
+    }
+    [data-theme="light"] .floating-mini-timer-dock:hover {
+      background: #f8fafc !important;
+      border-color: var(--gold-primary);
+    }
+    [data-theme="light"] .mini-timer-digits {
+      color: #0f172a;
+    }
+    [data-theme="light"] .mini-timer-btn {
+      background: #f1f5f9;
+      color: #475569;
+      border-color: #e2e8f0;
+    }
+    [data-theme="light"] .mini-timer-btn:hover {
+      background: #e2e8f0;
+      color: #0f172a;
+    }
+    [data-theme="light"] .dock-ring-bg {
+      stroke: #e2e8f0;
+    }
+    [data-theme="light"] .dock-ring-progress {
+      stroke: #b8860b;
+    }
+    [data-theme="light"] .timer-widget {
+      background: #ffffff !important;
+      border-color: rgba(184, 134, 11, 0.35);
+      color: #0f172a;
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.14);
+    }
+    [data-theme="light"] .timer-title {
+      color: #b8860b;
+    }
+    [data-theme="light"] .timer-digits {
+      color: #0f172a;
+      text-shadow: none;
+    }
+    [data-theme="light"] .timer-status-badge {
+      background: #f1f5f9;
+      color: #475569;
+      border-color: #e2e8f0;
+    }
+    [data-theme="light"] .timer-preset-btn {
+      background: #f8fafc;
+      color: #475569;
+      border-color: #e2e8f0;
+    }
+    [data-theme="light"] .timer-preset-btn:hover {
+      background: #f1f5f9;
+      color: #b8860b;
+      border-color: #b8860b;
+    }
+    [data-theme="light"] .timer-btn-secondary {
+      background: #f1f5f9;
+      color: #475569;
+      border-color: #e2e8f0;
+    }
+    [data-theme="light"] .timer-setting-row {
+      color: #475569;
+      border-top-color: #e2e8f0;
+    }
+    [data-theme="light"] .modal-overlay {
+      background: rgba(15, 23, 42, 0.45);
+    }
     [data-theme="light"] .modal-box {
       background: #ffffff;
       border-color: #e2e8f0;
       color: #1e293b;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    }
+    [data-theme="light"] .modal-header h2 {
+      color: #0f172a;
+    }
+    [data-theme="light"] .btn-close-modal {
+      color: #64748b;
+    }
+    [data-theme="light"] .form-label {
+      color: #475569;
+    }
+    [data-theme="light"] .form-control {
+      background: #ffffff;
+      border-color: #cbd5e1;
+      color: #0f172a;
     }
     [data-theme="light"] .nilam-table {
       background: #ffffff;
@@ -2701,6 +2825,248 @@
     }
     [data-theme="light"] .nilam-table tr:hover td {
       background: #f8fafc;
+    }
+    [data-theme="light"] .dropdown-tools-menu {
+      background: #ffffff;
+      border-color: #e2e8f0;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    [data-theme="light"] .dropdown-item {
+      color: #334155;
+    }
+    [data-theme="light"] .dropdown-item:hover {
+      background: #f1f5f9;
+      color: #b8860b;
+    }
+    [data-theme="light"] .dropdown-divider {
+      background: #e2e8f0;
+    }
+    [data-theme="light"] .batch-bar-sticky {
+      background: rgba(255, 255, 255, 0.96);
+      border-color: #e2e8f0;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    }
+    [data-theme="light"] .batch-count-badge {
+      background: rgba(184, 134, 11, 0.12);
+      color: #b8860b;
+    }
+    [data-theme="light"] #toast {
+      background: #ffffff;
+      border-color: #e2e8f0;
+      color: #0f172a;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    /* ==================================================== */
+    /* Reader Level & Gamification System Styles           */
+    /* ==================================================== */
+    .btn-level-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%);
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      border-radius: var(--radius-sm);
+      padding: 0.42rem 0.85rem;
+      color: var(--gold-primary);
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.22s var(--ease-spring-snappy);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+    .btn-level-badge:hover {
+      transform: translateY(-2px) scale(1.03);
+      border-color: var(--gold-primary);
+      box-shadow: 0 4px 16px var(--gold-glow);
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.25) 0%, rgba(212, 175, 55, 0.1) 100%);
+    }
+    .level-icon-badge {
+      font-size: 1.1rem;
+      line-height: 1;
+      filter: drop-shadow(0 0 4px rgba(212, 175, 55, 0.5));
+    }
+    .level-exp-pill {
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 0.12rem 0.45rem;
+      border-radius: 9999px;
+      background: rgba(212, 175, 55, 0.2);
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      color: #ffffff;
+      font-family: monospace;
+    }
+    [data-theme="light"] .btn-level-badge {
+      background: linear-gradient(135deg, rgba(184, 134, 11, 0.12) 0%, #ffffff 100%);
+      border-color: rgba(184, 134, 11, 0.4);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+    [data-theme="light"] .level-exp-pill {
+      color: #996515;
+      background: rgba(184, 134, 11, 0.15);
+      border-color: rgba(184, 134, 11, 0.35);
+    }
+    .compact-pill.level-pill {
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.14) 0%, rgba(212, 175, 55, 0.04) 100%);
+      border-color: rgba(212, 175, 55, 0.4);
+      color: var(--gold-primary);
+      font-weight: 700;
+      transition: all 0.2s;
+    }
+    .compact-pill.level-pill:hover {
+      transform: translateY(-1px);
+      border-color: var(--gold-primary);
+      box-shadow: 0 0 10px var(--gold-glow);
+    }
+    [data-theme="light"] .compact-pill.level-pill {
+      background: rgba(184, 134, 11, 0.08);
+      border-color: rgba(184, 134, 11, 0.35);
+    }
+
+    /* Level Modal Content */
+    .level-modal-header-hero {
+      text-align: center;
+      padding: 1.25rem 1rem 1rem;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+    .level-hero-icon {
+      font-size: 3.5rem;
+      margin-bottom: 0.4rem;
+      display: inline-block;
+      animation: levelIconBounce 0.6s var(--ease-spring-bounce);
+      filter: drop-shadow(0 0 14px var(--gold-glow));
+    }
+    @keyframes levelIconBounce {
+      0% { transform: scale(0.6) rotate(-15deg); }
+      70% { transform: scale(1.15) rotate(5deg); }
+      100% { transform: scale(1) rotate(0deg); }
+    }
+    .level-hero-title {
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--gold-primary);
+      letter-spacing: 0.5px;
+    }
+    .level-hero-subtitle {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      margin-top: 0.35rem;
+    }
+    .level-progress-card {
+      margin: 1.25rem 0;
+      padding: 1rem 1.25rem;
+      background: var(--card-inner);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+    }
+    .level-progress-bar-wrap {
+      height: 12px;
+      background: #080a10;
+      border-radius: 9999px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      margin: 0.65rem 0 0.4rem;
+    }
+    [data-theme="light"] .level-progress-bar-wrap {
+      background: #e2e8f0;
+      border-color: #cbd5e1;
+    }
+    .level-progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #b8860b, #fbbf24);
+      box-shadow: 0 0 12px rgba(245, 158, 11, 0.6);
+      transition: width 0.5s ease;
+    }
+    .level-tiers-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.65rem;
+      max-height: 380px;
+      overflow-y: auto;
+      padding-right: 0.3rem;
+    }
+    .level-tier-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      background: var(--card-inner);
+      transition: all 0.2s ease;
+      gap: 0.75rem;
+    }
+    .level-tier-row.is-current {
+      border-color: var(--gold-primary);
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.14) 0%, var(--card-inner) 100%);
+      box-shadow: 0 0 16px rgba(212, 175, 55, 0.25);
+    }
+    [data-theme="light"] .level-tier-row.is-current {
+      background: linear-gradient(135deg, rgba(184, 134, 11, 0.12) 0%, #ffffff 100%);
+      border-color: var(--gold-primary);
+    }
+    .level-tier-row.is-unlocked {
+      opacity: 0.95;
+    }
+    .level-tier-row.is-locked {
+      opacity: 0.55;
+      filter: grayscale(0.5);
+    }
+    .tier-left-col {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      min-width: 0;
+    }
+    .tier-icon {
+      font-size: 1.6rem;
+      line-height: 1;
+      width: 32px;
+      text-align: center;
+    }
+    .tier-name {
+      font-weight: 800;
+      font-size: 0.92rem;
+      color: var(--text-main);
+    }
+    .tier-range {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    .tier-nilam-badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.15rem 0.5rem;
+      border-radius: 9999px;
+      background: rgba(212, 175, 55, 0.12);
+      color: var(--gold-primary);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      white-space: nowrap;
+    }
+    .tier-status-badge {
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      white-space: nowrap;
+    }
+    .tier-status-badge.current {
+      background: var(--gold-primary);
+      color: #000;
+      box-shadow: 0 0 10px var(--gold-glow);
+    }
+    .tier-status-badge.unlocked {
+      background: rgba(34, 197, 94, 0.15);
+      color: #22c55e;
+      border: 1px solid rgba(34, 197, 94, 0.3);
+    }
+    .tier-status-badge.locked {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
     }
 /* ==================================================== */
     /* Side-by-Side Compact Mode (for half-screen docking)   */
@@ -3094,35 +3460,10 @@
       65% { transform: scale(1.03) translateY(-4px); opacity: 1; }
       100% { transform: scale(1) translateY(0); opacity: 1; }
     }
-    .modal-overlay.active .modal-box,
-    #roulette-modal.active .roulette-box {
+    .modal-overlay.active .modal-box {
       animation: modalSpringBounce 0.45s var(--ease-spring-snappy) forwards !important;
     }
-
-    /* 6. Floating Mini-Timer Dock Elastic Hover & Click */
-    .floating-mini-timer-dock {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      background: #121522 !important; /* Solid 100% opaque dark obsidian - Zero transparency */
-      border: 1px solid rgba(212, 175, 55, 0.45);
-      border-radius: 9999px;
-      padding: 0.38rem 0.85rem;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.92), 0 0 16px rgba(212, 175, 55, 0.25);
-      z-index: 990;
-      cursor: pointer;
-      user-select: none;
-      transform-origin: bottom right;
-      transform: scale(1) translateY(0);
-      opacity: 1;
-      pointer-events: auto;
-      backdrop-filter: none !important;
-      -webkit-backdrop-filter: none !important;
-      transition: transform 0.32s var(--ease-spring), opacity 0.25s var(--ease-spring), border-color 0.2s ease, box-shadow 0.2s ease;
-    }
+    
     .floating-mini-timer-dock:hover {
       border-color: var(--gold-primary);
       background: #171b2c !important;
@@ -3360,8 +3701,10 @@
         <button class="btn btn-gold" id="btn-add-book" onclick="openAddModal()">
           <svg class="g-icon"><use href="#icon-plus"></use></svg> <span id="btn-text-add">录入新书</span>
         </button>
-        <button class="btn btn-gold-light" id="btn-random-book" onclick="pickRandomBook()" title="随机抽取一本未做书籍并直达">
-          <svg class="g-icon"><use href="#icon-dice"></use></svg> <span id="btn-text-random">盲盒抽书</span>
+        <button class="btn btn-level-badge" id="btn-reader-level" onclick="openLevelModal()" title="查看读者成长等级与荣誉榜">
+          <span class="level-icon-badge" id="header-level-icon">🌱</span>
+          <span id="header-level-name">Lv.1 见习读者</span>
+          <span class="level-exp-pill" id="header-level-exp">0/10</span>
         </button>
         <button class="btn btn-outline" id="btn-backup-data" onclick="exportData()" title="导出完整JSON备份数据">
           <span id="btn-text-backup">💾 备份</span>
@@ -3448,7 +3791,7 @@
     <!-- Compact Progress Bar (Sleek Clean Line) -->
     <div class="stats-compact-bar" id="stats-compact-bar">
       <div class="compact-progress-wrap">
-        <span style="font-size: 0.85rem; font-weight: 700; color: #ffffff; display: flex; align-items: center; gap: 6px; white-space: nowrap;">
+        <span style="font-size: 0.85rem; font-weight: 700; color: var(--text-main); display: flex; align-items: center; gap: 6px; white-space: nowrap;">
           <svg class="g-icon g-icon-gold" style="width: 14px; height: 14px;"><use href="#icon-book-gold"></use></svg>
           <span id="compact-progress-title">全馆进度</span>:
         </span>
@@ -3458,7 +3801,11 @@
         </div>
       </div>
       <div class="compact-pills-group">
-        <span class="compact-pill gold"><svg class="g-icon g-icon-gold" style="width: 13px; height: 13px;"><use href="#icon-check"></use></svg> <span id="compact-label-done">已完成</span>: <strong id="compact-done-count">0</strong></span>
+        <span class="compact-pill gold"><svg class="g-icon g-icon-gold" style="width: 13px; height: 13px;"><use href="#icon-check"></use></svg> <span id="compact-label-done">已完成</span>
+        <span class="compact-pill level-pill" id="compact-level-pill" onclick="openLevelModal()" style="cursor: pointer;" title="点击查看读者等级路线图">
+          <span id="compact-level-icon">🌱</span>
+          <span id="compact-level-text">Lv.1 见习读者</span>
+        </span>: <strong id="compact-done-count">0</strong></span>
         <span class="compact-pill"><svg class="g-icon" style="width: 13px; height: 13px; color: var(--text-muted);"><use href="#icon-clock"></use></svg> <span id="compact-label-pending">待做</span>: <strong id="compact-pending-count">0</strong></span>
       </div>
     </div>
@@ -3644,21 +3991,49 @@
     </div>
   </div>
 
-  <!-- Blind Box Lottery Roulette Modal -->
-  <div id="roulette-modal" style="display: none; visibility: hidden; pointer-events: none;">
-    <div class="roulette-box">
-      <div class="roulette-dice-icon">🎲</div>
-      <h2 id="roulette-heading" style="font-size: 1.4rem; font-weight: 800; color: #ffffff; letter-spacing: 1px;">
-        盲盒天选抽书 · 正在探寻
-      </h2>
-      <p id="roulette-subheading" style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">
-        <span id="roulette-pool-desc">正从全馆典藏书库中为您随机锁定未读天选之卷...</span>
-      </p>
-
-      <div class="roulette-title-slot">
-        <div id="roulette-series" class="roulette-series-tag">✨ 典藏检索中 ✨</div>
-        <div id="roulette-name" class="roulette-book-name">火影忍者 (1) 漩涡鸣人</div>
+  <!-- Reader Level & Rank Honor Roadmap Modal -->
+  <div class="modal-overlay" id="level-modal" style="display: none;">
+    <div class="modal-box" style="max-width: 680px;">
+      <div class="modal-header">
+        <h2>
+          <span style="font-size: 1.3rem;">🎖️</span> <span id="level-modal-title">读者成就等级与荣誉榜</span>
+        </h2>
+        <button class="btn-close-modal" onclick="closeLevelModal()">&times;</button>
       </div>
+      <div>
+        <div class="level-modal-header-hero">
+          <div class="level-hero-icon" id="modal-hero-icon">🌱</div>
+          <div class="level-hero-title" id="modal-hero-title">Lv.1 见习读者</div>
+          <div class="level-hero-subtitle" id="modal-hero-subtitle">已填报 0 本 · 距离升级还需 10 本</div>
+        </div>
+
+        <div class="level-progress-card">
+          <div style="display: flex; justify-content: space-between; font-size: 0.82rem; font-weight: 700;">
+            <span style="color: var(--text-secondary);">阶位成长进度</span>
+            <span id="modal-progress-text" style="color: var(--gold-primary);">0 / 10 本 (0%)</span>
+          </div>
+          <div class="level-progress-bar-wrap">
+            <div class="level-progress-bar-fill" id="modal-level-fill" style="width: 0%;"></div>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted);">
+            <span id="modal-current-tier-range">当前门槛: 0 本</span>
+            <span id="modal-next-tier-range">下阶门槛: 10 本</span>
+          </div>
+          <div style="margin-top: 0.65rem; padding-top: 0.55rem; border-top: 1px dashed var(--border); font-size: 0.78rem; display: flex; align-items: center; justify-content: space-between;">
+            <span style="color: var(--text-secondary);" id="modal-nilam-title">🇲🇾 马来西亚教育部 NILAM 官方星级对应：</span>
+            <span class="tier-nilam-badge" id="modal-nilam-status">未达成星级</span>
+          </div>
+        </div>
+
+        <div style="font-size: 0.85rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.55rem; display: flex; align-items: center; gap: 6px;">
+          <span>📜</span> <span id="modal-roadmap-title">全阶读者荣耀路线图 (Lv.1 ~ Lv.10)</span>
+        </div>
+        <div class="level-tiers-list" id="level-tiers-list">
+          <!-- Dynamically Generated Tiers -->
+        </div>
+      </div>
+    </div>
+  </div>
 
       <div style="display: flex; justify-content: center; gap: 0.8rem;">
         <button id="btn-roulette-go" class="btn btn-gold" style="padding: 0.65rem 1.8rem; font-size: 0.95rem; font-weight: 800; opacity: 0; pointer-events: none; transition: 0.2s;" onclick="finishRouletteJump()">
@@ -3933,7 +4308,6 @@
     "pageTitle": "书籍资料库 (Dark Gold Edition)",
     "appTitle": "书籍资料库",
     "btnAddBook": "录入新书",
-    "btnRandomBook": "盲盒抽书",
     "btnExportCsv": "导出表格",
     "btnPoster": "🎨 业务推广海报",
     "btnBackup": "💾 备份",
@@ -4074,11 +4448,6 @@
     "lblInsight": "启示与道德价值 (Nilai Murni / Pengajaran - 约150字)",
     "btnAddCancel": "取消",
     "btnAddSubmit": "💾 保存并添加到系统",
-    "rouletteHeading": "盲盒天选抽书 · 正在探寻",
-    "rouletteSubheading": "正从全馆 1,000+ 册典藏中为您随机锁定未读书籍...",
-    "rouletteSearching": "✨ 典藏检索中 ✨",
-    "rouletteChosenTag": "🎯 天选系列 · {0}",
-    "rouletteBtnGo": "👉 立即直达该书",
     "alarmTitle": "3 分钟倒计时已到！",
     "alarmDesc": "阅读专注计时已完成，可以继续探索下一本书了！",
     "alarmBtnRepeat": "⏰ 再来 3 分钟",
@@ -4142,7 +4511,6 @@
     "pageTitle": "Pangkalan Data Buku (Edisi Dark Gold)",
     "appTitle": "Pangkalan Data Buku",
     "btnAddBook": "Rekod Buku Baharu",
-    "btnRandomBook": "Cabutan Bertuah",
     "btnExportCsv": "Eksport CSV",
     "btnPoster": "🎨 Poster Promosi Servis",
     "btnBackup": "💾 Sandaran",
@@ -4283,11 +4651,6 @@
     "lblInsight": "Nilai Murni & Pengajaran (~150 patah perkataan)",
     "btnAddCancel": "Batal",
     "btnAddSubmit": "💾 Simpan ke Koleksi",
-    "rouletteHeading": "Cabutan Bertuah Bahan Bacaan",
-    "rouletteSubheading": "Memilih bahan bacaan belum dibaca secara rawak daripada 1,000+ jilid...",
-    "rouletteSearching": "🎲 Sedang Memilih... 🎲",
-    "rouletteChosenTag": "🎯 Pilihan Bertuah · Siri {0}",
-    "rouletteBtnGo": "👉 Terus ke Buku Ini",
     "alarmTitle": "Pemasa 3 Minit Tamat!",
     "alarmDesc": "Masa bertenang membaca selesai! Anda kini boleh meneruskan bacaan buku seterusnya.",
     "alarmBtnRepeat": "⏰ Ulang 3 Minit",
@@ -4351,7 +4714,6 @@
     "pageTitle": "Book Database (Dark Gold Edition)",
     "appTitle": "Book Database",
     "btnAddBook": "Record New Book",
-    "btnRandomBook": "Lucky Draw",
     "btnExportCsv": "Export CSV",
     "btnPoster": "🎨 Promo Poster",
     "btnBackup": "💾 Backup",
@@ -4492,11 +4854,6 @@
     "lblInsight": "Moral Values & Lessons (~150 words)",
     "btnAddCancel": "Cancel",
     "btnAddSubmit": "💾 Save to Library",
-    "rouletteHeading": "Lucky Draw Reading Material",
-    "rouletteSubheading": "Selecting an unread volume at random from 1,000+ volumes...",
-    "rouletteSearching": "🎲 Selecting... 🎲",
-    "rouletteChosenTag": "🎯 Chosen Series · {0}",
-    "rouletteBtnGo": "👉 Jump to Book Now",
     "alarmTitle": "3-Minute Cooldown Complete!",
     "alarmDesc": "Reading session complete! You can now proceed to explore the next book.",
     "alarmBtnRepeat": "⏰ Another 3 Mins",
@@ -5141,10 +5498,7 @@
       if (el('btn-add-cancel')) el('btn-add-cancel').innerText = t('btnAddCancel');
       if (el('btn-add-submit')) el('btn-add-submit').innerText = t('btnAddSubmit');
 
-      // Roulette Modal
-      if (el('roulette-heading')) el('roulette-heading').innerText = t('rouletteHeading');
-      if (el('roulette-subheading')) el('roulette-subheading').innerText = t('rouletteSubheading');
-      if (el('btn-roulette-go')) el('btn-roulette-go').innerText = t('rouletteBtnGo');
+      
 
       // Timer Banner
       if (el('alarm-banner-title')) el('alarm-banner-title').innerText = t('alarmTitle');
@@ -5163,7 +5517,7 @@
       if (el('timer-expand-label')) el('timer-expand-label').innerText = t('timerExpand');
 
       // Top Buttons Tooltips
-      if (el('btn-random-book')) el('btn-random-book').title = t('btnRandomBook');
+      
       if (el('btn-backup-data')) el('btn-backup-data').title = t('btnBackup');
       if (el('btn-restore-data')) el('btn-restore-data').title = t('btnRestore');
         if (el('btn-cloud-sync')) el('btn-cloud-sync').title = t('btnSync');
@@ -5254,8 +5608,8 @@
       }
 
       // Roulette Modal
-      if (el('roulette-series')) el('roulette-series').innerText = t('rouletteSearching');
-      if (el('roulette-name')) el('roulette-name').innerText = '';
+      
+      
     }
 
     // State
@@ -5674,6 +6028,285 @@
       });
 
       if (container) container.innerHTML = html;
+    }
+
+    
+    // ====================================================
+    // Reader Level & Gamification System (10 Tiers)
+    // ====================================================
+    const READER_LEVELS = [
+      {
+        level: 1,
+        icon: '🌱',
+        titleZh: 'Lv.1 见习读者',
+        titleMs: 'Lv.1 Pembaca Baru',
+        titleEn: 'Lv.1 Novice Reader',
+        minBooks: 0,
+        maxBooks: 9,
+        nilamZh: '基础阅读起步',
+        nilamMs: 'Belum Capai Bintang',
+        nilamEn: 'Reading Starter'
+      },
+      {
+        level: 2,
+        icon: '📖',
+        titleZh: 'Lv.2 进阶学徒',
+        titleMs: 'Lv.2 Pembaca Aktif',
+        titleEn: 'Lv.2 Apprentice Reader',
+        minBooks: 10,
+        maxBooks: 29,
+        nilamZh: '积极阅读阶段',
+        nilamMs: 'Pembaca Berpotensi',
+        nilamEn: 'Active Reader'
+      },
+      {
+        level: 3,
+        icon: '🧭',
+        titleZh: 'Lv.3 书海行者',
+        titleMs: 'Lv.3 Pengembara Ilmu',
+        titleEn: 'Lv.3 Book Adventurer',
+        minBooks: 30,
+        maxBooks: 59,
+        nilamZh: '博识探索阶段',
+        nilamMs: 'Peneroka Buku',
+        nilamEn: 'Book Explorer'
+      },
+      {
+        level: 4,
+        icon: '📜',
+        titleZh: 'Lv.4 博览学者',
+        titleMs: 'Lv.4 Sarjana Minda',
+        titleEn: 'Lv.4 Avid Scholar',
+        minBooks: 60,
+        maxBooks: 99,
+        nilamZh: '准官方星级门槛',
+        nilamMs: 'Pra-Bintang NILAM',
+        nilamEn: 'Pre-Star Candidate'
+      },
+      {
+        level: 5,
+        icon: '🥉',
+        titleZh: 'Lv.5 铜卷典藏',
+        titleMs: 'Lv.5 Gangsa NILAM',
+        titleEn: 'Lv.5 Bronze Scholar',
+        minBooks: 100,
+        maxBooks: 199,
+        nilamZh: '★ 1星级认证 (144+)',
+        nilamMs: '★ 1 Bintang NILAM (144+)',
+        nilamEn: '★ 1 NILAM Star (144+)'
+      },
+      {
+        level: 6,
+        icon: '🥈',
+        titleZh: 'Lv.6 银星智者',
+        titleMs: 'Lv.6 Perak NILAM',
+        titleEn: 'Lv.6 Silver Luminary',
+        minBooks: 200,
+        maxBooks: 359,
+        nilamZh: '★★ 2星级认证 (288+)',
+        nilamMs: '★★ 2 Bintang NILAM (288+)',
+        nilamEn: '★★ 2 NILAM Stars (288+)'
+      },
+      {
+        level: 7,
+        icon: '🥇',
+        titleZh: 'Lv.7 黄金导师',
+        titleMs: 'Lv.7 Emas NILAM',
+        titleEn: 'Lv.7 Golden Master',
+        minBooks: 360,
+        maxBooks: 575,
+        nilamZh: '★★★ 3星级认证 (432+)',
+        nilamMs: '★★★ 3 Bintang NILAM (432+)',
+        nilamEn: '★★★ 3 NILAM Stars (432+)'
+      },
+      {
+        level: 8,
+        icon: '💎',
+        titleZh: 'Lv.8 璀璨宗师',
+        titleMs: 'Lv.8 NILAM Gemilang',
+        titleEn: 'Lv.8 Diamond Paragon',
+        minBooks: 576,
+        maxBooks: 719,
+        nilamZh: '★★★★ 4星级国标 (576+)',
+        nilamMs: '★★★★ 4 Bintang Kebangsaan',
+        nilamEn: '★★★★ 4 National Stars'
+      },
+      {
+        level: 9,
+        icon: '👑',
+        titleZh: 'Lv.9 封号贤者',
+        titleMs: 'Lv.9 Tokoh NILAM',
+        titleEn: 'Lv.9 Mythic Sage',
+        minBooks: 720,
+        maxBooks: 999,
+        nilamZh: '★★★★★ 5星最高荣誉 (720+)',
+        nilamMs: '★★★★★ 5 Bintang Tokoh',
+        nilamEn: '★★★★★ 5 Star Elite'
+      },
+      {
+        level: 10,
+        icon: '🏆',
+        titleZh: 'Lv.10 书道至尊',
+        titleMs: 'Lv.10 Maharaja Nilam',
+        titleEn: 'Lv.10 Supreme Sovereign',
+        minBooks: 1000,
+        maxBooks: 99999,
+        nilamZh: '👑 全国典范特等奖 (1000+)',
+        nilamMs: '👑 Tokoh Nilam Kebangsaan',
+        nilamEn: '👑 Sovereign Champion'
+      }
+    ];
+
+    let lastKnownLevel = 1;
+
+    function getReaderLevel(count) {
+      for (let i = READER_LEVELS.length - 1; i >= 0; i--) {
+        if (count >= READER_LEVELS[i].minBooks) {
+          return READER_LEVELS[i];
+        }
+      }
+      return READER_LEVELS[0];
+    }
+
+    function getLocalizedLevelTitle(tier) {
+      if (currentLang === 'ms') return tier.titleMs;
+      if (currentLang === 'en') return tier.titleEn;
+      return tier.titleZh;
+    }
+
+    function getLocalizedNilam(tier) {
+      if (currentLang === 'ms') return tier.nilamMs;
+      if (currentLang === 'en') return tier.nilamEn;
+      return tier.nilamZh;
+    }
+
+    function updateReaderLevelUI(doneCount) {
+      const tier = getReaderLevel(doneCount);
+      const title = getLocalizedLevelTitle(tier);
+      const isMax = tier.level === 10;
+      const nextThreshold = isMax ? tier.minBooks : tier.maxBooks + 1;
+      const prevThreshold = tier.minBooks;
+      const span = nextThreshold - prevThreshold;
+      const currentInSpan = doneCount - prevThreshold;
+      const pct = isMax ? 100 : Math.min(100, Math.max(0, Math.round((currentInSpan / span) * 100)));
+      const needed = isMax ? 0 : (nextThreshold - doneCount);
+
+      // Header button
+      const hIcon = document.getElementById('header-level-icon');
+      const hName = document.getElementById('header-level-name');
+      const hExp = document.getElementById('header-level-exp');
+      if (hIcon) hIcon.innerText = tier.icon;
+      if (hName) hName.innerText = title;
+      if (hExp) hExp.innerText = isMax ? 'MAX' : `${doneCount}/${nextThreshold}`;
+
+      // Compact Stats Bar Pill
+      const cIcon = document.getElementById('compact-level-icon');
+      const cText = document.getElementById('compact-level-text');
+      if (cIcon) cIcon.innerText = tier.icon;
+      if (cText) cText.innerText = title;
+
+      // Level Modal
+      const mIcon = document.getElementById('modal-hero-icon');
+      const mTitle = document.getElementById('modal-hero-title');
+      const mSub = document.getElementById('modal-hero-subtitle');
+      const mProgText = document.getElementById('modal-progress-text');
+      const mFill = document.getElementById('modal-level-fill');
+      const mCurRange = document.getElementById('modal-current-tier-range');
+      const mNextRange = document.getElementById('modal-next-tier-range');
+      const mNilam = document.getElementById('modal-nilam-status');
+
+      if (mIcon) mIcon.innerText = tier.icon;
+      if (mTitle) mTitle.innerText = title;
+      if (mSub) {
+        if (isMax) {
+          mSub.innerText = currentLang === 'ms' ? 'Tahap Kehormatan Tertinggi Dicapai! (1,000+ Jilid)' : (currentLang === 'en' ? 'Max Honour Rank Achieved! (1,000+ Books)' : '已达成最高荣耀境界！全馆千卷典范至尊！');
+        } else {
+          mSub.innerText = currentLang === 'ms' ? `Telah membaca ${doneCount} jilid · Baki ${needed} jilid untuk naik tahap` : (currentLang === 'en' ? `Completed ${doneCount} books · ${needed} more books to next level` : `已填报 ${doneCount} 本 · 距离下一阶位升级还需 ${needed} 本`);
+        }
+      }
+      if (mProgText) mProgText.innerText = isMax ? 'MAX (100%)' : `${doneCount} / ${nextThreshold} 本 (${pct}%)`;
+      if (mFill) mFill.style.width = `${pct}%`;
+      if (mCurRange) mCurRange.innerText = (currentLang === 'ms' ? 'Pintu masuk tahap: ' : (currentLang === 'en' ? 'Tier Min: ' : '当前阶位门槛: ')) + `${tier.minBooks} 本`;
+      if (mNextRange) mNextRange.innerText = isMax ? 'MAX' : ((currentLang === 'ms' ? 'Tahap seterusnya: ' : (currentLang === 'en' ? 'Next Tier: ' : '下一阶门槛: ')) + `${nextThreshold} 本`);
+      if (mNilam) mNilam.innerText = getLocalizedNilam(tier);
+
+      // Render Roadmap List
+      renderLevelRoadmap(doneCount, tier.level);
+
+      // Check level up celebration
+      if (tier.level > lastKnownLevel && lastKnownLevel > 0) {
+        showLevelUpCelebration(tier);
+      }
+      lastKnownLevel = tier.level;
+    }
+
+    function renderLevelRoadmap(doneCount, currentLevelNum) {
+      const listEl = document.getElementById('level-tiers-list');
+      if (!listEl) return;
+
+      listEl.innerHTML = READER_LEVELS.map(item => {
+        const isCurrent = item.level === currentLevelNum;
+        const isUnlocked = doneCount >= item.minBooks;
+        const localizedTitle = getLocalizedLevelTitle(item);
+        const localizedNilam = getLocalizedNilam(item);
+        const rangeText = item.level === 10 ? '1,000+ 本' : `${item.minBooks} - ${item.maxBooks} 本`;
+
+        let statusBadgeHtml = '';
+        if (isCurrent) {
+          statusBadgeHtml = `<span class="tier-status-badge current">${currentLang === 'ms' ? '★ Semasa' : (currentLang === 'en' ? '★ Current' : '★ 当前进行中')}</span>`;
+        } else if (isUnlocked) {
+          statusBadgeHtml = `<span class="tier-status-badge unlocked">${currentLang === 'ms' ? '✓ Dicapai' : (currentLang === 'en' ? '✓ Unlocked' : '✓ 已达成')}</span>`;
+        } else {
+          statusBadgeHtml = `<span class="tier-status-badge locked">${currentLang === 'ms' ? '🔒 Terkunci' : (currentLang === 'en' ? '🔒 Locked' : '🔒 未解锁')}</span>`;
+        }
+
+        return `
+          <div class="level-tier-row ${isCurrent ? 'is-current' : (isUnlocked ? 'is-unlocked' : 'is-locked')}">
+            <div class="tier-left-col">
+              <div class="tier-icon">${item.icon}</div>
+              <div>
+                <div class="tier-name">${localizedTitle}</div>
+                <div class="tier-range">${rangeText} · <span style="color: var(--gold-primary);">${localizedNilam}</span></div>
+              </div>
+            </div>
+            <div>
+              ${statusBadgeHtml}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function openLevelModal() {
+      const allBooks = getAllBooks();
+      let done = 0;
+      allBooks.forEach(b => { if (completedSet.has(b.id)) done++; });
+      updateReaderLevelUI(done);
+      const m = document.getElementById('level-modal');
+      if (m) {
+        m.style.display = 'flex';
+        setTimeout(() => m.classList.add('active'), 10);
+      }
+      playTactilePopSound();
+    }
+
+    function closeLevelModal() {
+      const m = document.getElementById('level-modal');
+      if (m) {
+        m.classList.remove('active');
+        setTimeout(() => m.style.display = 'none', 280);
+      }
+    }
+
+    function showLevelUpCelebration(tier) {
+      playTriumphantChord();
+      const title = getLocalizedLevelTitle(tier);
+      const msg = currentLang === 'ms'
+        ? `🎉 Tahniah! Anda telah dinaikkan ke tahap「${title}」!`
+        : (currentLang === 'en'
+          ? `🎉 Level Up! You reached「${title}」!`
+          : `🎉 恭喜晋级！您已荣升为「${title}」！`);
+      showToast(msg);
     }
 
     function updateStats() {
@@ -7079,99 +7712,6 @@
           osc.stop(t + i * 0.06 + 0.9);
         });
       } catch(e) {}
-    }
-
-    // Interactive Roulette Blind Box Lottery State
-    let rouletteChosenBook = null;
-    function pickRandomBook() {
-      const allBooks = getAllBooks();
-      const scopeBooks = currentSeries === 'all' ? (currentShelfCat !== 'all' ? allBooks.filter(b => getSeriesCategory(b.series) === currentShelfCat) : allBooks) : allBooks.filter(b => b.series === currentSeries);
-      const pendingBooks = scopeBooks.filter(b => !completedSet.has(b.id));
-
-      if (pendingBooks.length === 0) {
-        alert(t('luckyDrawAllDone'));
-        return;
-      }
-
-      const descEl = document.getElementById('roulette-pool-desc');
-      if (descEl) {
-        descEl.innerText = currentLang === 'ms'
-          ? `Memilih secara rawak daripada ${allBooks.length} buku (baki ${pendingBooks.length} buku belum dibaca)...`
-          : (currentLang === 'en'
-            ? `Randomly selecting from ${allBooks.length} books (${pendingBooks.length} pending)...`
-            : `正从全馆 ${allBooks.length} 卷典藏书库（待读 ${pendingBooks.length} 卷）中为您随机锁定未读天选之卷...`);
-      }
-
-      const randomIdx = Math.floor(Math.random() * pendingBooks.length);
-      rouletteChosenBook = pendingBooks[randomIdx];
-
-      // Open Roulette Modal
-      const modal = document.getElementById('roulette-modal');
-      const seriesEl = document.getElementById('roulette-series');
-      const nameEl = document.getElementById('roulette-name');
-      const goBtn = document.getElementById('btn-roulette-go');
-
-      if (!modal) {
-        jumpToVolume(rouletteChosenBook.id);
-        return;
-      }
-
-      modal.style.display = 'flex';
-      modal.style.visibility = 'visible';
-      modal.style.pointerEvents = 'auto';
-      modal.classList.add('active');
-      goBtn.style.opacity = '0';
-      goBtn.style.pointerEvents = 'none';
-
-      // Rapid shuffle through random book titles
-      let rolls = 0;
-      const maxRolls = 12;
-      const intervalMs = 65;
-
-      const shuffleTimer = setInterval(() => {
-        rolls++;
-        const dummy = pendingBooks[Math.floor(Math.random() * pendingBooks.length)];
-        seriesEl.innerText = t('rouletteSearching');
-        nameEl.innerText = dummy.title;
-        playTactilePopSound();
-
-        if (rolls >= maxRolls) {
-          clearInterval(shuffleTimer);
-          // Lock onto chosen
-          seriesEl.innerText = t('rouletteChosenTag', rouletteChosenBook.series);
-          nameEl.innerText = rouletteChosenBook.title;
-          playTriumphantChord();
-
-          goBtn.style.opacity = '1';
-          goBtn.style.pointerEvents = 'auto';
-
-          // Auto-jump after 1.2s if user doesn't click
-          setTimeout(() => {
-            if (modal.classList.contains('active')) {
-              finishRouletteJump();
-            }
-          }, 1400);
-        }
-      }, intervalMs);
-    }
-
-    function finishRouletteJump() {
-      const modal = document.getElementById('roulette-modal');
-      if (modal) {
-        modal.classList.remove('active');
-        modal.style.display = 'none';
-        modal.style.visibility = 'hidden';
-        modal.style.pointerEvents = 'none';
-      }
-      if (rouletteChosenBook) {
-        jumpToVolume(rouletteChosenBook.id);
-        setTimeout(() => {
-          const card = document.getElementById(`card-${rouletteChosenBook.id}`);
-          if (card) {
-            triggerChromaticAfterimage(card);
-          }
-        }, 320);
-      }
     }
 
     // ====================================================
